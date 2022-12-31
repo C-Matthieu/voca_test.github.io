@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vocab Test</title>
+	<link rel="icon" type="png" href="favicon.png">
+	<link rel="stylesheet" href="EvalVocabulaire.css">
+	<h4 id="chrono" style="text-align: center;"> <span id="chronometre">0:00</span></h4>
+	
+	<h1 id="name"  style="text-align: center;"> Comment dit-on <span id="mot"> </span> en <span id="langueEtud"></span> </h1>
+</head>
+<body  style="text-align: center;">
+	<br>
+	<button type="button" class="accent" onclick="á()">á</button>
+	<button type="button" class="accent" onclick="ú()">ú</button> 
+	<button type="button" class="accent" onclick="í()">í</button>
+	<button type="button" class="accent" onclick="ñ()">ñ</button>
+	<button type="button" class="accent" onclick="ó()">ó</button>
+	<br>
+	<input type="text" id="entree" name="entree" 
+       size="10">
+    <br>
+    <h2> <span id="faux"></span> <span id="null"></span> <span id="juste"></span> </h2>
+    <br>
+    <button id="valider" class="bouton" type="submit" onclick="getValue()"> Envoyer </button>
+    <script type="text/javascript" src="Fonction.js"></script>
+</body>
+</html>	
