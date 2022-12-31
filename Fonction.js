@@ -219,7 +219,7 @@ function getValue()
     document.getElementById("juste").innerHTML = "";
     document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
   }
-  else if (reponse == eval(liste)[motEtud][0]){
+  else if (reponse.toUpperCase() == eval(liste)[motEtud][0].toUpperCase()){
     document.body.style.background = 'green';
     document.getElementById("faux").innerHTML = "";
     document.getElementById("null").innerHTML = "";
@@ -361,59 +361,3 @@ function IncrementationChrono() {
     return fin;
   }
 }
-/*
-function IncrementationChrono() {
-  const intermediaire = new Date();
-  const heures = intermediaire.getHours();
-  const minutes = intermediaire.getMinutes();
-  const secondes = intermediaire.getSeconds();
-
-  if (eval(liste).length > 0){ 
-    if (heuresDebut == heures){
-      if (secondes > secondesDebut) {
-        document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut)-1}:${60 - secondes}`;
-
-      }
-      else {
-        document.getElementById("chronometre").innerHTML = `${minutes - minutesDebut}:${secondes - secondesDebut}`;
-      }
-      
-      
-    }
-  }
-  else if(fin==undefined){
-    fin = `${minutes - minutesDebut}:${secondes - secondesDebut}`;
-    document.getElementById("chronometre").innerHTML = fin;
-  }
-  else {
-    return fin;
-  }
-} */
-
-/* let chrono = document.getElementById("chronometre");
-
-let minutes = 0;
-let secondes = 0;
-
-const defilerTemps = ()=> {
-  secondes = parseInt(secondes);
-  minutes = parseInt(minutes);
-
-  secondes += secondes;
-
-  if (secondes == 60){
-    minutes++;
-    secondes = 0;
-  }
-
-  if (secondes < 10){
-    secondes = "0" + secondes;
-  }
-  if (minutes < 10){
-    minutes = "0" + minutes;
-  }
-
-  document.getElementById("chronometre").innerHTML = `${minutes}:${secondes}`;
-
-  setTimeout(defilerTemps(), 1000);
-}; */
