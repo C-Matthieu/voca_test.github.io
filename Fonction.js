@@ -183,16 +183,34 @@ let toutes = // ciudadanio_y_mundos_virtuales
 
 // Listes Anglaises__________________________________________________________________________________________________________________________________________________
 //Gun in America
-let GunInAmerica = [["a weapon","une arme"], ["a murder","un meurtre"], ["a law","une loi"], ["a bullet-proof","un gilet par balle"], 
-		    ["legal","légal"], ["insecurity","insécurité"], ["an attack","une attaque"], ["to feel safe","se sentir en sécurité"], 
-		    ["to commit suicide","commettre un suicide"], ["cops","les flics"], ["gun control","la réglementation du port d'armes"], 
-		    ["a mass shooting","une tuerie de masse"], ["to have easy access to","avoir un accès facile à"], 
-		    ["to be ratified by","être accepté par"], ["to become effective","entrer en vigueur"], ["to keep","garder"], ["to own","posséder"], 
-		    ["to bear","porter (b)"], ["to carry","porter (c)"], ["shall not be infringed","ne sera pas baffouer"], 
-		    ["the most striking","Le plus frappant"], ["aftermath","en conséquences"], 
-		    ["the easier the acces to guns, the more deaths there are","plus l'accés aux armes est facile, plus il y a de morts"], 
-		    ["a gun show sales","une foire aux armes"], ["a stranglehold","une emprise"], ["Lobbyists","les influenceurs politiques"], 
-		    ["to manage","réussir à (m)"], ["to succed to","réussir à (s)"]];
+let GunsInAmerica = [["a weapon","une arme"], ["a murder","un meurtre"], ["a law","une loi"], ["a bullet-proof","un gilet par balle"], 
+        ["legal","légal"], ["insecurity","insécurité"], ["an attack","une attaque"], ["to feel safe","se sentir en sécurité"], 
+        ["to commit suicide","commettre un suicide"], ["cops","les flics"], ["gun control","la réglementation du port d'armes"], 
+        ["a mass shooting","une tuerie de masse"], ["to have easy access to","avoir un accès facile à"], 
+        ["to be ratified by","être accepté par"], ["to become effective","entrer en vigueur"], ["to keep","garder"], ["to own","posséder"], 
+        ["to bear","porter (b)"], ["to carry","porter (c)"], ["shall not be infringed","ne sera pas baffouer"], 
+        ["the most striking","Le plus frappant"], ["aftermath","en conséquences"], 
+        ["the easier the acces to guns, the more deaths there are","plus l'accés aux armes est facile, plus il y a de morts"], 
+        ["a gun show sales","une foire aux armes"], ["a stranglehold","une emprise"], ["Lobbyists","les influenceurs politiques"], 
+        ["to manage","réussir à (m)"], ["to succed to","réussir à (s)"], ["to owe a debt", "devoir une dette"], ["the issue", "le problème"], 
+        ["to keep our focus", "pour garder notre concentration"], ["deadliest", "le plus meurtrier"], ["enforced", "appliqué"], 
+        ["widespred", "répandu"], ["widely", "largement"], ["a threat", "une menace"], ["aware", "au courant"], ["heavy", "lourd"], 
+        ["National Rifle Association", "L'association nationale des détenteurs d'armes à feu"], ["deadly", "mortel"], 
+        ["to be running for", "être dans la course pour"]];
+//LinkWords
+let LinkWords = [["as","comme"],["because","parce que"],["for","car"],["since","puisque"],["consequently","en conséquence"],
+        ["therefore","il s'en suit que"],["so","donc"],["that's why","c'est pourquoi"],["as a result of","en raison de"],
+        ["still","cependant (s)"],["and yet","et encore"],["however","cependant (h)"],["despite","malgré (d)"],
+        ["in spite of","malgré (i)"],["although","bien que (a)"],["though","bien que (t)"],["unless","à moins que"],
+        ["nevertheless","néanmoins"],["otherwise","sinon"],["wheter","si"],["on condition that","à condition que (o)"],
+        ["provided","à condition que (p)"],["meanwhile","pendant ce temps"],["until","jusqu'à (u)"],["till","jusqu'à (t)"],
+        ["once","une fois que"],["last week","la semaine dernière"],["when","quand"],["ago","il y a + time"],
+        ["during","pendant + évènement"],["for","pendant + durée"],["since","depuis"],["as soon as","dès que"],
+        ["in order to","pour, afin de"],["so as to","afin de"],["whereas","tandis que"],["while","pendant que"],
+        ["on the contrary","au contraire"],["contrary to","contrairement à (c)"],["instead of","plutôt que"],
+        ["unlike","contrairement à (u)"],["but","mais"],["even if","même si"],["even","même"],["though","cependant"],
+        ["moreover","de plus (m)"],["futhermore","en outre"],["what's more","quoi de plus"],["in a addition to","en plus de"],
+        ["besides","de plus (b)"],["all the same","tout de même"],["similary","similairement"],["what if","et si"],["suppose","supposer"]];
 
 
 // affiche le mot + la langue
@@ -253,7 +271,7 @@ function getValue()
 		document.body.style.background = '#DC143C';
 		document.getElementById("juste").innerHTML = "";
 		document.getElementById("null").innerHTML = "";
-		document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${ciudadano.length} mots à apprendre`;
+		document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${eval(liste).length} mots à apprendre`;
 		fautes += 1;
 		setTimeout(afficher, 1000);
 		}
