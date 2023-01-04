@@ -181,6 +181,11 @@ let toutes = // ciudadanio_y_mundos_virtuales
              ["el dolor", "la douleur"], ["una bombilla", "une ampoule"], ["conseguir", "réussir"],
              ["enemigo", "ennemi"]];
 
+// Listes Anglaises__________________________________________________________________________________________________________________________________________________
+//Gun in America
+let GunInAmerica = [["a weapon","une arme"], ["a murder","un meurtre"], ["a law","une loi"], ["a bullet-proof","un gilet par balle"], ["legal","légal"], ["insecurity","insécurité"], ["an attack","une attaque"], ["to feel safe","se sentir en sécurité"], ["to commit suicide","commettre un suicide"], ["cops","les flics"], ["gun control","la réglementation du port d'armes"], ["a mass shooting","une tuerie de masse"], ["to have easy access to","avoir un accès facile à"], ["to be ratified by","être accepté par"], ["to become effective","entrer en vigueur"], ["to keep","garder"], ["to own","posséder"], ["to bear","porter"], ["to carry","porter"], ["shall not be infringed","ne sera pas baffouer"], ["the most striking","Le plus frappant"], ["aftermath","en conséquences"], ["the easier the acces to guns, the more deaths there are","plus l'accés aux armes est facile, plus il y a de morts"], ["a gun show sales","une foire aux armes"], ["a stranglehold","une emprise"], ["Lobbyists","les influenceurs politiques"], ["to manage","réussir à"], ["to succed to","réussir à"]];
+
+
 // affiche le mot + la langue
 let motVocab = String(eval(liste)[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
