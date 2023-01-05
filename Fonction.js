@@ -327,6 +327,8 @@ const minutesDebut = debut.getMinutes();
 const secondesDebut = debut.getSeconds();
 
 let fin;
+let minutesIntermediaire;
+let secondesIntermediaire;
 
 
 function IncrementationChrono() {
@@ -334,40 +336,41 @@ function IncrementationChrono() {
 	const heures = intermediaire.getHours();
 	const minutes = intermediaire.getMinutes();
 	const secondes = intermediaire.getSeconds();
+	minutesIntermediaire = minutes - minutesDebut;
+	secondesIntermediaire = secondes - secondesDebut;
 	
-	if (eval(liste).length > 0){
-		if (heuresDebut == heures){
-			if (minutes >= minutesDebut && secondes>= secondesDebut) {
-				if (secondes - secondesDebut < 10){
-					document.getElementById("chronometre").innerHTML = `${minutes - minutesDebut}: 0${secondes - secondesDebut}`;
-					}
-        			else {
-					document.getElementById("chronometre").innerHTML = `${minutes - minutesDebut}:${secondes - secondesDebut}`;
-					}
-				}
-			else if (minutes >= minutesDebut && secondes <= secondesDebut) {
-				if ((secondes - secondesDebut + 60) < 10){
-					document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut) - 1}:0${(secondes - secondesDebut) + 60}`;
-					}
-				else {
-					document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut) - 1}:${(secondes - secondesDebut) + 60}`;
-					}
+	if (eval(liste).length > 1){
+		if (minutes >= minutesDebut && secondes>= secondesDebut) {
+			if (secondes - secondesDebut < 10){
+				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}: 0${secondesIntermediaire}`;
 				}
 			else {
-				if ((secondes - secondesDebut + 60) < 10){
-					document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut) + 60}:0${(secondes - secondesDebut) + 60}`;
-					}
-				else {
-					document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut) + 60}:${(secondes - secondesDebut) + 60}`;
-					}
+				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}:${secondesIntermediaire}`;
 				}
-			     }
+			}
+		else if (minutes >= minutesDebut && secondes <= secondesDebut) {
+			if ((secondes - secondesDebut + 60) < 10){
+				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire - 1}:0${secondesIntermediaire + 60}`;
+				}
+			else {
+				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire - 1}:${secondesIntermediaire + 60}`;
+				}
+			}
+		else {
+			if ((secondes - secondesDebut + 60) < 10){
+				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire + 60}:0${secondesIntermediaire + 60}`;
+				}
+			else {
+				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire + 60}:${secondesIntermediaire + 60}`;
+				}
+			}
 		}
 	else if(fin==undefined){
-		fin = `${minutes - minutesDebut}:${secondes - secondesDebut}`;
+		fin = `${minutesIntermediaire}:${secondesIntermediaire}`;
 		document.getElementById("chronometre").innerHTML = fin;
 		}
 	else {
 		return fin;
 		}
 	}
+}
