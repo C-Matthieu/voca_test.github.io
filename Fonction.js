@@ -332,17 +332,17 @@ let secondesIntermediaire;
 
 
 function IncrementationChrono() {
-	const intermediaire = new Date();
-	const heures = intermediaire.getHours();
-	const minutes = intermediaire.getMinutes();
-	const secondes = intermediaire.getSeconds();
-	minutesIntermediaire = minutes - minutesDebut;
-	secondesIntermediaire = secondes - secondesDebut;
-	
-	if (eval(liste).length > 1){
-		if (minutes >= minutesDebut && secondes>= secondesDebut) {
-			if (secondes - secondesDebut < 10){
-				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}: 0${secondesIntermediaire}`;
+  	const intermediaire = new Date();
+ 	const heures = intermediaire.getHours();
+  	const minutes = intermediaire.getMinutes();
+ 	const secondes = intermediaire.getSeconds();
+  	minutesIntermediaire = minutes - minutesDebut;
+  	secondesIntermediaire = secondes - secondesDebut;
+  
+  	if (eval(liste).length > 1){
+    		if (minutes >= minutesDebut && secondes>= secondesDebut) {
+      			if (secondes - secondesDebut < 10){
+        			document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}: 0${secondesIntermediaire}`;
 				}
 			else {
 				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}:${secondesIntermediaire}`;
@@ -373,4 +373,3 @@ function IncrementationChrono() {
 		return fin;
 		}
 	}
-
