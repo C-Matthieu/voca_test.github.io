@@ -189,9 +189,9 @@ let GunsInAmerica = [["a weapon","une arme"], ["a murder","un meurtre"], ["a law
         ["a mass shooting","une tuerie de masse"], ["to have easy access to","avoir un accès facile à"], 
         ["to be ratified by","être accepté par"], ["to become effective","entrer en vigueur"], ["to keep","garder"], ["to own","posséder"], 
         ["to bear","porter (b)"], ["to carry","porter (c)"], ["shall not be infringed","ne sera pas baffouer"], 
-        ["the most striking","Le plus frappant"], ["aftermath","en conséquences"], 
-        ["the easier the acces to guns, the more deaths there are","plus l'accés aux armes est facile, plus il y a de morts"], 
-        ["a gun show sales","une foire aux armes"], ["a stranglehold","une emprise"], ["Lobbyists","les influenceurs politiques"], 
+        ["the most striking","le plus frappant"], ["aftermath","en conséquences"], 
+        ["the easier the access to guns, the more deaths there are","plus l'accés aux armes est facile, plus il y a de morts"], 
+        ["a gun show sales","une foire aux armes"], ["a stranglehold","une emprise"], ["lobbyists","les influenceurs politiques"], 
         ["to manage","réussir à (m)"], ["to succed to","réussir à (s)"], ["to owe a debt", "devoir une dette"], ["the issue", "le problème"], 
         ["to keep our focus", "pour garder notre concentration"], ["deadliest", "le plus meurtrier"], ["enforced", "appliqué"], 
         ["widespread", "répandu"], ["widely", "largement"], ["a threat", "une menace"], ["aware", "au courant"], ["heavy", "lourd"], 
@@ -258,6 +258,7 @@ function getValue()
 		eval(liste).splice(motEtud, 1);
 		
 		if (eval(liste).length == 0){
+			document.body.style.background = 'grey';
 			document.getElementById("faux").innerHTML = "";
 			document.getElementById("null").innerHTML = "";
 			document.getElementById("mot").innerHTML = "Fin";
@@ -345,7 +346,7 @@ function IncrementationChrono() {
 					}
 				}
 			else if (minutes >= minutesDebut && secondes <= secondesDebut) {
-				if (secondes - secondesDebut < 10){
+				if ((secondes - secondesDebut + 60) < 10){
 					document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut) - 1}:0${(secondes - secondesDebut) + 60}`;
 					}
 				else {
@@ -353,7 +354,7 @@ function IncrementationChrono() {
 					}
 				}
 			else {
-				if (secondes - secondesDebut < 10){
+				if ((secondes - secondesDebut + 60) < 10){
 					document.getElementById("chronometre").innerHTML = `${(minutes - minutesDebut) + 60}:0${(secondes - secondesDebut) + 60}`;
 					}
 				else {
