@@ -194,7 +194,7 @@ let GunsInAmerica = [["a weapon","une arme"], ["a murder","un meurtre"], ["a law
         ["a gun show sales","une foire aux armes"], ["a stranglehold","une emprise"], ["Lobbyists","les influenceurs politiques"], 
         ["to manage","réussir à (m)"], ["to succed to","réussir à (s)"], ["to owe a debt", "devoir une dette"], ["the issue", "le problème"], 
         ["to keep our focus", "pour garder notre concentration"], ["deadliest", "le plus meurtrier"], ["enforced", "appliqué"], 
-        ["widespred", "répandu"], ["widely", "largement"], ["a threat", "une menace"], ["aware", "au courant"], ["heavy", "lourd"], 
+        ["widespread", "répandu"], ["widely", "largement"], ["a threat", "une menace"], ["aware", "au courant"], ["heavy", "lourd"], 
         ["National Rifle Association", "L'association nationale des détenteurs d'armes à feu"], ["deadly", "mortel"], 
         ["to be running for", "être dans la course pour"]];
 //LinkWords
