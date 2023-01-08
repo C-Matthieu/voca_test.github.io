@@ -89,6 +89,24 @@ let laPintura = [["una novela", "une nouvelle"], ["la conversación", "la conver
     ["una herida", "une blessure"], ["regresar", "revenir"], ["encargar", "commander"], ["volver", "rentrer"], 
     ["gobierno", "gouvernement"]];
 
+let losConectores = [["primero","d'abord, premièrement"], ["para empezar","pour commencer"], 
+    ["para comenzar","pour commencer (autre que 'para empezar')"], ["en primer lugar","en premier lieu"], 
+    ["al principio","au début"], ["segundo","deuxième"], ["en segundo lugar","en second lieu"], 
+    ["tercero","troisièmement"], ["en tercer lugar","en troisième lieu"], ["después","après"], 
+    ["luego","ensuite"], ["además","de plus"], ["por fin","enfin"], ["al final","à la fin"], 
+    ["para terminar","pour terminer"], ["para acabar","pour finir"], ["para concluir","pour conclure"], 
+    ["en conclusión","en conclusión"], ["entonces","donc, alors"], ["así que","donc, alors (autre que 'entonces')"], 
+    ["por lo tanto","par conséquent"], ["porque","parce que"], ["en efecto","en effet"], ["por eso","c'est pourquoi"], 
+    ["por","à cause de (préposition introduisant une cause)"], ["así","ainsi, comme ça"], ["en realidad","en réalité, en fait"], 
+    ["al contrario","au contraire"], ["de hecho","en fait (autre que 'en realidad')"], 
+    ["por lo contrario","au contraire (autre que 'al contrario')"], ["mientras que","alors que (opposition)"], 
+    ["por un lado","d'un côté"], ["por otro lado","d'un autre côté"], ["sin embargo","cependant"], 
+    ["aunque","bien que, même si"], ["y","et"], ["e","et (quand devant un mot qui commence par le son 'i')"], ["o","ou"], 
+    ["u","ou (quand devant un mot qui commence par le son 'o')"], ["pero","mais"], 
+    ["este libro es largo pero interesante","ce livre est long mais intéressant"], 
+    ["no habla español pero lo entiende","il ne parle pas espagnol mais il le comprend"], 
+    ["sino","mais (après une négation, pour OPPOSER)"], ["este libro no es largo sino corto","ce livre n'est pas long mais court"]];
+
 let toutes = // ciudadanio_y_mundos_virtuales
 [["ciudadanía", "citoyenneté"] , ["los derechos", "les droits"],
     ["un ciudadano", "un citoyen"], ["ejercer", "exercer"], ["comprometerse", "s'engager"],
