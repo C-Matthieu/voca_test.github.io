@@ -85,7 +85,7 @@ let laPintura = [["una novela", "une nouvelle"], ["la conversación", "la conver
     ["es decir", "c'est à dire"], ["artístico", "artistique"], ["irónico", "ironique"],
     ["a lo mejor", "peut-être (a)"], ["o sea", "c'est à dire(2eme façon)"], ["el sufrimiento", "la souffrance"],
     ["el dolor", "la douleur"], ["una bombilla", "une ampoule"], ["conseguir", "réussir"],
-    ["enemigo", "ennemi"], ["quizás", "peut-être (q)"], ["tal vez", "peut-être (t)"], ["acaso", "peut-être (a)"]
+    ["enemigo", "ennemi"], ["quizás", "peut-être (q)"], ["tal vez", "peut-être (t)"], ["acaso", "peut-être (a)"],
     ["una herida", "une blessure"], ["regresar", "revenir"], ["encargar", "commander"], ["volver", "rentrer"], 
     ["gobierno", "gouvernement"]];
 
