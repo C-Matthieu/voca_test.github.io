@@ -20,6 +20,7 @@ function verifie(){
 	else{
 		document.getElementById("Identifiant").value = "";
 		document.getElementById("psw").value = "";
+		document.getElementById('Identifiant').focus();		
 	}
 
 }
