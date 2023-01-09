@@ -3,10 +3,17 @@ const heures = date.getHours();
 const minutes = date.getMinutes();
 let id;
 let psw;
+document.getElementById('Identifiant').focus();
 
 function verifie(){
 	id = document.getElementById("Identifiant").value;
 	psw = document.getElementById("psw").value;
+	if (id == ''){
+		document.getElementById('Identifiant').focus();
+	}
+	if (psw == ''){
+		document.getElementById('psw').focus();
+	}
 	if (id == heures%10 && psw == minutes%10) {
 		document.location.href = "1ChoixLangue.html"
 	}
