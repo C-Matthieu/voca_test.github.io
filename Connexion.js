@@ -16,3 +16,10 @@ function verifie(){
 	}
 
 }
+
+// permet de valider avec la touche entrer
+document.addEventListener('keydown', function(event) {
+	if (event.code == "Enter") {
+		verifie();
+  }
+});
