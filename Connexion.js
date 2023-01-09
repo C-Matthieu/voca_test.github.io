@@ -11,10 +11,10 @@ function verifie(){
 	if (id == ''){
 		document.getElementById('Identifiant').focus();
 	}
-	if (psw == ''){
+	else if (psw == ''){
 		document.getElementById('psw').focus();
 	}
-	if (id == heures%10 && psw == minutes%10) {
+	else if (id == heures%10 && psw == minutes%10) {
 		document.location.href = "1ChoixLangue.html"
 	}
 	else{
