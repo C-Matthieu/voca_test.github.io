@@ -240,6 +240,7 @@ function aleatoire()
 	}
 	else if (eval(liste).length == 0) {
 		motEtud = 0;
+		return motEtud;
 	}
 	
 }
