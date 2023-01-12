@@ -238,7 +238,7 @@ function aleatoire()
 			return motEtud;
 			}
 	}
-	else if (eval(liste).lenght == 0) {
+	else if (eval(liste).length == 0) {
 		motEtud = eval(liste)[0]
 	}
 	
