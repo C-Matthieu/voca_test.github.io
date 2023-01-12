@@ -239,7 +239,7 @@ function aleatoire()
 			}
 	}
 	else if (eval(liste).length == 0) {
-		motEtud = eval(liste)[0]
+		motEtud = 0;
 	}
 	
 }
