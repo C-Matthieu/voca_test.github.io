@@ -228,14 +228,20 @@ document.addEventListener('keydown', function(event) {
 // permet de prendre un élement aléatoirement dans la liste
 function aleatoire()
 {
-	let a = Math.floor(Math.random() * eval(liste).length);
-	if (a == motEtud){
-		aleatoire()
-		}
-	else {
-		motEtud = a;
-		return motEtud;
-		}
+	if (eval(liste).lenght > 0){
+		let a = Math.floor(Math.random() * eval(liste).length);
+		if (a == motEtud){
+			aleatoire()
+			}
+		else {
+			motEtud = a;
+			return motEtud;
+			}
+	}
+	elif (eval(liste).lenght == 0) {
+		motEtud = eval(liste)[0]
+	}
+	
 }
 // permet de recuperer la valeur et d'agir en conséquence
 function getValue()
