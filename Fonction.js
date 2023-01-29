@@ -20,7 +20,17 @@ for (let i = 1; i<a.length; i++){
 }
 let termine = false;
 let fautes = 0;
-let ciudadano = [["ciudadanía", "citoyenneté"] , ["bajar", "télécharger"], 
+let ciudadano = [["ciudadanía", "citoyenneté"] , ["los derechos", "les droits"],
+["un ciudadano", "un citoyen"], ["ejercer", "exercer"], ["comprometerse", "s'engager"],
+["las redes sociales", "les réseaux sociaux"], ["favorecer", "favoriser"],
+["peligrar", "mettre en danger"], ["los bulos/las falsas noticias", "les fausses informations"],
+["la educación a los medios de communicación", "l'éducation au média"], ["los pagos virtuales", "les paiements virtuels"],
+["los datos personales", "les données personnelles"], ["la inteligencia artificial", "l'intelligence artificielle"],
+["el ciberacoso", "le cyber-harcèlement"], ["la usurpación de identidad", "l'usurpation d'identité (u)"],
+["el robo de identidad", "l'usurpation d'identité (r)"], ["los foros", "les forums"], ["un denunciante", "un lanceur d'alerte"],
+["soler", "avoir l'habitude"], ["el móvil", "le téléphone portable"],["hacer llamadas", "passer des appels"], 
+["cualquier", "n'importe"], ["estar acostumbrado a", "être habitué à"], ["ligar", "draguer"], ["intercambiar", "échanger"],
+["buscar informaciones", "chercher des informations"], ["riesgos/peligros", "danger"],  ["bajar", "télécharger"], 
     ["subir", "mettre en ligne"], ["una herramienta", "un outil"]];
 
 let todo = [["llegar", "arriver"], ["una solicitud de amistad", "un demande d'amis"],
