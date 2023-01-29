@@ -7,30 +7,30 @@ let virgule = false;
 let langue = "";
 let liste = "";
 for (let i = 1; i<a.length; i++){
-	if (a[i] != ',' && virgule == false){
-		langue += a[i];
-	}
-	else if (virgule == true){
-		liste += a[i];
-	}
-	else {
-		virgule = true;
-	}
+    if (a[i] != ',' && virgule == false){
+        langue += a[i];
+    }
+    else if (virgule == true){
+        liste += a[i];
+    }
+    else {
+        virgule = true;
+    }
 
 }
 let termine = false;
 let fautes = 0;
 let ciudadano = [["ciudadanía", "citoyenneté"] , ["los derechos", "les droits"],
-["un ciudadano", "un citoyen"], ["ejercer", "exercer"], ["comprometerse", "s'engager"],
-["las redes sociales", "les réseaux sociaux"], ["favorecer", "favoriser"],
-["peligrar", "mettre en danger"], ["los bulos/las falsas noticias", "les fausses informations"],
-["la educación a los medios de communicación", "l'éducation au média"], ["los pagos virtuales", "les paiements virtuels"],
-["los datos personales", "les données personnelles"], ["la inteligencia artificial", "l'intelligence artificielle"],
-["el ciberacoso", "le cyber-harcèlement"], ["la usurpación de identidad", "l'usurpation d'identité (u)"],
-["el robo de identidad", "l'usurpation d'identité (r)"], ["los foros", "les forums"], ["un denunciante", "un lanceur d'alerte"],
-["soler", "avoir l'habitude"], ["el móvil", "le téléphone portable"],["hacer llamadas", "passer des appels"], 
-["cualquier", "n'importe"], ["estar acostumbrado a", "être habitué à"], ["ligar", "draguer"], ["intercambiar", "échanger"],
-["buscar informaciones", "chercher des informations"], ["riesgos/peligros", "danger"],  ["bajar", "télécharger"], 
+    ["un ciudadano", "un citoyen"], ["ejercer", "exercer"], ["comprometerse", "s'engager"],
+    ["las redes sociales", "les réseaux sociaux"], ["favorecer", "favoriser"],
+    ["peligrar", "mettre en danger"], ["los bulos/las falsas noticias", "les fausses informations"],
+    ["la educación a los medios de communicación", "l'éducation au média"], ["los pagos virtuales", "les paiements virtuels"],
+    ["los datos personales", "les données personnelles"], ["la inteligencia artificial", "l'intelligence artificielle"],
+    ["el ciberacoso", "le cyber-harcèlement"], ["la usurpación de identidad", "l'usurpation d'identité (u)"],
+    ["el robo de identidad", "l'usurpation d'identité (r)"], ["los foros", "les forums"], ["un denunciante", "un lanceur d'alerte"],
+    ["soler", "avoir l'habitude"], ["el móvil", "le téléphone portable"],["hacer llamadas", "passer des appels"], 
+    ["cualquier", "n'importe"], ["estar acostumbrado a", "être habitué à"], ["ligar", "draguer"], ["intercambiar", "échanger"],
+    ["buscar informaciones", "chercher des informations"], ["riesgos/peligros", "danger"],  ["bajar", "télécharger"], 
     ["subir", "mettre en ligne"], ["una herramienta", "un outil"]];
 
 let todo = [["llegar", "arriver"], ["una solicitud de amistad", "un demande d'amis"],
@@ -218,122 +218,122 @@ document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
 
 // permet de valider avec la touche entrer
-if (termine == false){
 document.addEventListener('keydown', function(event) {
-	if (event.code == "Enter") {
-		getValue();
+    if (event.code == "Enter" && termine == false) {
+        getValue();
   }
-});}
+});
+
 
 
 
 // permet de prendre un élement aléatoirement dans la liste
 function aleatoire()
 {
-	if (eval(liste).length > 0){
-		let index = Math.floor(Math.random() * eval(liste).length);
+    if (eval(liste).length > 0){
+        let index = Math.floor(Math.random() * eval(liste).length);
         console.log(index)
-		if (index == motEtud && eval(liste).length > 1){
-			aleatoire()
-			}
-		else {
-			motEtud = index;
-			return motEtud;
-			}
-	}
-	else if (eval(liste).length == 0) {
-		motEtud = 0;
-		return motEtud;
-	}
-	
+        if (index == motEtud && eval(liste).length > 1){
+            aleatoire()
+            }
+        else {
+            motEtud = index;
+            return motEtud;
+            }
+    }
+    else if (eval(liste).length == 0) {
+        motEtud = 0;
+        return motEtud;
+    }
+    
 }
 // permet de recuperer la valeur et d'agir en conséquence
 function getValue()
 {
     if (termine == false){
-    	IncrementationChrono();
-    	let reponse = document.getElementById("entree").value;
-    	document.getElementById('entree').value = "";
-    	if (reponse.length == 0){
-    		document.getElementById("faux").innerHTML = "";
-    		document.getElementById("juste").innerHTML = "";
-    		document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
-    		}
-    	else if (reponse.toUpperCase() == eval(liste)[motEtud][0].toUpperCase()){
-    		document.body.style.background = 'green';
-    		document.getElementById("faux").innerHTML = "";
-    		document.getElementById("null").innerHTML = "";
-    		document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${eval(liste).length - 1} mots à apprendre`;
-    		eval(liste).splice(motEtud, 1);
-    		
-    		if (eval(liste).length == 0){
+        IncrementationChrono();
+        let reponse = document.getElementById("entree").value;
+        document.getElementById('entree').value = "";
+        if (reponse.length == 0){
+            document.getElementById("faux").innerHTML = "";
+            document.getElementById("juste").innerHTML = "";
+            document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
+            }
+        else if (reponse.toUpperCase() == eval(liste)[motEtud][0].toUpperCase()){
+            document.body.style.background = 'green';
+            document.getElementById("faux").innerHTML = "";
+            document.getElementById("null").innerHTML = "";
+            document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${eval(liste).length - 1} mots à apprendre`;
+            eval(liste).splice(motEtud, 1);
+            
+            if (eval(liste).length == 0){
                 termine = true;
                 IncrementationChrono();
-                document.getElementById("valider").value = "Recommencer";
-    			document.body.style.background = 'grey';
-    			document.getElementById("faux").innerHTML = "";
-    			document.getElementById("null").innerHTML = "";
-    			document.getElementById("mot").innerHTML = "Fin";
-    			document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs en ${fin}`;
-    			}
-    		else{
-    			setTimeout(afficher, 1000);
-    			}
-    		}
-    	else {
-    		document.body.style.background = '#DC143C';
-    		document.getElementById("juste").innerHTML = "";
-    		document.getElementById("null").innerHTML = "";
-    		document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${eval(liste).length} mots à apprendre`;
-    		fautes += 1;
-    		setTimeout(afficher, 1000);
-    		}
+                document.getElementById("bouton").innerHTML = "Recommencer";
+                document.body.style.background = 'grey';
+                document.getElementById("faux").innerHTML = "";
+                document.getElementById("null").innerHTML = "";
+                document.getElementById("mot").innerHTML = "Fin";
+                document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs en ${fin}`;
+                }
+            else{
+                setTimeout(afficher, 1000);
+                }
+            }
+        else {
+            document.body.style.background = '#DC143C';
+            document.getElementById("juste").innerHTML = "";
+            document.getElementById("null").innerHTML = "";
+            document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${eval(liste).length} mots à apprendre`;
+            fautes += 1;
+            setTimeout(afficher, 1000);
+            }
         }
     else if (termine == true){
-        document.location.href = `3LeTest.html?${a}`
+        document.location.href = `3LeTest.html${a}`
     }
-	}
+    }
 
  // gère l'affichage des mots
 function afficher()
 {
-	aleatoire()
-	let motVocab = String(eval(liste)[motEtud][1]);
-	document.getElementById('mot').innerHTML = motVocab;
-	document.getElementById('entree').focus();
-	document.body.style.background = 'grey';
+    aleatoire()
+    let motVocab = String(eval(liste)[motEtud][1]);
+    document.getElementById('mot').innerHTML = motVocab;
+    document.getElementById('entree').focus();
+    document.body.style.background = 'grey';
 
 }
 
 // gère les accents
 function á(){
-	let reponse = document.getElementById("entree").value;
-	document.getElementById('entree').value = reponse + "á";
-	document.getElementById('entree').focus();
+    let reponse = document.getElementById("entree").value;
+    document.getElementById('entree').value = reponse + "á";
+    document.getElementById('entree').focus();
 }
 
 function ú(){
-	let reponse = document.getElementById("entree").value;
-	document.getElementById('entree').value = reponse + "ú";
-	document.getElementById('entree').focus();
+    let reponse = document.getElementById("entree").value;
+    document.getElementById('entree').value = reponse + "ú";
+    document.getElementById('entree').focus();
 }
-		
+        
 function í(){
-	let reponse = document.getElementById("entree").value;
-	document.getElementById('entree').value = reponse + "í";
-	document.getElementById('entree').focus();
+    let reponse = document.getElementById("entree").value;
+    document.getElementById('entree').value = reponse + "í";
+    document.getElementById('entree').focus();
 }
 
 function ñ(){
-	let reponse = document.getElementById("entree").value;
-	document.getElementById('entree').value = reponse + "ñ";
-	document.getElementById('entree').focus();
+    let reponse = document.getElementById("entree").value;
+    document.getElementById('entree').value = reponse + "ñ";
+    document.getElementById('entree').focus();
 }
 
 function ó(){
-	let reponse = document.getElementById("entree").value;
-	document.getElementById('entree').value = reponse + "ó";
-	document.getElementById('entree').focus();
+    let reponse = document.getElementById("entree").value;
+    document.getElementById('entree').value = reponse + "ó";
+    document.getElementById('entree').focus();
 }
 
 
