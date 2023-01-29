@@ -289,7 +289,7 @@ function getValue()
     		setTimeout(afficher, 1000);
     		}
         }
-    if (termine == true){
+    else if (termine == true){
         document.location.href = `3LeTest.html?${a}`
     }
 	}
