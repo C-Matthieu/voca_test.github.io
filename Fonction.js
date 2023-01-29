@@ -218,11 +218,12 @@ document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
 
 // permet de valider avec la touche entrer
+if (termine == false){
 document.addEventListener('keydown', function(event) {
 	if (event.code == "Enter") {
 		getValue();
   }
-});
+});}
 
 
 
@@ -268,7 +269,7 @@ function getValue()
     		if (eval(liste).length == 0){
                 termine = true;
                 IncrementationChrono();
-                document.getElementById("valider").disabled = true;
+                document.getElementById("valider").value = "Recommencer";
     			document.body.style.background = 'grey';
     			document.getElementById("faux").innerHTML = "";
     			document.getElementById("null").innerHTML = "";
@@ -288,6 +289,9 @@ function getValue()
     		setTimeout(afficher, 1000);
     		}
         }
+    if (termine == true){
+        document.location.href = `3LeTest.html?${a}`
+    }
 	}
 
  // gère l'affichage des mots
