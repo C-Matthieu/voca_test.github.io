@@ -18,18 +18,9 @@ for (let i = 1; i<a.length; i++){
 	}
 
 }
+let termine = false;
 let fautes = 0;
-let ciudadano = [["ciudadanía", "citoyenneté"] , ["los derechos", "les droits"],
-    ["un ciudadano", "un citoyen"], ["ejercer", "exercer"], ["comprometerse", "s'engager"],
-    ["las redes sociales", "les réseaux sociaux"], ["favorecer", "favoriser"],
-    ["peligrar", "mettre en danger"], ["los bulos/las falsas noticias", "les fausses informations"],
-    ["educación a los medios de communicación", "l'éducation au média"], ["los pagos virtuales", "les paiements virtuels"],
-    ["los datos personales", "les données personnelles"], ["la inteligencia artificial", "l'intelligence artificielle"],
-    ["el ciberacoso", "le cyber-harcèlement"], ["la usurpación de identidad", "l'usurpation d'identité (u)"],
-    ["el robo de identidad", "l'usurpation d'identité (r)"], ["los foros", "les forums"], ["un denunciante", "un lanceur d'alerte"],
-    ["soler", "avoir l'habitude"], ["el móvil", "le téléphone portable"],["hacer llamadas", "passer des appels"], 
-    ["cualquier", "n'importe"], ["estar acostumbrado a", "être habitué à"], ["ligar", "draguer"], ["intercambiar", "échanger"],
-    ["buscar informaciones", "chercher des informations"], ["riesgos/peligros", "danger"], ["bajar", "télécharger"], 
+let ciudadano = [["ciudadanía", "citoyenneté"] , ["bajar", "télécharger"], 
     ["subir", "mettre en ligne"], ["una herramienta", "un outil"]];
 
 let todo = [["llegar", "arriver"], ["una solicitud de amistad", "un demande d'amis"],
@@ -229,12 +220,13 @@ document.addEventListener('keydown', function(event) {
 function aleatoire()
 {
 	if (eval(liste).length > 0){
-		let a = Math.floor(Math.random() * eval(liste).length);
-		if (a == motEtud){
+		let index = Math.floor(Math.random() * eval(liste).length);
+        console.log(index)
+		if (index == motEtud && eval(liste).length > 1){
 			aleatoire()
 			}
 		else {
-			motEtud = a;
+			motEtud = index;
 			return motEtud;
 			}
 	}
@@ -247,40 +239,45 @@ function aleatoire()
 // permet de recuperer la valeur et d'agir en conséquence
 function getValue()
 {
-	IncrementationChrono();
-	let reponse = document.getElementById("entree").value;
-	document.getElementById('entree').value = "";
-	if (reponse.length == 0){
-		document.getElementById("faux").innerHTML = "";
-		document.getElementById("juste").innerHTML = "";
-		document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
-		}
-	else if (reponse.toUpperCase() == eval(liste)[motEtud][0].toUpperCase()){
-		document.body.style.background = 'green';
-		document.getElementById("faux").innerHTML = "";
-		document.getElementById("null").innerHTML = "";
-		document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${eval(liste).length - 1} mots à apprendre`;
-		eval(liste).splice(motEtud, 1);
-		
-		if (eval(liste).length == 0){
-			document.body.style.background = 'grey';
-			document.getElementById("faux").innerHTML = "";
-			document.getElementById("null").innerHTML = "";
-			document.getElementById("mot").innerHTML = "Fin";
-			document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs en ${fin}`;
-			}
-		else{
-			setTimeout(afficher, 1000);
-			}
-		}
-	else {
-		document.body.style.background = '#DC143C';
-		document.getElementById("juste").innerHTML = "";
-		document.getElementById("null").innerHTML = "";
-		document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${eval(liste).length} mots à apprendre`;
-		fautes += 1;
-		setTimeout(afficher, 1000);
-		}
+    if (termine == false){
+    	IncrementationChrono();
+    	let reponse = document.getElementById("entree").value;
+    	document.getElementById('entree').value = "";
+    	if (reponse.length == 0){
+    		document.getElementById("faux").innerHTML = "";
+    		document.getElementById("juste").innerHTML = "";
+    		document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
+    		}
+    	else if (reponse.toUpperCase() == eval(liste)[motEtud][0].toUpperCase()){
+    		document.body.style.background = 'green';
+    		document.getElementById("faux").innerHTML = "";
+    		document.getElementById("null").innerHTML = "";
+    		document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${eval(liste).length - 1} mots à apprendre`;
+    		eval(liste).splice(motEtud, 1);
+    		
+    		if (eval(liste).length == 0){
+                termine = true;
+                IncrementationChrono();
+                document.getElementById("valider").disabled = true;
+    			document.body.style.background = 'grey';
+    			document.getElementById("faux").innerHTML = "";
+    			document.getElementById("null").innerHTML = "";
+    			document.getElementById("mot").innerHTML = "Fin";
+    			document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs en ${fin}`;
+    			}
+    		else{
+    			setTimeout(afficher, 1000);
+    			}
+    		}
+    	else {
+    		document.body.style.background = '#DC143C';
+    		document.getElementById("juste").innerHTML = "";
+    		document.getElementById("null").innerHTML = "";
+    		document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${eval(liste).length} mots à apprendre`;
+    		fautes += 1;
+    		setTimeout(afficher, 1000);
+    		}
+        }
 	}
 
  // gère l'affichage des mots
@@ -327,54 +324,25 @@ function ó(){
 
 
 const debut = new Date();
-const heuresDebut = debut.getHours();
-const minutesDebut = debut.getMinutes();
-const secondesDebut = debut.getSeconds();
-
+const depart = debut.getHours() * 3600 + debut.getMinutes() * 60 + debut.getSeconds();
 let fin;
-let minutesIntermediaire;
-let secondesIntermediaire;
-
 
 function IncrementationChrono() {
-  	const intermediaire = new Date();
- 	const heures = intermediaire.getHours();
-  	const minutes = intermediaire.getMinutes();
- 	const secondes = intermediaire.getSeconds();
-  	minutesIntermediaire = minutes - minutesDebut;
-  	secondesIntermediaire = secondes - secondesDebut;
-  
-  	if (eval(liste).length > 1){
-    		if (minutes >= minutesDebut && secondes>= secondesDebut) {
-      			if (secondes - secondesDebut < 10){
-        			document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}: 0${secondesIntermediaire}`;
-				}
-			else {
-				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire}:${secondesIntermediaire}`;
-				}
-			}
-		else if (minutes >= minutesDebut && secondes <= secondesDebut) {
-			if ((secondes - secondesDebut + 60) < 10){
-				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire - 1}:0${secondesIntermediaire + 60}`;
-				}
-			else {
-				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire - 1}:${secondesIntermediaire + 60}`;
-				}
-			}
-		else {
-			if ((secondes - secondesDebut + 60) < 10){
-				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire + 60}:0${secondesIntermediaire + 60}`;
-				}
-			else {
-				document.getElementById("chronometre").innerHTML = `${minutesIntermediaire + 60}:${secondesIntermediaire + 60}`;
-				}
-			}
-		}
-	else if(fin==undefined){
-		fin = `${minutesIntermediaire}:${secondesIntermediaire}`;
-		document.getElementById("chronometre").innerHTML = fin;
-		}
-	else {
-		return fin;
-		}
-	}
+    if (fin == undefined){
+        const intermediaire = new Date();
+        const tempsIntermediaire = intermediaire.getHours() * 3600 + intermediaire.getMinutes() * 60 + intermediaire.getSeconds();
+        let secondesEtude = tempsIntermediaire - depart;
+        let minutes = 0;
+        while (secondesEtude >= 60) {
+            minutes += 1;
+            secondesEtude -= 60;
+        }
+        if (secondesEtude < 10){
+            secondesEtude = `0${secondesEtude}`;
+        }
+        if (termine == true){
+            fin = `${minutes}:${secondesEtude}`;
+        }
+        document.getElementById("chronometre").innerHTML = `${minutes}:${secondesEtude}`;
+    }
+}
