@@ -360,7 +360,6 @@ function IncrementationChrono() {
         document.getElementById("chronometre").innerHTML = `${minutes}:${secondesEtude}`;
     }
 }
-
 function retour(){
     document.location.href = `2${langue.replace(`${langue[0]}`,`${langue[0].toUpperCase()}`)}.html`;
 }
