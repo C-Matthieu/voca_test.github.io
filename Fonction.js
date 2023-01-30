@@ -362,6 +362,8 @@ function IncrementationChrono() {
 }
 
 function retour(){
-    langue[0] = langue[0].toUpperCase();
-    document.location.href = `2${langue}.html`
+    premiereLettre = langue[0].toUpperCase();
+    langue.splice(0,1);
+    langue.unshift(premiereLettre);
+    document.location.href = `2${langue}.html`;
 }
