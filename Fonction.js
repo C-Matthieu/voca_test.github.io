@@ -211,7 +211,12 @@ let LinkWords = [["as","comme"],["because","parce que"],["for","car"],["since","
     ["moreover","de plus (m)"],["futhermore","en outre"],["what's more","quoi de plus"],["in a addition to","en plus de"],
     ["besides","de plus (b)"],["all the same","tout de même"],["similary","similairement"],["what if","et si"],["suppose","supposer"]];
 
-
+// trigo
+let vr = [["cos 0","1"],["cos pi/6","sqrt3/2"],["cos pi/4","sqrt2/2"],["cos pi/3","1/2"],["cos pi/2","0"],["sin 0","0"],
+["sin pi/6","1/2"],["sin pi/4","sqrt2/2"],["sin pi/3","sqrt3/2"],["sin pi/2","1"],["tan 0","0"],["tan pi/6","1/sqrt3"],
+["tan pi/4","1"],["tan pi/3","sqrt3"],["tan pi/2","non définie"],["cos 2pi/3","-1/2"],["cos 3pi/4","-sqrt2/2"],
+["cos 5pi/6","-sqrt3/2"],["cos pi","-1"],["sin 2pi/3","sqrt3/2"],["sin 3pi/4","sqrt2/2"],["sin 5pi/6","1/2"],
+["sin pi","1"],["tan 2pi/3","-sqrt3"],["tan 3pi/4","-1"],["tan 5pi/6","-1/sqrt3"],["tan pi","0"]]
 // affiche le mot + la langue
 let motVocab = String(eval(liste)[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
