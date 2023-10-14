@@ -154,7 +154,7 @@ function getValue()
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
             }
-        else if (join(reponse.toUpperCase()) == join(eval(liste)[motEtud][0].toUpperCase())){
+        else if (reponse.toUpperCase().replace(/\s+/g, '') == eval(liste)[motEtud][0].toUpperCase().replace(/\s+/g, '')){
             console.log("je suis dedans");
             document.body.style.background = 'green';
             document.getElementById("faux").innerHTML = "";
