@@ -35,7 +35,7 @@ let chap59 = [["to be at work", "être au travail"], ["the workplace", "le lieu 
 ["a stable job","un emploi stable"], ["job prospects","des perspectives d'emploi"], ["a career track","un plan de carrière"],
 ["job satisfaction","la satisfaction au travail"], ["a fixed-term contract","un CDD"], ["an open-ended contract","un CDI"],
 ["on-the-job training","la formation sur le tas"], ["a civil servant","un fonctionnaire"], ["a senior civil servant","un haut fonctionnaire"],
-["the civil service","la fonction publique"], ["the public sector","le secteur publique"], ["a low-paid jod","un emploi peu rémunéré"],
+["the civil service","la fonction publique"], ["the public sector","le secteur publique"], ["a low-paid job","un emploi peu rémunéré"],
 ["a highly-paid job","un emploi bien rémunéré"], ["a responsible job","un poste à responsabilités"], ["lifetime employment","l'emploi à vie"], 
 ["in a technologically oriented society","où la technologie prime"], ["at least","au moins"], ["be willing to","être disposé"], ["industrialists","industriels"],
 ["a probationary periode","une période d'essai"], ["to hire","embaucher"], ["to fire","débaucher"], ["overwork","surmenage"], 
