@@ -61,7 +61,7 @@ let chap61 = [["a company","une entreprise"], ["a multinational","une (société
 ["to privatize","privatiser"], ["a medium-sized business","une PME"], ["a small business","une petite entreprise"],
 ["to run a company","diriger une company"], ["the chief executive officer","le président directeur général"], 
 ["to be on the payroll","être salarié d'une entreprise"], ["the staff","le personnel"], ["management and unions","la direction et les syndicats"], 
-["a senior executive","un cadre supérieur"], ["a junior executive","un cadre moyen"], ["an employer","le patron"], ["a company director","un cher d'entreprise"], 
+["a senior executive","un cadre supérieur"], ["a junior executive","un cadre moyen"], ["an employer","un patron"], ["a company director","un chef d'entreprise"], 
 ["free enterprise","la libre entreprise"], ["to set up a company","créer une entreprise"], ["crowdfunding","le financement participatif"], 
 ["the business world","le monde des affaires"], ["to make an acquisition","faire une acquisition"], ["a merger","une fusion"], 
 ["to buy out a firm","racheter une entreprise"], ["to gobble up a firm","absorber une entreprise"], ["a takeover bid","une offre publique d'achat"], 
