@@ -69,7 +69,7 @@ let chap61 = [["a company","une entreprise"], ["a multinational","une (société
 ["profit sharing","l'intéressement au résultat"], ["competitiveness","la comptétitivité"], ["bankruptcy","la faillite"], 
 ["to go bankrupt","faire faillite"], ["to be in the red","être en déficit"], ["to bail out a company","renflouer une entreprise"], 
 ["to rescue a company","sauver une entreprise"], ["the restructuring of a company","la restructuration d'une entreprise"], 
-["to downnsize","dégraisser ses effections"], ["red tap","la paperasserie"], ["receivership","redressement judiciaire"], 
+["to downsize","dégraisser ses effections"], ["red tap","la paperasserie"], ["receivership","redressement judiciaire"], 
 ["mania","la folie"], ["to shut up","mettre la clé sous  la porte"]];
 // trigo
 let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","cos pi/3"],["0","cos pi/2"],["0","sin 0"],["1/2","sin pi/6"],
