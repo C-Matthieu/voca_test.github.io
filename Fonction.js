@@ -24,27 +24,27 @@ let fautes = 0;
 // Listes Anglaises__________________________________________________________________________________________________________________________________________________
 //Gun in America
 let chap59 = [["to be at work", "être au travail"], ["the workplace", "le lieu de travail"], ["labour legislation","le Code du travail"],
-["full employment","le plein-emploi"], ["the workfoce","la main-d'oeuvre"], ["to work in shifts","faire les trois huit"], 
+["full employment","le plein-emploi"], ["the workforce","la main-d'oeuvre"], ["to work in shifts","faire les trois huit"], 
 ["a blue-collar worker","un travailleur manuel"], ["an unskilled worker","un ouvrier non qualifié"],
 ["a white-collar worker","un employé de bureau"], ["a temp","un intérimaire"], ["to be self-employed","travailler à son compte"],
 ["working conditions","les conditions de travail"], ["a working day","une journée de travail"], 
 ["the 35-hour working week","la semaine de 35 heures"], ["the reduction in the working week","la réduction du temps de travail"],
-["to work overtime","faire des heures supplémentaires"], ["absenteeism","l'absentéisme"], ["stress-related work","le stress (lié) au travai"],
+["to work overtime","faire des heures supplémentaires"], ["the absenteeism","l'absentéisme"], ["stress-related work","le stress (lié) au travai"],
 ["to take a career break","prendre une année sabbatique"], ["to work part time","travail à mi-temps"], ["a part-time worker","un travailleur à mi-temps"],
 ["the staff turnover","le renouvellement du personnel"], ["job security","la sécurité de l'emploi"], ["job insecurity","la précarité de l'emploi"],
 ["a stable job","un emploi stable"], ["job prospects","des perspectives d'emploi"], ["a career track","un plan de carrière"],
-["job satisfaction","la satisfaction au travail"], ["a fixed-term contract","un CDD"], ["open-ended contract","un CDI"],
+["job satisfaction","la satisfaction au travail"], ["a fixed-term contract","un CDD"], ["an open-ended contract","un CDI"],
 ["on-the-job training","la formation sur le tas"], ["a civil servant","un fonctionnaire"], ["a senior civil servant","un haut fonctionnaire"],
 ["the civil service","la fonction publique"], ["the public sector","le secteur publique"], ["a low-paid jod","un emploi peu rémunéré"],
 ["a highly-paid job","un emploi bien rémunéré"], ["a responsible job","un poste à responsabilités"], ["lifetime employment","l'emploi à vie"], 
-["in a technologically oriented society","où la technologie prime"], ["at least","au moins"], ["willing","disposé"], ["industrialists","industriels"],
+["in a technologically oriented society","où la technologie prime"], ["at least","au moins"], ["be willing to","être disposé"], ["industrialists","industriels"],
 ["a probationary periode","une période d'essai"], ["to hire","embaucher"], ["to fire","débaucher"], ["overwork","surmenage"], 
 ["workaholics","les bourreaux de travail"]]
 let chap60 = [["a growing trend","une tendance croissante"], ["teleworking","le télé travail"], ["remote working","le travail à distance"],
 ["to telework","télétravailler"], ["a teleworker","un télétravailleur"], ["a remote worker","un travailleur à distance"], 
 ["to work from home","travailler depuis chez soi"], ["from a coworking place","depuis un espace de travail partagé"], 
 ["a digital nomad","un nomade numérique"], ["to use digital tools","utiliser les outils numériques"], 
-["new ways of working","kes nouveaux modes de travail"], ["agile working","le travail intelligent"], 
+["new ways of working","les nouveaux modes de travail"], ["agile working","le travail intelligent"], 
 ["well-being at work","le bien-être au travail"], ["an open plan office","un open space"], ["to jobshare","partager un poste avec quelqu'un d'autre"], 
 ["desk sharing","le partage de buraux"], ["not to be assigned a permanent desk","ne pas avoir de bureau attitré"], 
 ["to work in a collective environment","travailler dans un environnement collectif"], ["not to work in a specific place","ne pas travailler dans un endroit spécifique"], 
@@ -135,7 +135,7 @@ function getValue()
             if (eval(liste).length == 0){
                 termine = true;
                 IncrementationChrono();
-                document.getElementById("bouton").innerHTML = "Recommencer";
+                document.getElementById("bouton").innerHTML = 'Recommencer';
                 document.body.style.background = 'grey';
                 document.getElementById("faux").innerHTML = "";
                 document.getElementById("null").innerHTML = "";
