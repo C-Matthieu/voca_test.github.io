@@ -135,7 +135,7 @@ function getValue()
             if (eval(liste).length == 0){
                 termine = true;
                 IncrementationChrono();
-                document.getElementById("bouton").innerHTML = 'Recommencer';
+                document.getElementById("valider").innerHTML = 'Recommencer';
                 document.body.style.background = 'grey';
                 document.getElementById("faux").innerHTML = "";
                 document.getElementById("null").innerHTML = "";
