@@ -72,46 +72,118 @@ let chap61 = [["a company","une entreprise"], ["a multinational","une (société
 ["to downsize","dégraisser ses effections"], ["red tap","la paperasserie"], ["receivership","redressement judiciaire"], 
 ["mania","la folie"], ["to shut up","mettre la clé sous  la porte"]];
 
-let chap62 = [["a wage earner", "un salarié"], ["his pay packet","sa paie"], ["
-his wages / his salary	son salaire
-["an hourly wage / a daily wage	un salaire horaire / journalier
-the minimum wage	le salaire minimum, le SMIC
-low wages / high wages	les bas salaires / les salaires élevés
-to earn a good wage / good wages	avoir un bon salaire
-to be / to get paid £400 a week	toucher 400 livres par semaine
-to be well paid / to be badly paid	être bien / être mal payé
-to be promoted / to get promotion	être promu
-his annual income	son revenu annuel
-income tax	l’impôt sur le revenu
-to be on a high income	avoir des revenus élevés
-low-income families	des familles à revenus modestes
-take-home pay	le salaire net
-net income	le revenu net (après impôts)
-gross income	le revenu brut
-fees	des honoraires
-a source of income / of livelihood	une source de revenu
-a wage policy	une politique des salaires
-a wage claim	une revendication salariale
-a wage rise / a pay rise / (US) a pay hike	une augmentation de salaire
-wages increased by / rose by…	les salaires ont augmenté de…
-they increased / raised wages by…	ils ont augmenté les salaires de…
-a wage freeze	un blocage des salaires
-to freeze wages	geler les salaires
-pay negotiations	des négociations salariales
-a wage agreement	un accord salarial
-to settle / to resolve a pay dispute	résoudre un conflit salarial
-a social conflict / an industrial	un conflit social
-a trade union / a workers’ union	un syndicat
-a union member	un syndiqué
-to join a union	se syndiquer
-a union / staff representative	un délégué syndical / du personnel
-a work stoppage / a strike	un arrêt de travail / une grève
-a protest movement	un mouvement de protestation
-to be / to go on strike	être / se mettre en grève
-a demonstration / a demo	une manifestation / une manif
-to demonstrate / a demonstrator	manifester / un manifestant]]
-let chap63 = [[]]
-let chap64 = [[]]
+let chap62 = [["a wage earner", "un salarié"], ["his pay packet","sa paie"], 
+["his wages / his salary ", "	son salaire"],
+["an hourly wage / a daily wage", "	un salaire horaire / journalier"],
+["the minimum wage	", "le salaire minimum, le SMIC"],
+["low wages / high wages", "	les bas salaires / les salaires élevés"],
+["to earn a good wage / good wages", "	avoir un bon salaire"],
+["to be / to get paid £400 a week", "	toucher 400 livres par semaine"],
+["to be well paid / to be badly paid", "	être bien / être mal payé"],
+["to be promoted / to get promotion", "	être promu"],
+["his annual income", "	son revenu annuel"],
+["income tax", "	l’impôt sur le revenu"],
+["to be on a high income", "	avoir des revenus élevés"],
+["low-income families", "	des familles à revenus modestes"],
+["take-home pay", "	le salaire net"],
+["net income", "	le revenu net (après impôts)"],
+["gross income", "	le revenu brut"],
+["fees	", "des honoraires"],
+["a source of income / of livelihood", "	une source de revenu"],
+["a wage policy", "	une politique des salaires"],
+["a wage claim", "	une revendication salariale"],
+["a wage rise / a pay rise / (US) a pay hike", "	une augmentation de salaire"],
+["wages increased by / rose by…", "	les salaires ont augmenté de…"],
+["they increased / raised wages by…", "	ils ont augmenté les salaires de…"],
+["a wage freeze", "	un blocage des salaires"],
+["to freeze wages", "	geler les salaires"],
+["pay negotiations", "	des négociations salariales"],
+["a wage agreement", "	un accord salarial"],
+["to settle / to resolve a pay dispute", "	résoudre un conflit salarial"],
+["a social conflict / an industrial", "	un conflit social"],
+["a trade union / a workers’ union", "	un syndicat"],
+["a union member", "	un syndiqué"],
+["to join a union", "	se syndiquer"],
+["a union / staff representative", "	un délégué syndical / du personnel"],
+["a work stoppage / a strike", "	un arrêt de travail / une grève"],
+["a protest movement", "	un mouvement de protestation"],
+["to be / to go on strike", "	être / se mettre en grève"],
+["a demonstration / a demo", "	une manifestation / une manif"],
+["to demonstrate / a demonstrator", "	manifester / un manifestant"]];
+let chap63 = [
+    ["the welfare state / the nanny state", "	l’État providence / l’État nounou"],
+["a safety net", "	un filet de protection (sociale)"],
+["National Insurance", "	la Sécurité sociale (RU)"],
+["the National Health Service / the NHS	la Sécurité sociale", " (au RU : branche assurance maladie)"],
+["the “Sécurité Sociale”", "	la Sécurité sociale (France)"],
+["Social Security", "	la Sécurité sociale (US)"],
+["social security / (US) welfare", "	les prestations sociales"],
+["sb on social security / (US) on welfare", "	qn qui bénéficie de l’aide sociale"],
+["minimum social benefits", "	les minima sociaux (en France)"],
+["income support", "	le RSA (en France)"],
+["Universal Credit", "	l’aide aux personnes à revenu modeste (RU)"],
+["employee benefits / fringe benefits", "	les avantages sociaux"],
+["the minimum old-age pension", "	le minimum vieillesse"],
+["the entitlement to benefit", "	le droit à l’aide sociale"],
+["a claimant / a recipient", "	un ayant droit / un bénéficiaire"],
+["the social services", "	les services d’aide sociale"],
+["social work", "	l’assistance sociale"],
+["a social worker", "	un(e) assistant(e) social(e)"],
+["health care", "	la santé publique"],
+["the public health system", "	le système de santé publique"],
+["universal health coverage", "	la CMU"],
+["universal basic income / UBI", "	le revenu universel"],
+["to be entitled to a health insurance", "	avoir droit à une couverture maladie"],
+["to get free medical care", "	être soigné gratuitement"],
+["sickness benefit", "	les prestations maladie"],
+["to take out a private health insurance", "	prendre une mutuelle"],
+["to take out an insurance", "	s’assurer, prendre une assurance"],
+["an old age insurance", "	une assurance vieillesse"],
+["an unemployment insurance", "	une assurance chômage"],
+["compensation for injuries at work", "	une indemnité d’accident du travail"],
+["child benefit / family allowances", "	les allocations familiales"],
+["means-tested benefits", "	des prestations modulées en fonction des revenus"],
+["a single parent’s allowance", "	une allocation de parent isolé"],
+["housing benefit", "	l’allocation logement, les APL"],
+["Jobseeker’s Allowance (JSA)", "	l’allocation d’aide au retour à l’emploi (l’ARE)"],
+["to be on furlough", "	être en chômage partiel"]];
+let chap64 = [
+    ["to retire", "	partir en retraite"],
+["to be retired	être", " en retraite"],
+["a retired teacher", "	un professeur en retraite"],
+["a retiree / a pensioner / an old age pensioner / an OAP", "	un retraité"],
+["(to approach) retirement age", "	(approcher de) l’âge de la retraite"],
+["to be of pensionable age", "	avoir l’âge de la retraite"],
+["to be pensioned off / put out to grass", "	être mis à la retraite"],
+["early retirement", "	la préretraite, la retraite anticipée"],
+["to take early retirement", "	partir en préretraite"],
+["to be semi-retired", "	être en semi-retraite"],
+["a (retirement) pension", "	une pension, une retraite"],
+["to draw / get / receive one’s pension", "	toucher sa retraite"],
+["to pay money into a pension", "	cotiser pour sa retraite"],
+["to take out a pension", "	souscrire un plan de retraite"],
+["to take out an extra pension", "	prendre une retraite complémentaire"],
+["to qualify for a full pension", "	bénéficier d’une retraite à taux plein"],
+["a pension plan / scheme / system", "	un système de retraite"],
+["a state pension / (US) a public pension", "	une retraite versée par l’État"],
+["the pay-as-you-go pension system", "	la retraite par répartition"],
+["pension funds", "	la retraite par capitalisation, les fonds de pension"],
+["the cost of retirement", "	le coût de la retraite"],
+["the population is ageing", "	la population vieillit"],
+["the ratio of active workers to retirees", "	le ratio cotisants-retraités"],
+["to redress the imbalance", "	rétablir l’équilibre"],
+["to take unpopular measures", "	prendre des mesures impopulaires"],
+["to postpone retirement age", "	reculer l’âge de la retraite"],
+["to increase contributions", "	augmenter les cotisations"],
+["to reduce pensions", "	diminuer les pensions"],
+["to work up to 65", "	travailler jusqu’à 65 ans"],
+["to save for one’s retirement", "	se constituer une épargne-retraite"],
+["a generational contract", "	un contrat intergénérationnel"],
+["generational solidarity", "	la solidarité entre générations"],
+["to finance / to fund the retirement of their elders", "	financer la retraite de leurs aînés"],
+["to ignite an age war", "	déclencher une guerre des générations"],
+["to be a burden on", "	être un fardeau pour"],
+["to cost the nation a fortune", "	coûter une fortune à la nation"]];
 // trigo
 let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","cos pi/3"],["0","cos pi/2"],["0","sin 0"],["1/2","sin pi/6"],
           ["sqrt2/2","sin pi/4"],["sqrt3/2","sin pi/3"],["1","sin pi/2"],["0","tan 0"],["1/sqrt3","tan pi/6"],["1","tan pi/4"],
