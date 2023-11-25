@@ -165,7 +165,7 @@ let chap64 = [
 ["to take early retirement", "	partir en préretraite"],
 ["to be semi-retired", "	être en semi-retraite"],
 ["a (retirement) pension", "	une pension, une retraite"],
-["to get one’s pension", "	toucher sa retraite"],
+["to get one's pension", "	toucher sa retraite"],
 ["to pay money into a pension", "	cotiser pour sa retraite"],
 ["to take out a pension", "	souscrire un plan de retraite"],
 ["to take out an extra pension", "	prendre une retraite complémentaire"],
