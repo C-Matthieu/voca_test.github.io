@@ -190,7 +190,7 @@ let chap64 = [
 ["to ignite an age war", "	déclencher une guerre des générations"],
 ["to be a burden on", "	être un fardeau pour"],
 ["to cost the nation a fortune", "	coûter une fortune à la nation"],
-["to collapse", "s'éffonfrer"]];
+["to collapse", "s'éffondrer"]];
 // trigo
 let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","cos pi/3"],["0","cos pi/2"],["0","sin 0"],["1/2","sin pi/6"],
           ["sqrt2/2","sin pi/4"],["sqrt3/2","sin pi/3"],["1","sin pi/2"],["0","tan 0"],["1/sqrt3","tan pi/6"],["1","tan pi/4"],
