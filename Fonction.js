@@ -148,7 +148,7 @@ let chap63 = [
 ["means-tested benefits", "	des prestations modulées en fonction des revenus"],
 ["a single parent's allowance", "	une allocation de parent isolé"],
 ["housing benefit", "	l’allocation logement, les APL"],
-["Jobseeker's Allowance (JSA)", "	l’allocation d’aide au retour à l’emploi (l’ARE)"],
+["Jobseeker's Allowance", "	l’allocation d’aide au retour à l’emploi (l’ARE)"],
 ["to be on furlough", "	être en chômage partiel"],
 ["from the cradle to the grave", "du berceau au tombeau"],
     ["to pick up the pieces", "se ressaisir"],
