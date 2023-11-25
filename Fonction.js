@@ -80,7 +80,7 @@ let chap62 = [["a wage earner", "un salarié"], ["his wage packet","sa paie"],
 ["to earn a good wage", "	avoir un bon salaire"],
 ["to be paid £400 a week", "	toucher 400 livres par semaine"],
 ["to be well paid / to be badly paid", "	être bien / être mal payé"],
-["to be promoted / to get promotion", "	être promu"],
+["to be promoted", "	être promu"],
 ["his annual income", "	son revenu annuel"],
 ["income tax", "	l’impôt sur le revenu"],
 ["to be on a high income", "	avoir des revenus élevés"],
@@ -189,7 +189,8 @@ let chap64 = [
 ["to fund the retirement of their elders", "	financer la retraite de leurs aînés"],
 ["to ignite an age war", "	déclencher une guerre des générations"],
 ["to be a burden on", "	être un fardeau pour"],
-["to cost the nation a fortune", "	coûter une fortune à la nation"]];
+["to cost the nation a fortune", "	coûter une fortune à la nation"],
+["to collapse", "s'éffonfrer"]];
 // trigo
 let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","cos pi/3"],["0","cos pi/2"],["0","sin 0"],["1/2","sin pi/6"],
           ["sqrt2/2","sin pi/4"],["sqrt3/2","sin pi/3"],["1","sin pi/2"],["0","tan 0"],["1/sqrt3","tan pi/6"],["1","tan pi/4"],
