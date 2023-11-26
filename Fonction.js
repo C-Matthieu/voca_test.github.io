@@ -236,7 +236,7 @@ function aleatoire()
 function getValue()
 {
     if (termine == false){
-        IncrementationChrono();
+        // IncrementationChrono();
         let reponse = document.getElementById("entree").value;
         document.getElementById('entree').value = "";
         if (reponse.length == 0){
@@ -254,7 +254,7 @@ function getValue()
             
             if (eval(liste).length == 0){
                 termine = true;
-                IncrementationChrono();
+                // IncrementationChrono();
                 document.getElementById("valider").innerHTML = 'Recommencer';
                 document.body.style.background = 'grey';
                 document.getElementById("faux").innerHTML = "";
@@ -328,9 +328,7 @@ worker.onmessage = function(event) {
     document.getElementById("chronometre").innerHTML = event.data;
 };
 
-// Pour démarrer le worker, envoyez-lui un message
 worker.postMessage('start');
-
 
 function retour(){
     document.location.href = `2${langue.replace(`${langue[0]}`,`${langue[0].toUpperCase()}`)}.html`;

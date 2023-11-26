@@ -1,8 +1,17 @@
-function IncrementationChrono() {
-    const debut = new Date();
-    const depart = debut.getHours() * 3600 + debut.getMinutes() * 60 + debut.getSeconds();
-    let fin;
+let depart;
+let fin;
 
+self.onmessage = function(event) {
+    if (event.data === 'start') {
+        const debut = new Date();
+        depart = debut.getHours() * 3600 + debut.getMinutes() * 60 + debut.getSeconds();
+        IncrementationChrono();
+    } else if (event.data === 'stop') {
+        fin = true;
+    }
+};
+
+function IncrementationChrono() {
     if (fin == undefined){
         const intermediaire = new Date();
         const tempsIntermediaire = intermediaire.getHours() * 3600 + intermediaire.getMinutes() * 60 + intermediaire.getSeconds();
@@ -15,9 +24,7 @@ function IncrementationChrono() {
         if (secondesEtude < 10){
             secondesEtude = `0${secondesEtude}`;
         }
-        if (termine == true){
-            fin = `${minutes}:${secondesEtude}`;
-        }
-        postMessage(`${minutes}:${secondesEtude}`);
+        self.postMessage(`${minutes}:${secondesEtude}`);
+        setTimeout(IncrementationChrono, 1000);
     }
-}
+};
