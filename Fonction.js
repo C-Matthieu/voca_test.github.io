@@ -328,7 +328,7 @@ monWorker.onmessage = function(e) {
   document.getElementById("chronometre").innerHTML = e.data;
 }
 
-monWorker.postMessage();
+monWorker.postMessage(null);
 
 
 function retour(){
