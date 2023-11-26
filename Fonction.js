@@ -322,30 +322,15 @@ function ó(){
     document.getElementById('entree').focus();
 }
 
+const monWorker = new Worker('worker.js');
 
-const debut = new Date();
-const depart = debut.getHours() * 3600 + debut.getMinutes() * 60 + debut.getSeconds();
-let fin;
-
-function IncrementationChrono() {
-    if (fin == undefined){
-        const intermediaire = new Date();
-        const tempsIntermediaire = intermediaire.getHours() * 3600 + intermediaire.getMinutes() * 60 + intermediaire.getSeconds();
-        let secondesEtude = tempsIntermediaire - depart;
-        let minutes = 0;
-        while (secondesEtude >= 60) {
-            minutes += 1;
-            secondesEtude -= 60;
-        }
-        if (secondesEtude < 10){
-            secondesEtude = `0${secondesEtude}`;
-        }
-        if (termine == true){
-            fin = `${minutes}:${secondesEtude}`;
-        }
-        document.getElementById("chronometre").innerHTML = `${minutes}:${secondesEtude}`;
-    }
+monWorker.onmessage = function(e) {
+  document.getElementById("chronometre").innerHTML = e.data;
 }
+
+monWorker.postMessage();
+
+
 function retour(){
     document.location.href = `2${langue.replace(`${langue[0]}`,`${langue[0].toUpperCase()}`)}.html`;
 }
