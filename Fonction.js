@@ -246,7 +246,7 @@ function getValue()
             }
         else if (reponse.toUpperCase().replace(/\s+/g, '') == eval(liste)[motEtud][0].toUpperCase().replace(/\s+/g, '')){
             console.log("je suis dedans");
-            document.body.style.background = 'green';
+            document.body.style.background = '#1DC16A';
             document.getElementById("faux").innerHTML = "";
             document.getElementById("null").innerHTML = "";
             document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${eval(liste).length - 1} mots à apprendre`;
