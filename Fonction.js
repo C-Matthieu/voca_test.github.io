@@ -183,7 +183,7 @@ let chap64 = [
 ["to increase contributions", "	augmenter les cotisations"],
 ["to reduce pensions", "	diminuer les pensions"],
 ["to work up to 65", "	travailler jusqu’à 65 ans"],
-["to save for one’s retirement", "	se constituer une épargne-retraite"],
+["to save for one's retirement", "	se constituer une épargne-retraite"],
 ["a generational contract", "	un contrat intergénérationnel"],
 ["generational solidarity", "	la solidarité entre générations"],
 ["to fund the retirement of their elders", "	financer la retraite de leurs aînés"],
@@ -198,6 +198,7 @@ let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","co
           ["-1","cos pi"],["sqrt3/2","sin 2pi/3"],["sqrt2/2","sin 3pi/4"],["1/2","sin 5pi/6"],["1","sin pi"],["-sqrt3","tan 2pi/3"],
           ["-1","tan 3pi/4"],["-1/sqrt3","tan 5pi/6"],["0","tan pi"]];
 // affiche le mot + la langue
+const nb_mots = eval(liste).length
 let motVocab = String(eval(liste)[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
@@ -261,7 +262,7 @@ function getValue()
                 document.getElementById("faux").innerHTML = "";
                 document.getElementById("null").innerHTML = "";
                 document.getElementById("mot").innerHTML = "Fin";
-                document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs en ${fin}`;
+                document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs sur une liste de ${nb_mots} mots`;
                 }
             else{
                 setTimeout(afficher, 1000);
