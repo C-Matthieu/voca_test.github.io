@@ -322,13 +322,14 @@ function ó(){
     document.getElementById('entree').focus();
 }
 
-const monWorker = new Worker('worker.js');
+const worker = new Worker('worker.js');
 
-monWorker.onmessage = function(e) {
-  document.getElementById("chronometre").innerHTML = e.data;
-}
+worker.onmessage = function(event) {
+    document.getElementById("chronometre").innerHTML = event.data;
+};
 
-monWorker.postMessage(null);
+// Pour démarrer le worker, envoyez-lui un message
+worker.postMessage('start');
 
 
 function retour(){
