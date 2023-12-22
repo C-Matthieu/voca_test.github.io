@@ -27,7 +27,7 @@ function processFile() {
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
             console.log(vocabList);
-            window.location.href = "test.html?anglais,file=" + encodeURIComponent(file.name);
+            window.location.href = "3LeTest.html?anglais,file=" + encodeURIComponent(file.name);
         };
         reader.readAsText(file);
     } else {
