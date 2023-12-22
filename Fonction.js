@@ -18,15 +18,23 @@ for (let i = 1; i<a.length; i++){
     }
 
 }
-const fs = require('fs');
-
-function convertFileToList(filePath) {
-    const data = fs.readFileSync(filePath, 'utf8');
-    const lines = data.split('\n');
-    const vocabList = lines.map(line => line.split('\t'));
-    return vocabList;
+function convertFileToList(fileInputId) {
+    const fileInput = document.getElementById(fileInputId);
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const contents = e.target.result;
+            const lines = contents.split('\n');
+            const vocabList = lines.map(line => line.split('\t'));
+            console.log(vocabList);
+            return vocabList;
+        };
+        reader.readAsText(file);
+    } else {
+        alert('No file selected');
+    }
 }
-
 let termine = false;
 let fautes = 0;
 
