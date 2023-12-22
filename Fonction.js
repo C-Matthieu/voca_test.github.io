@@ -251,6 +251,7 @@ else {
     motVocab = String(eval(liste)[aleatoire()][1]);}
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
+const nb_mots = motVocab.length;
 
 // permet de valider avec la touche entrer
 document.addEventListener('keydown', function(event) {
@@ -258,7 +259,7 @@ document.addEventListener('keydown', function(event) {
         getValue();
   }
 });
-const nb_mots = eval(motVocab).length;
+
 
 
 
