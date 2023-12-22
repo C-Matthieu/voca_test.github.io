@@ -19,6 +19,24 @@ for (let i = 1; i<a.length; i++){
 }
 
 // permet de convertir un fichier en liste
+function processFile() {
+    const fileInput = document.getElementById('myFile');
+    const langue = document.getElementById('langue').value;
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const contents = e.target.result;
+            const lines = contents.split('\n');
+            const vocabList = lines.map(line => line.split('\t'));
+            console.log(vocabList);
+            window.location.href = "3LeTest.html?" + encodeURIComponent(langue) + "," + encodeURIComponent(vocabList);
+        };
+        reader.readAsText(file);
+    } else {
+        alert('No file selected');
+    }
+}
 function convertFileToList(fileInputId) {
     const fileInput = document.getElementById(fileInputId);
     const file = fileInput.files[0];

@@ -14,29 +14,12 @@
 
 <input type="text" id="langue" placeholder="Entrez la langue du fichier">
 <input type="file" id="myFile" accept=".txt">
-<button onclick="processFile()">Upload</button>
-</body>
 
 <script src="Fonction.js">
-function processFile() {
-    const fileInput = document.getElementById('myFile');
-    const langue = document.getElementById('langue').value;
-    const file = fileInput.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const contents = e.target.result;
-            const lines = contents.split('\n');
-            const vocabList = lines.map(line => line.split('\t'));
-            console.log(vocabList);
-            window.location.href = "3LeTest.html?" + encodeURIComponent(langue) + "," + encodeURIComponent(vocabList);
-        };
-        reader.readAsText(file);
-    } else {
-        alert('No file selected');
-    }
-}
+<button onclick="processFile()">Upload</button>
 </script>
+</body>
+
 
 <br>
 <div id="retour">
