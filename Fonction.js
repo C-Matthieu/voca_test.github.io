@@ -18,6 +18,15 @@ for (let i = 1; i<a.length; i++){
     }
 
 }
+const fs = require('fs');
+
+function convertFileToList(filePath) {
+    const data = fs.readFileSync(filePath, 'utf8');
+    const lines = data.split('\n');
+    const vocabList = lines.map(line => line.split('\t'));
+    return vocabList;
+}
+
 let termine = false;
 let fautes = 0;
 
@@ -206,7 +215,14 @@ let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","co
           ["-1","tan 3pi/4"],["-1/sqrt3","tan 5pi/6"],["0","tan pi"]];
 // affiche le mot + la langue
 const nb_mots = eval(liste).length
-let motVocab = String(eval(liste)[aleatoire()][1]);
+let motVocab;
+// Si 'liste' est un nom de fichier, lire le contenu du fichier
+if (liste.endsWith('.txt')) {
+    liste = convertFileToList(liste);
+    motVocab = String(eval(liste)[aleatoire()][1]);
+}
+else {
+    motVocab = String(eval(liste)[aleatoire()][1]);}
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
 

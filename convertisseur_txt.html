@@ -8,11 +8,13 @@
 	<h1 style="text-align: center;">Cliquez sur la liste que vous voulez étudier</h1>
 	<link rel="stylesheet" href="EvalVocabulaire.css">
 </head>
+<body style="text-align: center; background-color: grey;">
 <h2>Choisez le fichier qui correspond à la spécification :</h2>
-<h1>- mot dans la langue à apprendre séparé d'un tab puis le mot en français</h1>
+<h3>- mot dans la langue à apprendre séparé d'un tab puis le mot en français</h3>
 
 <input type="file" id="myFile" accept=".txt">
 <button onclick="processFile()">Upload</button>
+</body>
 
 <script>
 function processFile() {
@@ -25,7 +27,7 @@ function processFile() {
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
             console.log(vocabList);
-            window.location.href = "test.html?file=" + encodeURIComponent(file.name);
+            window.location.href = "test.html?anglais,file=" + encodeURIComponent(file.name);
         };
         reader.readAsText(file);
     } else {
@@ -33,6 +35,8 @@ function processFile() {
     }
 }
 </script>
-
-</body>
+<br>
+<div id="retour">
+	<button class="choix" style="background-color: darkgrey;"> <a href="1ChoixLangue.html">Retour</a> </button>
+</div>
 </html>
