@@ -18,6 +18,7 @@ for (let i = 1; i<a.length; i++){
     }
 }
 
+// permet de convertir un fichier en liste
 function convertFileToList(fileInputId) {
     const fileInput = document.getElementById(fileInputId);
     const file = fileInput.files[0];

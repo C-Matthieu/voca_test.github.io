@@ -17,7 +17,7 @@
 <button onclick="processFile()">Upload</button>
 </body>
 
-<script>
+<script src="Fonction.js">
 function processFile() {
     const fileInput = document.getElementById('myFile');
     const langue = document.getElementById('langue').value;
@@ -29,7 +29,7 @@ function processFile() {
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
             console.log(vocabList);
-            window.location.href = "3LeTest.html?" + encodeURIComponent(langue) + "," + encodeURIComponent(file.name);
+            window.location.href = "3LeTest.html?" + encodeURIComponent(langue) + "," + encodeURIComponent(vocabList);
         };
         reader.readAsText(file);
     } else {
