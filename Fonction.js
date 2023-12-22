@@ -16,8 +16,8 @@ for (let i = 1; i<a.length; i++){
     else {
         virgule = true;
     }
-
 }
+
 function convertFileToList(fileInputId) {
     const fileInput = document.getElementById(fileInputId);
     const file = fileInput.files[0];
