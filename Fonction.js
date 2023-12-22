@@ -22,7 +22,14 @@ let termine = false;
 let fautes = 0;
 
 // Listes Anglaises__________________________________________________________________________________________________________________________________________________
-//Gun in America
+let chap35 = [
+    ["the education(al) system",	"le système éducatif"],
+    ["compulsory schooling",	"la scolarité obligatoire"],
+    ["a school-age child",	"un enfant d’âge scolaire"],
+    ["providing education for children",	"la scolarisation des enfants"],
+    ["to educate", "éduquer, instruire"],
+    ["the teachers / the members of staff",	"le personnel enseignant"],
+    ["to teach / teaching",	"enseigner / l’enseignement"]]
 let chap59 = [["to be at work", "être au travail"], ["the workplace", "le lieu de travail"], ["labour legislation","le Code du travail"],
 ["full employment","le plein-emploi"], ["the workforce","la main-d'oeuvre"], ["to work in shifts","faire les trois huit"], 
 ["a blue-collar worker","un travailleur manuel"], ["an unskilled worker","un ouvrier non qualifié"],

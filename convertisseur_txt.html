@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Upload Text File</h2>
+
+<input type="file" id="myFile" accept=".txt">
+<button onclick="processFile()">Upload</button>
+
+<script>
+function processFile() {
+    const fileInput = document.getElementById('myFile');
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const contents = e.target.result;
+            const lines = contents.split('\n');
+            const vocabList = lines.map(line => line.split('\t'));
+            console.log(vocabList);
+        };
+        reader.readAsText(file);
+    } else {
+        alert('No file selected');
+    }
+}
+</script>
+
+</body>
+</html>
