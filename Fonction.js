@@ -258,10 +258,6 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-
-
-
-
 // permet de prendre un élement aléatoirement dans la liste
 function aleatoire()
 {
