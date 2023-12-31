@@ -42,15 +42,6 @@ function listExists(listName) {
     return window.hasOwnProperty(listName);
 }
 
-let urlData = "the%20justice%20system%2Cle%20syst%C3%A8me%20judiciaire%2Cthe%20shortcomings%20of%20the%20justice%20system%2Cle%20dysfonctionnement%20de%20la%20justice%2Cto%20abide%20by%20the%20law%2Crespecter%20la%20loi";
-urlData = decodeURIComponent(urlData);
-let listName = urlData.split(',')[0];
-
-if (listExists(listName)) {
-    console.log("La liste existe");
-} else {
-    console.log("La liste n'existe pas");
-}
 function convertURLToList(liste) {
     urlData = decodeURIComponent(liste);
     let vocabPairs = urlData.split(',');
