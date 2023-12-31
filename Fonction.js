@@ -37,22 +37,14 @@ function processFile() {
         alert('No file selected');
     }
 }
-function convertFileToList(fileInputId) {
-    const fileInput = document.getElementById(fileInputId);
-    const file = fileInput.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const contents = e.target.result;
-            const lines = contents.split('\n');
-            const vocabList = lines.map(line => line.split('\t'));
-            console.log(vocabList);
-            return vocabList;
-        };
-        reader.readAsText(file);
-    } else {
-        alert('No file selected');
+function convertURLToList(liste) {
+    urlData = decodeURIComponent(liste);
+    let vocabPairs = urlData.split(',');
+    let vocabList = [];
+    for (let i = 0; i < vocabPairs.length; i += 2) {
+        vocabList.push([vocabPairs[i], vocabPairs[i + 1]]);
     }
+    console.log(vocabList);
 }
 let termine = false;
 let fautes = 0;
@@ -243,12 +235,13 @@ let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","co
 // affiche le mot + la langue
 let motVocab;
 // Si 'liste' est un nom de fichier, lire le contenu du fichier
-if (liste.endsWith('.txt')) {
-    liste = convertFileToList(liste);
+if (listeExiste(liste)) {
     motVocab = String(eval(liste)[aleatoire()][1]);
 }
 else {
-    motVocab = String(eval(liste)[aleatoire()][1]);}
+    liste = convertURLToList(liste);
+    motVocab = String(eval(liste)[aleatoire()][1]);
+    }
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
 const nb_mots = motVocab.length;
