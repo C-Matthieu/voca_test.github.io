@@ -240,7 +240,7 @@ let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","co
 // affiche le mot + la langue
 let motVocab;
 // Si 'liste' est un nom de fichier, lire le contenu du fichier
-if (listeExiste(liste)) {
+if (listExists(liste)) {
     motVocab = String(eval(liste)[aleatoire()][1]);
 }
 else {
