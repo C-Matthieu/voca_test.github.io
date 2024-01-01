@@ -39,9 +39,8 @@ function processFile() {
 }
 
 function listExists(listName) {
-    return window.hasOwnProperty(listName);
+    return typeof eval(listName) !== 'undefined';
 }
-
 function convertURLToList(liste) {
     urlData = decodeURIComponent(liste);
     let vocabPairs = urlData.split(',');
