@@ -29,7 +29,6 @@ function processFile() {
             const contents = e.target.result;
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
-            console.log(vocabList);
             window.location.href = "3LeTest.html?" + encodeURIComponent(langue) + "," + encodeURIComponent(vocabList);
         };
         reader.readAsText(file);
@@ -48,7 +47,6 @@ function convertURLToList(liste) {
     for (let i = 0; i < vocabPairs.length; i += 2) {
         vocabList.push([vocabPairs[i], vocabPairs[i + 1]]);
     }
-    console.log(vocabList);
     return vocabList;
 }
 let termine = false;
@@ -60,7 +58,7 @@ let chap35 = [["the education(al) system", "le système éducatif"],
 ["a school-age child", "un enfant d'âge scolaire"], 
 ["providing education for children", "la scolarisation des enfants"], 
 ["to educate", "éduquer/ instruire"], 
-["the teachers / the members of staff", "le personnel enseignant"], 
+["the teachers", "le personnel enseignant"], 
 ["to teach / teaching", "enseigner / l'enseignement"], 
 ["to learn", "apprendre (soi-même)"], 
 ["to study", "étudier/ faire des études"], 
@@ -79,7 +77,7 @@ let chap35 = [["the education(al) system", "le système éducatif"],
 ["a grammar school", "un lycée (avec sélection à l'entrée)"], 
 ["a high school", "un lycée (aux USA ou au RU)"], 
 ["a public school", "(UK) une école privée (prestigieuse)"], 
-["a(n) private / independent school", "une école privée"], 
+["a private school", "une école privée"], 
 ["a vocational school", "un lycée professionnel"], 
 ["a technical college", "un lycée technique"], 
 ["further education", "l'enseignement postscolaire"], 
@@ -91,7 +89,17 @@ let chap35 = [["the education(al) system", "le système éducatif"],
 ["a grant", "une bourse"], 
 ["Oxbridge", "les universités d'Oxford et de Cambridge"], 
 ["the Ivy League", "le groupe de 8 universités célèbres du nord-est des États-Unis"], 
-["a graduate", "un diplômé/ un licencié"]]
+["a graduate", "un diplômé/ un licencié"],
+["to thrive in a globalised world", "s'en sortir à l'heure de la mondialisation"],
+["back-to-basics", "le retour à l'essentiel"],
+["The numbers of school leavers who do not master the three Rs", "Le nombre de jeunes qui quittent l'école sans maîtriser la lecture, l'écriture et le calcul"],
+["has rechead alarming proportions", "a atteint des proportions alarmantes"],
+["poured into", "investie dans"],
+["quite a number of people", "un certain nombre de personnes"],
+["the gold standard", "la référence"],
+["a maths degree", "une licence de maths"],
+["Americans llegedly lack", "les Américains manqueraient supposément de"],
+["Open University", "l'université à distance"]]
 
 let chap36 = [["academic standards", "les exigences scolaires/ le niveau"], 
 ["academic failure", "l'échec scolaire"], 
@@ -112,7 +120,7 @@ let chap36 = [["academic standards", "les exigences scolaires/ le niveau"],
 ["the school year / a term", "l'année scolaire / un trimestre"], 
 ["the timetable / (US) the schedule", "l'emploi du temps"], 
 ["the syllabus", "le programme"], 
-["to move up a class", "passer dans la classe supérieure"], 
+["to move up a class", "passer dans la classe supérieure"],     
 ["to repeat a year", "redoubler"], 
 ["assessment", "l'évaluation"], 
 ["to take / to sit an exam", "passer un examen"], 
@@ -130,7 +138,15 @@ let chap36 = [["academic standards", "les exigences scolaires/ le niveau"],
 ["to take a course in computing", "suivre des cours d'informatique"], 
 ["e-learning / distance learning", "l'enseignement à distance"], 
 ["homeschooling / unschooling", "l'instruction à domicile"], 
-["vocational training", "la formation professionnelle"]]
+["vocational training", "la formation professionnelle"],
+["Extra curricular activities", "les activités extra-scolaires"],
+["to reduce worload and tackle poor pupil behaviour", "réduire la charge de travail et s'attaquer au mauvais comportement des élèves"],
+["to catch up", "rattraper"],
+["a piece of cake", "un jeu d'enfant / facile comme bonjour"],
+["passed with flying colours", "réussir haut la main"],
+["All work and no play makes Jack a dull boy", "Il n'y a pas que le travail dans la vie"]]
+
+
 let chap38 = [["the justice system", "le système judiciaire"], 
 ["the shortcomings of the justice system", "le dysfonctionnement de la justice"], 
 ["to abide by the law", "respecter la loi"], 
@@ -139,12 +155,12 @@ let chap38 = [["the justice system", "le système judiciaire"],
 ["to enforce the law", "faire respecter la loi"], 
 ["illegal / against the law", "illégal"], 
 ["a (clean) criminal record", "un casier judiciaire (vierge)"], 
-["to take sb to court / to bring sb to justice / to sue sb", "poursuivre qn en justice"], 
+["to sue sb", "poursuivre qn en justice"], 
 ["to lodge a complaint against sb", "porter plainte contre qn"], 
 ["to take legal advice", "consulter un avocat"], 
 ["to be indicted", "être mis en examen"], 
 ["to remand sb in custody", "placer qn en détention provisoire"], 
-["to stand trial / to be tried", "passer en jugement"], 
+["to stand trial", "passer en jugement"], 
 ["a trial (behind closed doors)", "un procès (à huis clos)"], 
 ["a case", "une affaire"], 
 ["the prosecution / the defence", "l'accusation / la défense"], 
@@ -169,7 +185,15 @@ let chap38 = [["the justice system", "le système judiciaire"],
 ["prison overcrowding", "la surpopulation carcérale"], 
 ["to jail sb / to imprison sb", "incarcérer qn"], 
 ["an inmate", "un détenu"], 
-["a (prison) warder", "un surveillant de prison"]]
+["a (prison) warder", "un surveillant de prison"]
+["to be sentenced", "être condamné"],
+["to be wrongly convicted", "être condamné à tort"],
+["several blatant miscarriages of justice", "plusieurs erreurs judiciaires flagrantes"],
+["leniency", "laxisme"],
+["take the law into their own hands", "se faire justice soi-même"],
+["electronically tagged", "sous surveillance électronique"],
+["to be bursting at the seams", "déborder de prisonniers"],
+["The judgment is likely to set a precedent", "Le jugement risque de faire jurisprudence"]]
 
 let chap59 = [["to be at work", "être au travail"], ["the workplace", "le lieu de travail"], ["labour legislation","le Code du travail"],
 ["full employment","le plein-emploi"], ["the workforce","la main-d'oeuvre"], ["to work in shifts","faire les trois huit"], 
@@ -371,7 +395,6 @@ function aleatoire()
 {
     if (eval(liste).length > 0){
         let index = Math.floor(Math.random() * eval(liste).length);
-        console.log(index)
         if (index == motEtud && eval(liste).length > 1){
             aleatoire()
             }
@@ -399,7 +422,6 @@ function getValue()
             document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
             }
         else if (reponse.toUpperCase().replace(/\s+/g, '') == eval(liste)[motEtud][0].toUpperCase().replace(/\s+/g, '')){
-            console.log("je suis dedans");
             document.body.style.background = '#1DC16A';
             document.getElementById("faux").innerHTML = "";
             document.getElementById("null").innerHTML = "";
