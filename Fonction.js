@@ -98,7 +98,7 @@ let chap35 = [["the education(al) system", "le système éducatif"],
 ["quite a number of people", "un certain nombre de personnes"],
 ["the gold standard", "la référence"],
 ["a maths degree", "une licence de maths"],
-["Americans allegedly lack", "les Américains manqueraient supposément de"],
+["Americans llegedly lack", "les Américains manqueraient supposément de"],
 ["Open University", "l'université à distance"]]
 
 let chap36 = [["academic standards", "les exigences scolaires/ le niveau"], 
@@ -139,8 +139,8 @@ let chap36 = [["academic standards", "les exigences scolaires/ le niveau"],
 ["e-learning / distance learning", "l'enseignement à distance"], 
 ["homeschooling / unschooling", "l'instruction à domicile"], 
 ["vocational training", "la formation professionnelle"],
-["Extra-curricular activities", "les activités extra-scolaires"],
-["to reduce workload and tackle poor pupil behaviour", "réduire la charge de travail et s'attaquer au mauvais comportement des élèves"],
+["Extra curricular activities", "les activités extra-scolaires"],
+["to reduce worload and tackle poor pupil behaviour", "réduire la charge de travail et s'attaquer au mauvais comportement des élèves"],
 ["to catch up", "rattraper"],
 ["a piece of cake", "un jeu d'enfant / facile comme bonjour"],
 ["passed with flying colours", "réussir haut la main"],
@@ -391,23 +391,18 @@ document.addEventListener('keydown', function(event) {
 });
 
 // permet de prendre un élement aléatoirement dans la liste
-function aleatoire()
-{
-    if (eval(liste).length > 0){
-        let index = Math.floor(Math.random() * eval(liste).length);
-        if (index == motEtud && eval(liste).length > 1){
-            aleatoire()
-            }
-        else {
-            motEtud = index;
-            return motEtud;
-            }
-    }
-    else if (eval(liste).length == 0) {
+function aleatoire() {
+    if (eval(liste).length > 0) {
+        let index;
+        do {
+            index = Math.floor(Math.random() * eval(liste).length);
+        } while (index == motEtud && eval(liste).length > 1);
+        motEtud = index;
+        return motEtud;
+    } else if (eval(liste).length == 0) {
         motEtud = 0;
         return motEtud;
     }
-    
 }
 // permet de recuperer la valeur et d'agir en conséquence
 function getValue()
