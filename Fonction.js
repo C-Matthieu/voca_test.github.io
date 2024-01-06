@@ -98,7 +98,7 @@ let chap35 = [["the education(al) system", "le système éducatif"],
 ["quite a number of people", "un certain nombre de personnes"],
 ["the gold standard", "la référence"],
 ["a maths degree", "une licence de maths"],
-["Americans llegedly lack", "les Américains manqueraient supposément de"],
+["Americans allegedly lack", "les Américains manqueraient supposément de"],
 ["Open University", "l'université à distance"]]
 
 let chap36 = [["academic standards", "les exigences scolaires/ le niveau"], 
