@@ -185,7 +185,7 @@ let chap38 = [["the justice system", "le système judiciaire"],
 ["prison overcrowding", "la surpopulation carcérale"], 
 ["to jail sb / to imprison sb", "incarcérer qn"], 
 ["an inmate", "un détenu"], 
-["a (prison) warder", "un surveillant de prison"]
+["a (prison) warder", "un surveillant de prison"],
 ["to be sentenced", "être condamné"],
 ["to be wrongly convicted", "être condamné à tort"],
 ["several blatant miscarriages of justice", "plusieurs erreurs judiciaires flagrantes"],
