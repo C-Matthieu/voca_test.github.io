@@ -203,7 +203,7 @@ let chap18 =[["a crime", "un délit"],
     ["drugtrafficking", "le trafic de drogue"],
     ["gangkillings", "les règlements de compte entre gangs"],
     ["to be cracked down on hard", "être réprimé sévèrement"],
-    ["for fear to be mugged", "par peur de se faire agresser"],
+    ["for fear to be mugged", "de peur de se faire agresser"],
     ["to roam the streets", "errer dans les rues"],
     ["left to their own devices", "laissés à eux-mêmes"],
     ["might help to curb crime", "pourrait contribuer à réduire la criminalité"]]
