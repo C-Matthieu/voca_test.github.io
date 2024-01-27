@@ -677,7 +677,7 @@ function toggleTheme() {
         chrono.classList.add('light-mode');
         document.body.style.background = '#FCF6F6';
         color = '#FCF6F6';
-        Theme.style.backgroundImage = "url('img/sun.jpeg')";
+        Theme.style.backgroundImage = "url('img/sun.png')";
     } else {
         name.classList.remove('light-mode');
         name.classList.add('dark-mode');
@@ -687,7 +687,7 @@ function toggleTheme() {
         chrono.classList.add('dark-mode');
         document.body.style.background = '#393939';
         color = '#393939';
-        Theme.style.backgroundImage = "url('img/moon.jpeg')";
+        Theme.style.backgroundImage = "url('img/moon.png')";
     }
 
 }
