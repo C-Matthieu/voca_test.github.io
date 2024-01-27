@@ -1,6 +1,8 @@
 // création des constantes, variables et listes
-document.body.style.background = 'grey';
+let color = 'grey';
+document.body.style.background = color;
 document.getElementById('entree').focus();
+
 let motEtud;
 const a = location.search;  // récupére les élements dans le lien
 let virgule = false;
@@ -583,7 +585,7 @@ function getValue()
                 // IncrementationChrono();
                 worker.postMessage('stop');
                 document.getElementById("valider").innerHTML = 'Recommencer';
-                document.body.style.background = 'grey';
+                document.body.style.background = color;
                 document.getElementById("faux").innerHTML = "";
                 document.getElementById("null").innerHTML = "";
                 document.getElementById("mot").innerHTML = "Fin";
@@ -614,7 +616,7 @@ function afficher()
     let motVocab = String(eval(liste)[motEtud][1]);
     document.getElementById('mot').innerHTML = motVocab;
     document.getElementById('entree').focus();
-    document.body.style.background = 'grey';
+    document.body.style.background = color;
 
 }
 
@@ -664,17 +666,28 @@ function retour(){
 function toggleTheme() {
     var entree = document.getElementById('entree');
     var name = document.getElementById('name'); 
+    var chrono = document.getElementById('chrono'); 
+    var Theme = document.getElementById('Theme');
     if (name.classList.contains('dark-mode')) {
         name.classList.remove('dark-mode');
         name.classList.add('light-mode');
         entree.classList.remove('dark-mode');
         entree.classList.add('light-mode');
+        chrono.classList.remove('dark-mode');
+        chrono.classList.add('light-mode');
         document.body.style.background = '#FCF6F6';
+        color = '#FCF6F6';
+        Theme.style.backgroundImage = "url('img/sun.jpeg')";
     } else {
         name.classList.remove('light-mode');
         name.classList.add('dark-mode');
         entree.classList.remove('light-mode');
-        entree.classList.add('dark-mode');
-        document.body.style.background = '#121212';
+        entree.classList.add('dark-mode'); 
+        chrono.classList.remove('light-mode');
+        chrono.classList.add('dark-mode');
+        document.body.style.background = '#393939';
+        color = '#393939';
+        Theme.style.backgroundImage = "url('img/moon.jpeg')";
     }
+
 }

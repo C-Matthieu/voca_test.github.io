@@ -6,12 +6,14 @@
 	<title>Vocab Test</title>
 	<link rel="icon" type="png" href="favicon.png">
 	<link rel="stylesheet" href="EvalVocabulaire.css">
-	<h4 id="chrono" style="text-align: center;"> <span id="chronometre">0:00</span></h4>
-	<h1 id="name"  style="text-align: center;"> Comment dit-on : <strong><u><span id="mot"> </span></u></strong> en <span id="langueEtud"></span> </h1>
 </head>
 <body  style="text-align: center;">
-	<button id="toggleTheme" onclick="toggleTheme()">Changer de mode</button>
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<h4 id="chrono" style="display: flex; justify-content: center;"> <span id="chronometre">0:00</span></h4>
+	</div>
+	<button id="Theme" onclick="toggleTheme()"></button>
 	<br>
+	<h1 id="name"  style="text-align: center;"> Comment dit-on : <strong><u><span id="mot"> </span></u></strong> en <span id="langueEtud"></span> </h1>
 	<button type="button" class="accent" onclick="á()">á</button>
 	<button type="button" class="accent" onclick="ú()">ú</button> 
 	<button type="button" class="accent" onclick="í()">í</button>

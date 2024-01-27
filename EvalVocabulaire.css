@@ -84,7 +84,7 @@
 	border-bottom-width: 2.4pt;
 	font-size: 13pt;
 }
-#toggleTheme
+#Theme
 {
 	float: right;
 	border-radius: 60px;
@@ -94,7 +94,7 @@
 
 #entree.light-mode {
 	background-color: grey;
-	color : white;
+	color : black;
 	font-family: Fixedsys;
 	font-size:14pt;
 	border-radius: 40px;
@@ -102,19 +102,26 @@
 
 #entree.dark-mode {
 	background-color: grey;
-	color : black;
+	color : white;
 	font-family: Fixedsys;
 	font-size:14pt;
 	border-radius: 40px;
 }
 #name.light-mode {
-	color : white;
-}
-
-#name.dark-mode {
 	color : black;
 }
 
+#name.dark-mode {
+	color : white;
+}
+
+#chrono.light-mode {
+	color : black;
+}
+
+#chrono.dark-mode {
+	color : white;
+}
 
 
 /*input[type=checkbox]{
