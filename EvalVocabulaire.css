@@ -84,6 +84,23 @@
 	border-bottom-width: 2.4pt;
 	font-size: 13pt;
 }
+#toggleTheme
+{
+	float: right;
+	border-radius: 60px;
+	background-color:darkgrey;
+	font-size: 11pt;
+}
+
+body.light-mode {
+	background-color: white;
+	color: black;
+}
+
+body.dark-mode {
+	background-color: black;
+	color: white;
+}
 
 
 
