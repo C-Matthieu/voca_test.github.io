@@ -662,12 +662,19 @@ function retour(){
 }
 
 function toggleTheme() {
-    var body = document.body;
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
+    var entree = document.getElementById('entree');
+    var name = document.getElementById('name'); 
+    if (name.classList.contains('dark-mode')) {
+        name.classList.remove('dark-mode');
+        name.classList.add('light-mode');
+        entree.classList.remove('dark-mode');
+        entree.classList.add('light-mode');
+        document.body.style.background = '#FCF6F6';
     } else {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
+        name.classList.remove('light-mode');
+        name.classList.add('dark-mode');
+        entree.classList.remove('light-mode');
+        entree.classList.add('dark-mode');
+        document.body.style.background = '#121212';
     }
 }

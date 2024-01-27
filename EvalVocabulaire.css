@@ -92,17 +92,28 @@
 	font-size: 11pt;
 }
 
-body.light-mode {
-	background-color: white;
-	color: black;
+#entree.light-mode {
+	background-color: grey;
+	color : white;
+	font-family: Fixedsys;
+	font-size:14pt;
+	border-radius: 40px;
 }
 
-body.dark-mode {
-	background-color: black;
-	color: white;
+#entree.dark-mode {
+	background-color: grey;
+	color : black;
+	font-family: Fixedsys;
+	font-size:14pt;
+	border-radius: 40px;
+}
+#name.light-mode {
+	color : white;
 }
 
-
+#name.dark-mode {
+	color : black;
+}
 
 
 
