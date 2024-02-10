@@ -84,12 +84,11 @@
 	border-bottom-width: 2.4pt;
 	font-size: 13pt;
 }
-#Theme
+#bouton-mode-sombre
 {
 	float: right;
 	border-radius: 60px;
-	background-image : url("img/moon.png");
-	font-size: 11pt;
+	font-size: 25pt;
 }
 
 #entree.light-mode {
@@ -123,47 +122,30 @@
 	color : white;
 }
 
-
-/*input[type=checkbox]{
-height: 0;
-width: 0;
-visibility: hidden;
-}
-label {
-cursor: pointer;
-text-indent: -9999px;
-width: 200px;
-height: 100px;
-background: orange;
-display: block;
-border-radius: 100px;
-position: relative;
-}
-label:after{
-content: '';
-position: absolute;
-top: 5px;
-left: 5px;
-width: 90px;
-height: 90px;
-background: #fff;
-border-radius: 90px;
-transition: 0.3s;
-}
-input:checked + label {
-background: #000;
-}
-input:checked + label:after {
-left: calc(100% - 5px);
-transform: translateX(-100%);
-}
-label:active:after {
-width: 130px;
+#null.light-mode {
+	color : black;
 }
 
-body {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-}*/
+#null.dark-mode {
+	color : white;
+}
+
+#bouton-mode-sombre {
+	background-image: url("img/moon.png");
+	border-radius: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
+  
+#bouton-mode-sombre.dark-mode {
+	background-image: url("img/sun.png");
+	border-radius: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+}

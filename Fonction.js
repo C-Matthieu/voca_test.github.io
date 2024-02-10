@@ -3,6 +3,7 @@ let color = 'grey';
 document.body.style.background = color;
 document.getElementById('entree').focus();
 
+
 let motEtud;
 const a = location.search;  // récupére les élements dans le lien
 let virgule = false;
@@ -19,11 +20,18 @@ for (let i = 1; i<a.length; i++){
         virgule = true;
     }
 }
+if (liste != ""){
+    localStorage.clear();
+}
 
 // permet de convertir un fichier en liste
 function processFile() {
     const fileInput = document.getElementById('myFile');
-    const langue = document.getElementById('langue').value;
+    let langue = document.getElementById('langue').value;
+    if (langue == ''){
+        langue = 'anglais';
+    }
+    localStorage.setItem("langue", langue);
     const file = fileInput.files[0];
     if (file) {
         const reader = new FileReader();
@@ -31,7 +39,8 @@ function processFile() {
             const contents = e.target.result;
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
-            window.location.href = "3LeTest.html?" + encodeURIComponent(langue) + "," + encodeURIComponent(vocabList);
+            localStorage.setItem("liste", JSON.stringify(vocabList));
+            window.location.href = "3LeTest.html?" + encodeURIComponent(langue);
         };
         reader.readAsText(file);
     } else {
@@ -39,9 +48,6 @@ function processFile() {
     }
 }
 
-function listExists(listName) {
-    return typeof eval(listName) !== 'undefined';
-}
 function convertURLToList(liste) {
     urlData = decodeURIComponent(liste);
     let vocabPairs = urlData.split(',');
@@ -529,13 +535,11 @@ let vr = [["1","cos 0"],["sqrt3/2","cos pi/6"],["sqrt2/2","cos pi/4"],["1/2","co
 // affiche le mot + la langue
 let motVocab;
 // Si 'liste' est un nom de fichier, lire le contenu du fichier
-if (listExists(eval(liste))) {
-    motVocab = String(eval(liste)[aleatoire()][1]);
+l_temp = localStorage.getItem("liste");
+if (l_temp != null) {
+    liste = l_temp;
 }
-else {
-    liste = convertURLToList(liste);
-    motVocab = String(eval(liste)[aleatoire()][1]);
-    }
+motVocab = String(eval(liste)[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
 const nb_mots = motVocab.length;
@@ -667,7 +671,7 @@ function toggleTheme() {
     var entree = document.getElementById('entree');
     var name = document.getElementById('name'); 
     var chrono = document.getElementById('chrono'); 
-    var Theme = document.getElementById('Theme');
+    var boutonModeSombre  = document.getElementById('bouton-mode-sombre');
     if (name.classList.contains('dark-mode')) {
         name.classList.remove('dark-mode');
         name.classList.add('light-mode');
@@ -677,7 +681,7 @@ function toggleTheme() {
         chrono.classList.add('light-mode');
         document.body.style.background = '#FCF6F6';
         color = '#FCF6F6';
-        Theme.style.backgroundImage = "url('img/sun.png')";
+        boutonModeSombre.classList.toggle('dark-mode');
     } else {
         name.classList.remove('light-mode');
         name.classList.add('dark-mode');
@@ -687,7 +691,7 @@ function toggleTheme() {
         chrono.classList.add('dark-mode');
         document.body.style.background = '#393939';
         color = '#393939';
-        Theme.style.backgroundImage = "url('img/moon.png')";
+        boutonModeSombre.classList.toggle('dark-mode');
     }
 
 }
