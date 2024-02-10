@@ -24,13 +24,19 @@ if (liste != ""){
     localStorage.clear();
 }
 
+// permet de récuperer les éléments de la zone d'entrée
+function getElement(){
+    fileInput = document.getElementById('myFile');
+    localStorage.setItem("file", fileInput);
+    langue = document.getElementById('langue').value;
+    processFile(fileInput, langue);
+}
 // permet de convertir un fichier en liste
-function processFile() {
-    const fileInput = document.getElementById('myFile');
-    let langue = document.getElementById('langue').value;
-    if (langue == ''){
-        langue = 'anglais';
-    }
+function processFile(e, langue = "anglais") {
+    console.log(e);
+    localStorage.clear();
+    let fileInput = e;
+    console.log(fileInput);
     localStorage.setItem("langue", langue);
     const file = fileInput.files[0];
     if (file) {
@@ -39,7 +45,9 @@ function processFile() {
             const contents = e.target.result;
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
+            console.log(vocabList);
             localStorage.setItem("liste", JSON.stringify(vocabList));
+            console.log(localStorage.getItem("liste"));
             window.location.href = "3LeTest.html?" + encodeURIComponent(langue);
         };
         reader.readAsText(file);

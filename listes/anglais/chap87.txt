@@ -1,0 +1,38 @@
+an illness / a disease	une maladie
+a serious disease	une maladie grave
+an incurable disease	une maladie incurable
+to be physically / mentally disabled	être handicapé moteur / mental
+nosocomial infections / hospital-acquired infections	les maladies nosocomiales
+to break out	se déclarer
+a heart attack / a cardiac arrest	une crise cardiaque
+high blood pressure / hypertension	l’hypertension
+a stroke	une attaque cérébrale, un AVC
+breast / skin / colon / lung / liver cancer	le cancer du sein / de la peau / du colon / du poumon / du foie
+a brain tumour	une tumeur au cerveau
+multiple sclerosis / MS	la sclérose en plaques
+Down’s syndrome	trisomie 21
+a birth defect	une malformation congénitale
+Alzheimer’s (disease)	la maladie d’Alzheimer
+a mental illness	une maladie mentale
+psychic disorders	des troubles psychiques
+stress-related health problems	les problèmes de santé liés  au stress
+kidney failure	l’insuffisance rénale
+hepatitis	l’hépatite
+diabetes / cholesterol	le diabète / le cholestérol
+asthma	l’asthme
+a respiratory disease	une maladie respiratoire
+to cough	tousser
+to have a cold / a sore throat	avoir un rhume / mal à la gorge
+sleep apnea	l’apnée du sommeil
+sleeplessness / insomnia	l’insomnie
+sleep deprivation / lack of sleep	le manque de sommeil
+to have a headache / toothache	avoir mal à la tête / mal aux dents
+backache	le mal de dos
+to have all sorts of aches and pains	avoir mal partout
+rheumatism	des rhumatismes
+MSDs	les TMS
+sports injuries	les blessures dues au sport
+a fracture / to break one’s leg	une fracture / se casser la jambe
+to twist / sprain one’s ankle	se fouler la cheville
+a sprain	une entorse
+to tear a ligament	se rompre un ligament

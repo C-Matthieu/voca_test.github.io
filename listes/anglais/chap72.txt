@@ -1,0 +1,38 @@
+agriculture / farming	l’agriculture
+a farmer	un agriculteur
+a farm	une ferme, une exploitation agricole
+an agricultural scientist	un ingénieur agronome
+to work on a farm	travailler dans une ferme
+to farm 500 hectares	exploiter 500 hectares
+farm products / farm produce	des produits agricoles
+a dairy farm	une exploitation laitière
+milk products / dairy products	des produits laitiers
+a poultry farm	une exploitation avicole
+to farm / to till / to cultivate the land	exploiter, cultiver la terre
+a crop	1) un produit agricole | 2) une récolte
+to increase crop yields	accroître le rendement des cultures
+to harvest	récolter
+a crop failure	une très mauvaise récolte
+to grow food	produire de la nourriture
+corn	du blé (UK), du maïs (US)
+maize	du maïs (UK)
+wheat	du blé, du froment
+rice	du riz
+a fruit and vegetable grower	un producteur de fruits et légumes
+a wine grower	un viticulteur
+the livestock / the cattle	le bétail
+to raise / to rear cattle	élever du bétail
+a chicken / a hen	un poulet / une poule
+an ox (plu. oxen), beef	un bœuf, du bœuf (la viande)
+a pig, pork	un porc, du porc (la viande)
+a calf (plu. calves), veal	un veau, du veau (la viande)
+a lamb, lamb	un agneau, de l’agneau (la viande)
+mad cow disease	la maladie de la vache folle
+bird flu / avian flu	la grippe aviaire
+fertilizers	des engrais
+sustainable agriculture	l’agriculture durable
+organic farming	l’agriculture bio
+intensive farming	l’agriculture intensive
+the food processing industry	l’industrie agroalimentaire
+the Common Agricultural Policy	la Politique agricole commune
+a subsidy / to subsidize	une subvention / subventionner

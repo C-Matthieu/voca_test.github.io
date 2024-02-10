@@ -9,22 +9,36 @@
 	<link rel="stylesheet" href="EvalVocabulaire.css">
 </head>
 <body  style="text-align: center; background-color: grey;">
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap59"> Chapitres 59 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap60"> Chapitre 60 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap61"> Chapitre 61 </a></button>
+	
+	<script src="Fonction.js"></script>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap59.txt')"> <a href="3LeTest.html?anglais"> Chapitres 59 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap60.txt')"> <a href="3LeTest.html?anglais"> Chapitre 60 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap61.txt')"> <a href="3LeTest.html?anglais"> Chapitre 61 </a></button>
 	<br>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap62"> Chapitres 62 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap63"> Chapitre 63 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap64"> Chapitre 64 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap62.txt')"> <a href="3LeTest.html?anglais"> Chapitres 62 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap63.txt')"> <a href="3LeTest.html?anglais"> Chapitre 63 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap64.txt')"> <a href="3LeTest.html?anglais"> Chapitre 64 </a></button>
 	<br>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap35"> Chapitres 35 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap36"> Chapitre 36 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap38"> Chapitre 38 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap35.txt')"> <a href="3LeTest.html?anglais"> Chapitres 35 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap36.txt')"> <a href="3LeTest.html?anglais"> Chapitre 36 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap38.txt')"> <a href="3LeTest.html?anglais"> Chapitre 38 </a></button>
 	<br>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap16"> Chapitres 16 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap17"> Chapitre 17 </a></button>
-	<button class="choix" style="background-color: darkgrey;"> <a href="3LeTest.html?anglais,chap18"> Chapitre 18 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap16.txt')"> <a href="3LeTest.html?anglais"> Chapitres 16 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap17.txt')"> <a href="3LeTest.html?anglais"> Chapitre 17 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap18.txt')"> <a href="3LeTest.html?anglais"> Chapitre 18 </a></button>
 	<br>
+	<select id="chapitres" onchange="processFile(this.value)">
+		<script>
+			var select = document.getElementById('chapitres');
+			for (var i = 1; i <= 108; i++) {
+				var option = document.createElement('option');
+				option.value = 'listes/anglais/chap' + i + '.txt';
+				option.text = 'Chapitre ' + i;
+				select.appendChild(option);
+			}
+		</script>
+	</select>
+
 </body>
 <br>
 <div id="retour">

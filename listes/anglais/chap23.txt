@@ -1,0 +1,39 @@
+car traffic	la circulation automobile
+a motorist	un automobiliste
+the flow / the volume of traffic	le flot / le volume de la circulation
+a crossroads	un carrefour
+a roundabout	un rond-point
+traffic lights	des feux de signalisation
+the green light	le feu vert
+green / amber / red	vert / orange / rouge
+a one-way street	une rue à sens unique
+a thoroughfare	une artère
+a pedestrian	un piéton
+a zebra crossing or a pedestrian crossing / (US) a crosswalk	un passage pour piétons
+a subway (UK)	un passage souterrain
+traffic congestion	les embouteillages
+traffic gridlock	la paralysie de la circulation
+at rush hour / during the rush hour	aux heures de pointe, d’affluence
+rush-hour traffic	la circulation aux heures de pointe
+a traffic jam	un embouteillage, un bouchon
+a tailback / a traffic hold-up	un bouchon, une retenue
+a bottleneck	un goulot d’étranglement
+a busy street / a congested street	une rue passante / une rue encombrée
+to crawl (along)	avancer au pas
+heavy traffic / light traffic	une circulation dense / fluide
+a car park / (US) a parking lot	un parking
+a multistorey car park	un parking à plusieurs niveaux
+a parking meter	un parcmètre
+a parking ticket	une contravention (stationnement)
+a traffic warden	un(e) contractuel(le)
+to double-park	se garer en double file
+to park illegally	se garer en interdiction
+to tow away a car	emmener une voiture à la fourrière
+to clamp a car	immobiliser une voiture avec un sabot
+to introduce urban road pricing	introduire un système de péage urbain
+the congestion charge	la taxe anti-embouteillages (Londres)
+a pedestrian precinct / zone	une zone piétonnière
+the pedestrianization (of a street)	la piétonnisation (d’une rue)
+car pooling	le covoiturage
+car sharing	l’auto-partage
+to use public transport	utiliser les transports en commun

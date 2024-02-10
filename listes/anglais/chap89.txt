@@ -1,0 +1,38 @@
+the Covid-19 pandemic	la pandémie de Covid-19
+to combat the pandemic	lutter contre la pandémie
+the first wave / peak / spike	la première vague
+a Covid-19 case	un cas de Covid-19
+Covid fatalities	les morts de la Covid
+to increase exponentially	augmenter de façon exponentielle
+a variant / the Omicron variant	un variant / le variant Omicron
+a swab	1) un test PCR. | 2) un écouvillon
+to be non-immune	ne pas être immunisé
+to be asymptomatic	être asymptomatique
+stringent / draconian measures	des mesures strictes / draconiennes
+social distancing measures	des mesures de distanciation sociale
+social distance	la distanciation physique
+to stop kissing / shaking hands	ne plus s’embrasser / se serrer la main
+protective gestures	les gestes barrières
+to wear a (surgical) mask	porter un masque (chirurgical)
+hand sanitizer	du gel hydroalcoolique
+to wash one’s hands with soap	se laver les mains avec du savon
+to cough / sneeze into your elbow	tousser / éternuer dans votre coude
+to use a single-use tissue	utiliser un mouchoir à usage unique
+to be transmitted through droplets	se transmettre par des gouttelettes
+to lose the sense of taste / smell	perdre le goût / l’odorat
+to self-isolate / to isolate oneself	s’isoler
+to be in intensive care	être en réanimation
+intensive care beds	les lits de réanimation
+a ventilator	un ventilateur
+to be intubated / on a ventilator	être intubé / ventilé
+a care home	un Ehpad
+at-risk people	les personnes vulnérables
+those with underlying health conditions	ceux qui présentent des facteurs de comorbidité
+to be in lockdown	être confiné
+to lift the lockdown	déconfiner
+to impose a curfew	imposer un couvre-feu
+a vaccine for the disease	un vaccin contre la maladie
+to be vaccinated / to have a jab	être vacciné / se faire vacciner
+anti-vaxxers	les antivax
+a health pass / a vaccine pass	un passeport sanitaire / vaccinal
+to achieve herd immunity	parvenir à l’immunité collective
