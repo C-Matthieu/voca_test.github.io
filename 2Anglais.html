@@ -11,28 +11,28 @@
 <body  style="text-align: center; background-color: grey;">
 	
 	<script src="Fonction.js"></script>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap59.txt')"> <a href="3LeTest.html?anglais"> Chapitres 59 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap60.txt')"> <a href="3LeTest.html?anglais"> Chapitre 60 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap61.txt')"> <a href="3LeTest.html?anglais"> Chapitre 61 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap59.txt')"> <a href="3LeTest.html?Anglais"> Chapitres 59 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap60.txt')">  <a href="3LeTest.htmlAnglais"> Chapitre 60 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap61.txt')"> <a href="3LeTest.html?Anglais"> Chapitre 61 </a></button>
 	<br>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap62.txt')"> <a href="3LeTest.html?anglais"> Chapitres 62 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap63.txt')"> <a href="3LeTest.html?anglais"> Chapitre 63 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap64.txt')"> <a href="3LeTest.html?anglais"> Chapitre 64 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap62.txt')">  <a href="3LeTest.html?Anglais"> Chapitres 62 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap63.txt')">  <a href="3LeTest.html?Anglais"> Chapitre 63 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap64.txt')">  <a href="3LeTest.html?Anglais"> Chapitre 64 </a></button>
 	<br>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap35.txt')"> <a href="3LeTest.html?anglais"> Chapitres 35 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap36.txt')"> <a href="3LeTest.html?anglais"> Chapitre 36 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap38.txt')"> <a href="3LeTest.html?anglais"> Chapitre 38 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap35.txt')">  <a href="3LeTest.html?Anglais"> Chapitres 35 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap36.txt')">  <a href="3LeTest.html?Anglais"> Chapitre 36 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap38.txt')">  <a href="3LeTest.html?Anglais"> Chapitre 38 </a></button>
 	<br>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap16.txt')"> <a href="3LeTest.html?anglais"> Chapitres 16 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap17.txt')"> <a href="3LeTest.html?anglais"> Chapitre 17 </a></button>
-	<button class="choix" style="background-color: darkgrey;" onclick="processFile('listes/anglais/chap18.txt')"> <a href="3LeTest.html?anglais"> Chapitre 18 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap16.txt')">  <a href="3LeTest.html?Anglais"> Chapitres 16 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap17.txt')">  <a href="3LeTest.html?Anglais"> Chapitre 17 </a></button>
+	<button class="choix" style="background-color: darkgrey;" onclick="loadFileFromUrl('https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap18.txt')">  <a href="3LeTest.html?Anglais"> Chapitre 18 </a></button>
 	<br>
-	<select id="chapitres" onchange="processFile(this.value)">
+	<select id="chapitres" style="background-color: darkgrey;" onchange="loadFileFromUrl(this.value)">
 		<script>
 			var select = document.getElementById('chapitres');
-			for (var i = 1; i <= 108; i++) {
+			for (var i = 1; i <= 116; i++) {
 				var option = document.createElement('option');
-				option.value = 'listes/anglais/chap' + i + '.txt';
+				option.value = 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap' + i + '.txt';
 				option.text = 'Chapitre ' + i;
 				select.appendChild(option);
 			}
@@ -42,6 +42,6 @@
 </body>
 <br>
 <div id="retour">
-	<button class="choix"  style="background-color: darkgrey;"> <a href="1ChoixLangue.html">Retour</a></button>
+	<button class="choix"  style="background-color: darkgrey;"> <a href="index.html">Retour</a></button>
 </div>
 </html>

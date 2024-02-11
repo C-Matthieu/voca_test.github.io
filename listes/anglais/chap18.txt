@@ -27,7 +27,7 @@ to commit a murder / a crime	commettre un meutre / un délit
 a mugging	une attaque avec violence
 to attack sb / assault sb / mug sb	attaquer qn, agresser qn
 armed robbery	le vol à main armé
-burglary / a burglarize	cambriolage / un cambrioleur
+burglary / a burglar	cambriolage / un cambrioleur
 to burgle / (US) to burglarize	cambrioler (une maison)
 to break into a place / to raid a bank	s'introduire par effraction quelque part / braquer une banque
 shoplifting	le vol à l'étalage
@@ -37,3 +37,18 @@ racketeering / a racketeer	le racket / un racketteur
 to extort money from sb	racketter qn
 a riot / a rioter	une émeute / un casseur
 vandalism / to vandalize	le vandalisme / vandalier
+crimes figures	les chiffres de la criminalité
+ought to be touger on delinquency	devrait être plus sévère à l'égard de la délinquance
+but this is mainly due to	mais cela est dû principalement à
+to stop at nothing	ne reculer devant rien
+to ressort to carjacking	avoir recours au carjacking
+to ram-raiding to burgle shops	attaques à la voiture-bélier pour dévaliser des magasins
+trouble spots	les zones à risque
+no go areas	les zones de non-droit
+drugtrafficking	le trafic de drogue
+gangkillings	les règlements de compte entre gangs
+to be cracked down on hard	être réprimé sévèrement
+for fear to be mugged	de peur de se faire agresser
+to roam the streets	errer dans les rues
+left to their own devices	laissés à eux-mêmes
+might help to curb crime	pourrait contribuer à réduire la criminalité
