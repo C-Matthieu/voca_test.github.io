@@ -8,12 +8,15 @@ var nb_mots;
 var liste;
 let motVocab;
 let motEtud;
-let langue = "";
+var langue = "";
 // permet de récuperer les éléments de la zone d'entrée
 function getElement(){
     localStorage.clear();
     fileInput = document.getElementById('myFile');
     langue = document.getElementById('langue').value;
+    if (langue ==""){
+        langue = "Anglais";
+    }
     processFile(fileInput.files[0], langue);
 }
 
@@ -62,6 +65,7 @@ function processFile(e, langue = "Anglais") {
 
 // permet de gérér le premier affichage
 liste = localStorage.getItem("liste");
+langue = localStorage.getItem("langue").toLowerCase();
 motVocab = String(eval(liste)[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
