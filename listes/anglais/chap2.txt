@@ -5,11 +5,13 @@ poor	pauvre
 a pauper / a poor man	un pauvre
 to impoverish	paupériser, appauvrir
 the impoverishment (of a population)	la paupérisation
-dire poverty / grinding poverty / extreme poverty	la misère noire, la misère extrême, la grande pauvreté
-to be poverty-sticken	être dans le misère
+dire poverty / extreme poverty / grinding poverty	la misère noire, la misère extrême, la grande pauvreté
+to be poverty-stricken	être dans le misère
 to live below the poverty line	vivre en dessous du seuil de pauvreté
 the underprivileged / the deprived / the disadvantaged	les défavorisés
 to live a hand-to-mouth existence	vivre au jour le jour
+precariousness	la précarité
+to live a precarious existence	vivre une existence précaire
 to make ends meet	joindre les deux bouts
 starvation wages	un salaire de misère
 to sink into poverty	sombrer, basculer dans la pauvreté
@@ -30,4 +32,15 @@ to alleviate poverty	réduire la pauvreté
 to eradicate poverty	éradiquer la pauvreté
 to meet a target	atteindre un objectif
 a mammoth task / a daunting task	une tâche gigantesque, énorme
-(the aid of) the World Bank	(l'aide de) la banque mondiale
+(the aid of) the World Bank	(l'aide de) la Banque mondiale
+the greastest killer	la première cause de mortalité
+Even halving it as a tall order	Même le fait de le réduire de moitié est un défi de taille
+greed	la cupidité
+to be widening	ne se comble pas
+to be bound to worsen	ne peut qu'empirer
+the amount	le montant
+adequate sanitation	des installations sanitaires adéquates
+to be a mighty step forward	être un grand pas en avant
+preventable diseases	les maladies évitables
+concerted action	une action d'ensemble
+to lift people out of poverty	sortir les gens de la pauvreté

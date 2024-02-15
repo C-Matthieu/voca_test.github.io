@@ -9,7 +9,7 @@ the gap is widening / is narrowing	le fossé se creuse / se réduit
 to bridge / to narrow the gap	combler / réduire le fossé
 inequality is on the rise	les inégalités sont en hausse
 to prevent inequalities from rising	empêcher les inégalités d'augmenter
-the struggle against inequelity	la luttte contre les inégalités
+the struggle against inequalities	la luttte contre les inégalités
 wealth / income inequality	l'inégalité des richesses / de revenus
 health / education inequality	l'inégalité en matière de santé / d'éducation
 racial / gender / age inequality	l'inegalité en fonction de la race / du sexe / de l'âge
@@ -31,3 +31,11 @@ to promote universal access to education	promouvoir l'accès universel à l'édu
 to tackle prejudice and discrimination	s'attaquer aux préjugés et aux discriminations
 to refuse two-tier societies	refuser les sociétés à deux vitesses
 to take concerted action to build fairer societies	prendre des mesures concertées pour bâtir des sociétés plus justes
+to make a priority	faire une priorité
+two-thirds	des deux tiers
+twice as much wealth	deux fois plus de richesses
+"The rich get richer and the poor get poorer"	"Les riches s'enrichissent et les pauvres s'appauvrissent"
+an earlier grave	une mort plus précoce
+to pay lip service to inequality	ne faire que de belles paroles sur l'inégalité
+to make empty promises	faire des promesses en l'air
+not just a fortunate few	pas seulement une poignée de privilégiés

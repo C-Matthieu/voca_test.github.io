@@ -17,7 +17,7 @@ to make contraception available to all women	rendre la contraception accessible 
 the death rate / mortality / the mortality rate	le taux de mortalité
 the infant mortality rate	le taux de mortalité infantile
 life expectancy	l'esperence de vie
-a densely populated area / an area of low population density	une région fortement peuplée
+a densely populated area / an area of high population density	une région fortement peuplée
 a sparsely populated area / an area of low population density	une région faiblement peuplée
 to rise by / to increase by / to grow by 5%	augmenter de 5%
 a rise / an increase in world population	une augmentation de la population mondiale
@@ -30,3 +30,14 @@ the current trend	la tendance actuelle
 the reversal of a trend	un renversement de tendance
 a baby boom	un baby boom
 the baby boomers	les enfants du baby boom
+overturns	contredit
+currently	à l'heure actuelle
+to put up	pouvoir s'accomoder
+moins	fewer
+the world's most populous	le plus peuplé du monde
+points to	met l'accent sur
+a growing imbalance	un déséquilibre croissant
+to curb	freiner
+a disaster waiting to happen	un désastre annoncé
+to be elderly	être âgé
+the human behaviour	le comportement humain
