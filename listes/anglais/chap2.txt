@@ -1,4 +1,5 @@
 poverty	la pauvreté, le paupérisme
+the destitute	les indigents, les pauvres
 destitution	le dénuement, la misère
 the poor / poor people / the needy / the have-nots	les pauvres
 poor	pauvre
