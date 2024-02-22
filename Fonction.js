@@ -54,7 +54,6 @@ function processFile(e, langue = "Anglais") {
             vocabList.pop();
             console.log(vocabList);
             localStorage.setItem("liste", JSON.stringify(vocabList));
-            nb_mots = vocabList.length;
             window.location.href = "3LeTest.html?" + encodeURIComponent(langue);
         };
         reader.readAsText(file);
@@ -66,6 +65,7 @@ function processFile(e, langue = "Anglais") {
 // permet de gérér le premier affichage
 liste = localStorage.getItem("liste");
 liste = eval(liste);
+nb_mots = liste.length;
 langue = localStorage.getItem("langue").toLowerCase();
 motVocab = String(liste[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
@@ -192,6 +192,7 @@ function toggleTheme() {
     var chrono = document.getElementById('chrono'); 
     var boutonModeSombre  = document.getElementById('bouton-mode-sombre');
     var affichage = document.getElementById('null');
+    var entree = document.getElementById('entree');
     if (name.classList.contains('dark-mode')) {
         document.body.style.background = '#FCF6F6';
         color = '#FCF6F6';
@@ -204,6 +205,7 @@ function toggleTheme() {
     chrono.classList.toggle('dark-mode')
     boutonModeSombre.classList.toggle('dark-mode');
     affichage.classList.toggle('dark-mode');
+    entree.classList.toggle('dark-mode');
 }
 
 

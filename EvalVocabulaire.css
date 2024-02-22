@@ -15,13 +15,6 @@
 	float: left;
 }
 
-#entree
-{
-	background-color: grey;
-	font-family: Fixedsys;
-	font-size:14pt;
-	border-radius: 40px;
-}
 
 #valider
 {
@@ -106,6 +99,7 @@
 	font-size:14pt;
 	border-radius: 40px;
 }
+
 #name {
 	color : black;
 }
