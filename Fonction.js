@@ -5,7 +5,7 @@ document.getElementById('entree').focus();
 let termine = false;
 let fautes = 0;
 var nb_mots;
-var liste;
+let liste;
 let motVocab;
 let motEtud;
 var langue = "";
@@ -65,8 +65,9 @@ function processFile(e, langue = "Anglais") {
 
 // permet de gérér le premier affichage
 liste = localStorage.getItem("liste");
+liste = eval(liste);
 langue = localStorage.getItem("langue").toLowerCase();
-motVocab = String(eval(liste)[aleatoire()][1]);
+motVocab = String(liste[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
 
@@ -80,14 +81,14 @@ document.addEventListener('keydown', function(event) {
 
 // permet de prendre un élement aléatoirement dans la liste
 function aleatoire() {
-    if (eval(liste).length > 0) {
+    if (liste.length > 0) {
         let index;
         do {
-            index = Math.floor(Math.random() * eval(liste).length);
-        } while (index == motEtud && eval(liste).length > 1);
+            index = Math.floor(Math.random() * liste.length);
+        } while (index == motEtud && liste.length > 1);
         motEtud = index;
         return motEtud;
-    } else if (eval(liste).length == 0) {
+    } else if (liste.length == 0) {
         motEtud = 0;
         return motEtud;
     }
@@ -103,14 +104,16 @@ function getValue()
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
             }
-        else if (reponse.toUpperCase().replace(/\s+/g, '') == eval(liste)[motEtud][0].toUpperCase().replace(/\s+/g, '')){
+        else if (reponse.toUpperCase().replace(/\s+/g, '') == liste[motEtud][0].toUpperCase().replace(/\s+/g, '')){
             document.body.style.background = '#1DC16A';
             document.getElementById("faux").innerHTML = "";
             document.getElementById("null").innerHTML = "";
-            document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${eval(liste).length - 1} mots à apprendre`;
-            eval(liste).splice(motEtud, 1);
+            document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${liste.length - 1} mots à apprendre`;
+            console.log(liste.length, liste);
+            liste.splice(motEtud, 1);
+            console.log(liste.length, liste);
             
-            if (eval(liste).length == 0){
+            if (liste.length == 0){
                 termine = true;
                 worker.postMessage('stop');
                 document.getElementById("valider").innerHTML = 'Recommencer';
@@ -128,7 +131,7 @@ function getValue()
             document.body.style.background = '#DC143C';
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "";
-            document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${eval(liste)[motEtud][0]}, il vous reste plus que ${eval(liste).length} mots à apprendre`;
+            document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
             fautes += 1;
             setTimeout(afficher, 1000);
             }
@@ -142,7 +145,7 @@ function getValue()
 function afficher()
 {
     aleatoire()
-    let motVocab = String(eval(liste)[motEtud][1]);
+    let motVocab = String(liste[motEtud][1]);
     document.getElementById('mot').innerHTML = motVocab;
     document.getElementById('entree').focus();
     document.body.style.background = color;
