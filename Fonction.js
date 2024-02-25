@@ -33,14 +33,13 @@ async function loadFileFromUrl(url, langue = "Anglais") {
       return processFile(file, langue);
     } catch (error) {
       console.error("Erreur lors du chargement du fichier depuis l'URL:", error);
-      // ... actions de gestion des erreurs
-      return null; // ou une valeur indiquant l'échec
+      document.location.href = "https://c-matthieu.github.io/voca_test.github.io/";
+      return null;
     }
   }
   
 // permet de convertir un fichier en liste
 function processFile(e, langue = "Anglais") {
-    console.log(e);
     localStorage.clear();
     localStorage.setItem("langue", langue);
     const file = e;
@@ -50,9 +49,7 @@ function processFile(e, langue = "Anglais") {
             const contents = e.target.result;
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
-            console.log(vocabList);
             vocabList.pop();
-            console.log(vocabList);
             localStorage.setItem("liste", JSON.stringify(vocabList));
             window.location.href = "3LeTest.html?" + encodeURIComponent(langue);
         };
@@ -109,9 +106,7 @@ function getValue()
             document.getElementById("faux").innerHTML = "";
             document.getElementById("null").innerHTML = "";
             document.getElementById("juste").innerHTML = `Bravo vous avez trouvé la bonne reponse, il vous reste plus que ${liste.length - 1} mots à apprendre`;
-            console.log(liste.length, liste);
             liste.splice(motEtud, 1);
-            console.log(liste.length, liste);
             
             if (liste.length == 0){
                 termine = true;
