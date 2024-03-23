@@ -16,14 +16,14 @@
 }
 
 
-#valider
+.bouton
 {
 	float:right;
 	border-radius: 60px;
 	background-color:darkgrey;
 	font-size: 11pt;
 }
-#valider:hover
+.bouton:hover
 {
 	border-left-color: black;
 	border-left-width: 2.4pt;

@@ -181,6 +181,13 @@ function retour(){
     document.location.href = `2${localStorage.langue}.html`;
 }
 
+function passer(){
+    document.getElementById("juste").innerHTML = "";
+    document.getElementById("null").innerHTML = "";
+    document.getElementById("faux").innerHTML = `La reponse était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
+    afficher();
+}
+
 function toggleTheme() {
     var entree = document.getElementById('entree');
     var name = document.getElementById('name'); 
