@@ -1,4 +1,5 @@
 poverty	la pauvreté, le paupérisme
+the destitute	les indigents, les pauvres
 destitution	le dénuement, la misère
 the poor / poor people / the needy / the have-nots	les pauvres
 poor	pauvre
@@ -33,8 +34,8 @@ to eradicate poverty	éradiquer la pauvreté
 to meet a target	atteindre un objectif
 a mammoth task / a daunting task	une tâche gigantesque, énorme
 (the aid of) the World Bank	(l'aide de) la Banque mondiale
-the greastest killer	la première cause de mortalité
-Even halving it as a tall order	Même le fait de le réduire de moitié est un défi de taille
+the greatest killer	la première cause de mortalité
+Even halving it is a tall order	Même le fait de le réduire de moitié est un défi de taille
 greed	la cupidité
 to be widening	ne se comble pas
 to be bound to worsen	ne peut qu'empirer
