@@ -4,6 +4,7 @@ document.body.style.background = color;
 document.getElementById('entree').focus();
 let termine = false;
 let fautes = 0;
+let passes = 0;
 var nb_mots;
 let liste;
 let motVocab;
@@ -116,7 +117,7 @@ function getValue()
                 document.getElementById("faux").innerHTML = "";
                 document.getElementById("null").innerHTML = "";
                 document.getElementById("mot").innerHTML = "Fin";
-                document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs sur une liste de ${nb_mots} mots`;
+                document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs et de ${passes} mots passés sur une liste de ${nb_mots} mots`;
                 }
             else{
                 setTimeout(afficher, 1000);
@@ -182,6 +183,7 @@ function retour(){
 }
 
 function passer(){
+    passes += 1;
     document.getElementById("juste").innerHTML = "";
     document.getElementById("null").innerHTML = "";
     document.getElementById("faux").innerHTML = `La reponse était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
