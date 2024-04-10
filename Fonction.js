@@ -112,7 +112,7 @@ function getValue()
             
             if (liste.length == 0){
                 termine = true;
-                //worker.postMessage('stop');
+                worker.postMessage('stop');
                 document.getElementById("valider").innerHTML = 'Recommencer';
                 document.body.style.background = color;
                 document.getElementById("faux").innerHTML = "";
