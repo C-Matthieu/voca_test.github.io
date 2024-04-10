@@ -10,6 +10,7 @@ let liste;
 let motVocab;
 let motEtud;
 var langue = "";
+let erreurs = "";
 // permet de récuperer les éléments de la zone d'entrée
 function getElement(){
     localStorage.clear();
@@ -50,7 +51,7 @@ function processFile(e, langue = "Anglais") {
             const contents = e.target.result;
             const lines = contents.split('\n');
             const vocabList = lines.map(line => line.split('\t'));
-            vocabList.pop();
+            //vocabList.pop();
             localStorage.setItem("liste", JSON.stringify(vocabList));
             window.location.href = "3LeTest.html?" + encodeURIComponent(langue);
         };
@@ -111,13 +112,15 @@ function getValue()
             
             if (liste.length == 0){
                 termine = true;
-                worker.postMessage('stop');
+                //worker.postMessage('stop');
                 document.getElementById("valider").innerHTML = 'Recommencer';
                 document.body.style.background = color;
                 document.getElementById("faux").innerHTML = "";
                 document.getElementById("null").innerHTML = "";
                 document.getElementById("mot").innerHTML = "Fin";
                 document.getElementById("juste").innerHTML = `Bravo vous avez finis la liste de vocabulaire avec un total de ${fautes} erreurs et de ${passes} mots passés sur une liste de ${nb_mots} mots`;
+                localStorage.setItem("Erreurs", erreurs);
+                downloadErrors();
                 }
             else{
                 setTimeout(afficher, 1000);
@@ -128,6 +131,8 @@ function getValue()
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "";
             document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
+            if (!erreurs.includes(liste[motEtud][0])){
+                erreurs += `${liste[motEtud][0]}	${liste[motEtud][1]}\n`;}
             fautes += 1;
             setTimeout(afficher, 1000);
             }
@@ -212,7 +217,33 @@ function toggleTheme() {
     entree.classList.toggle('dark-mode');
 }
 
+function downloadErrors() {
+    // Récupérer les erreurs du localStorage
+    let errors = localStorage.getItem('Erreurs');
+    if(errors){
+        errors = errors.slice(0, -1);
+    }
+    // Demander à l'utilisateur s'il souhaite télécharger le fichier
+    if (confirm('Voulez-vous télécharger le fichier contenant vos erreurs (au format comprehensible par le site pour vous entrainer sur les erreurs)?')) {
+        // Créer un Blob à partir des erreurs
+        const blob = new Blob([errors], {type: 'text/plain'});
 
+        // Créer une URL pour le Blob
+        const url = URL.createObjectURL(blob);
+
+        // Créer un lien de téléchargement
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'lesDifferentesErreurs.txt';
+
+        // Ajouter le lien au document et déclencher un clic dessus
+        document.body.appendChild(link);
+        link.click();
+
+        // Supprimer le lien du document
+        document.body.removeChild(link);
+    }
+}
 const worker = new Worker('worker.js');
 worker.onmessage = function(event) {
     document.getElementById("chronometre").innerHTML = event.data;
