@@ -9,11 +9,11 @@ var nb_mots;
 let liste;
 let motVocab;
 let motEtud;
+let chapitre;
 var langue = "";
 let erreurs = "";
 // permet de récuperer les éléments de la zone d'entrée
 function getElement(){
-    localStorage.clear();
     fileInput = document.getElementById('myFile');
     langue = document.getElementById('langue').value;
     if (langue ==""){
@@ -24,7 +24,6 @@ function getElement(){
 
 // permet de récuperer les fichiers txt du répository GitHub
 async function loadFileFromUrl(url, langue = "Anglais") {
-    localStorage.clear();
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -42,7 +41,6 @@ async function loadFileFromUrl(url, langue = "Anglais") {
   
 // permet de convertir un fichier en liste
 function processFile(e, langue = "Anglais") {
-    localStorage.clear();
     localStorage.setItem("langue", langue);
     const file = e;
     if (true) {
@@ -236,7 +234,7 @@ function downloadErrors() {
         // Créer un lien de téléchargement
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'lesDifferentesErreurs.txt';
+        link.download = 'Fichier_Erreurs.txt';
 
         // Ajouter le lien au document et déclencher un clic dessus
         document.body.appendChild(link);
