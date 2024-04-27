@@ -192,6 +192,8 @@ function passer(){
     document.getElementById("juste").innerHTML = "";
     document.getElementById("null").innerHTML = "";
     document.getElementById("faux").innerHTML = `La reponse était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
+    if (!erreurs.includes(liste[motEtud][0])){
+        erreurs += `${liste[motEtud][0]}	${liste[motEtud][1]}\n`;}
     afficher();
 }
 
@@ -224,7 +226,7 @@ function downloadErrors() {
         errors = errors.slice(0, -1);
     }
     // Demander à l'utilisateur s'il souhaite télécharger le fichier
-    if (confirm('Voulez-vous télécharger le fichier contenant vos erreurs (au format comprehensible par le site pour vous entrainer sur les erreurs)?')) {
+    if (confirm('Voulez-vous télécharger le fichier contenant vos erreurs et les mots passés (au format comprehensible par le site pour vous entrainer sur cette liste)?')) {
         // Créer un Blob à partir des erreurs
         const blob = new Blob([errors], {type: 'text/plain'});
 
