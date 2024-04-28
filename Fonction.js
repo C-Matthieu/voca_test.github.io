@@ -182,7 +182,13 @@ function ó(){
 }
 
 function retour(){
-    document.location.href = `2${localStorage.langue}.html`;
+    if (localStorage.langue == "Anglais" || localStorage.langue == "Espagnol"){
+        document.location.href = `2${localStorage.langue}.html`;
+    }
+    else {
+        document.location.href = `index.html`;
+    }
+    
 }
 
 function passer(){
