@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vocab Test</title>
+	<link rel="icon" type="png" href="favicon.png">
+	<link rel="stylesheet" href="Flash.css">
+</head>
+<body  style="text-align: center;">
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<h4 id="chrono" style="display: flex; justify-content: center;"> <span id="chronometre">0:00</span></h4>
+	</div>
+	<button id="bouton-mode-sombre" class="bouton-par-defaut" onclick="FtoggleTheme()">
+	  </button>
+	  <h1 id="name"> <span id="mot"></span> </h1>
+	<button id="passer" class="bouton" type="submit" onclick="Fretourner()"> Tourner </button>
+    <button id="valider" class="bouton" type="submit" onclick="Fsuivant()"> Suivant </button>
+	<script type="text/javascript" src="FlashCard.js"></script>
+</body>
+<br>
+
+<div id="retour">
+	<button class="bouton" style="background-color: darkgrey;" onclick="Fretour()">Retour</button>
+</div>
+</html>	
+

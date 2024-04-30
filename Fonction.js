@@ -34,7 +34,7 @@ async function loadFileFromUrl(url, langue = "Anglais") {
       return processFile(file, langue);
     } catch (error) {
       console.error("Erreur lors du chargement du fichier depuis l'URL:", error);
-      document.location.href = "https://c-matthieu.github.io/voca_test.github.io/";
+      document.location.href = "index.html";
       return null;
     }
   }

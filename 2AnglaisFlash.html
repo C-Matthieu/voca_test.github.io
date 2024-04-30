@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anglais</title>
+	<link rel="icon" type="png" href="favicon.png">
+	<h1 style="text-align: center;">Cliquez sur la liste que vous voulez étudier</h1>
+	<link rel="stylesheet" href="EvalVocabulaire.css">
+</head>
+<body  style="text-align: center; background-color: grey;">
+	<script src="FlashCard.js"></script>
+	<h2> Mode Flashcard</h2>
+	<select id="chapitres" style="background-color: darkgrey;" onchange="FloadFileFromUrl(this.value)">
+		<script>
+			var select = document.getElementById('chapitres');
+			for (var i = 1; i <= 116; i++) {
+				var option = document.createElement('option');
+				option.value = 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chap' + i + '.txt';
+				option.text = 'Chapitre ' + i;
+				select.appendChild(option);
+			}
+			option.value = 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chapLinkWords.txt';
+			option.text = 'LinkWords';
+			select.appendChild(option);
+		</script>
+	</select>
+
+</body>
+<br>
+<div id="retour">
+	<button class="choix"  style="background-color: darkgrey;"> <a href="index.html">Retour</a></button>
+</div>
+</html>
+

@@ -1,3 +1,21 @@
+#texte-acceuil {
+    text-align: center;
+    min-height: 100vh; /* Occuper toute la hauteur de la fenêtre */
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+	font-family: Ink Free;
+	font-size: 30px;
+	color: black;
+}
+
+
+#page-principale {
+	margin-top: 75vh; /* Masquer la page principale au début */
+	margin-bottom: 75vh;
+    position: relative; 
+}
+
 * 
 {
 	font-family: Ink Free;

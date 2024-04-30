@@ -1,0 +1,74 @@
+#retour
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 5pt;
+	
+}
+
+.bouton
+{
+	float:center;
+	border-radius: 60px;
+	background-color:darkgrey;
+	font-size: 11pt;
+	margin: 2.5pt;
+}
+.bouton:hover
+{
+	border-left-color: royalblue;
+	border-left-width: 1.5pt;
+	border-right-color: royalblue;
+	border-right-width: 1.5pt;
+	border-top-color: royalblue;
+	border-top-width: 1.5pt;
+	border-bottom-color: royalblue;
+	border-bottom-width: 1.5pt;
+	font-size: 13pt;
+}
+
+#name {
+	background-color: white;
+	color : black;
+	border-radius: 60px;
+	min-height: 80vh;
+	text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+	font-family: Ink Free;
+}
+
+#name.dark-mode {
+	color : black;
+	background-color: darkgrey;
+}
+
+#chrono {
+	color : black;
+}
+
+#chrono.dark-mode {
+	color : white;
+}
+
+#bouton-mode-sombre {
+	background-image: url("img/moon.png");
+	border-radius: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
+  
+#bouton-mode-sombre.dark-mode {
+	background-image: url("img/sun.png");
+	border-radius: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+}
