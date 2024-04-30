@@ -98,9 +98,27 @@ function Fretourner(){
 }
 
 function Fsuivant(){
-    liste.splice(motEtud, 1);
-    Fafficher();
+    if (termine == false){
+        liste.splice(motEtud, 1);
+        if (liste.length == 0) {
+            document.getElementById('mot').innerHTML = "Fin";
+            termine = true;
+            document.getElementById('valider').innerHTML = "Recommencer";
+        }
+        else {
+        Fafficher();
+    }
 }
+    else {
+        liste = localStorage.getItem("liste");;
+        liste = eval(liste);
+        nb_mots = liste.length;
+        motVocab = String(liste[Faleatoire()][1]);
+        document.getElementById('mot').innerHTML = motVocab;
+        document.getElementById('valider').innerHTML = "Suivant";
+    }
+}
+
 function Fretour(){
         document.location.href = `index.html`;
     }
