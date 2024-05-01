@@ -125,12 +125,9 @@ function Fretour(){
 
 
 function FtoggleTheme() {
-    var entree = document.getElementById('entree');
     var name = document.getElementById('name'); 
     var chrono = document.getElementById('chrono'); 
     var boutonModeSombre  = document.getElementById('bouton-mode-sombre');
-    var affichage = document.getElementById('null');
-    var entree = document.getElementById('entree');
     if (name.classList.contains('dark-mode')) {
         document.body.style.background = '#FCF6F6';
         color = '#FCF6F6';
@@ -139,11 +136,9 @@ function FtoggleTheme() {
         color = '#393939';
     }
     name.classList.toggle('dark-mode')
-    entree.classList.toggle('dark-mode')
     chrono.classList.toggle('dark-mode')
     boutonModeSombre.classList.toggle('dark-mode');
     affichage.classList.toggle('dark-mode');
-    entree.classList.toggle('dark-mode');
 }
 
 const worker = new Worker('worker.js');

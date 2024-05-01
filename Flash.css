@@ -1,11 +1,8 @@
 #retour
 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 5pt;
-	
+	float: left;
 }
+
 
 .bouton
 {
@@ -27,6 +24,7 @@
 	border-bottom-width: 1.5pt;
 	font-size: 13pt;
 }
+
 
 #name {
 	background-color: white;
