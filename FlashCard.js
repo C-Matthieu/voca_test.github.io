@@ -80,6 +80,7 @@ function Fafficher()
 {
     Faleatoire()
     motVocab = String(liste[motEtud][1]);
+    affiché = 1;
     document.getElementById('mot').innerHTML = motVocab;
     document.body.style.background = color;
 }
@@ -120,7 +121,7 @@ function Fsuivant(){
 }
 
 function Fretour(){
-        document.location.href = `index.html`;
+        document.location.href = `FlashCard.html`;
     }
 
 

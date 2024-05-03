@@ -182,14 +182,8 @@ function ó(){
 }
 
 function retour(){
-    if (localStorage.langue == "Anglais" || localStorage.langue == "Espagnol"){
-        document.location.href = `2${localStorage.langue}.html`;
+        document.location.href = `Evaluation.html`;
     }
-    else {
-        document.location.href = `index.html`;
-    }
-    
-}
 
 function passer(){
     passes += 1;
