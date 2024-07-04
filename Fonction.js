@@ -12,6 +12,7 @@ let motEtud;
 let chapitre;
 var langue = "";
 let erreurs = "";
+localStorage.setItem("preRemplissage", "");
 // permet de récuperer les éléments de la zone d'entrée
 function getElement(){
     fileInput = document.getElementById('myFile');
@@ -24,6 +25,9 @@ function getElement(){
 
 // permet de récuperer les fichiers txt du répository GitHub
 async function loadFileFromUrl(url, langue = "Anglais") {
+    if (url == 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliers.txt'){
+        localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
+    }
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -67,6 +71,7 @@ langue = localStorage.getItem("langue").toLowerCase();
 motVocab = String(liste[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
+document.getElementById('entree').value = localStorage.getItem("preRemplissage");
 
 
 // permet de valider avec la touche entrer
@@ -95,7 +100,7 @@ function getValue()
 {
     if (termine == false){
         let reponse = document.getElementById("entree").value;
-        document.getElementById('entree').value = "";
+        document.getElementById('entree').value = localStorage.getItem("preRemplissage");
         if (reponse.length == 0){
             document.getElementById("faux").innerHTML = "";
             document.getElementById("juste").innerHTML = "";

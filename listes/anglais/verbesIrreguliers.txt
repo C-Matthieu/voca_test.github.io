@@ -1,0 +1,176 @@
+bv:abide, pr:abode, pp:abode	respecter, se conformer à
+bv:arise, pr:arose, pp:arisen	survenir
+bv:awake, pr:awoke, pp:awoken	se réveiller
+bv:be, pr:was, were, pp:been	être
+bv:bear, pr:bore, pp:borne, born	porter, supporter, naître
+bv:beat, pr:beat, pp:beaten	battre
+bv:become, pr:became, pp:become	devenir
+bv:beget, pr:begat, begot, pp:begotten	engendrer
+bv:begin, pr:began, pp:begun	commencer
+bv:bend, pr:bent, pp:bent	plier, se courber
+bv:bet, pr:bet, pp:bet	parier
+bv:bid, pr:bid, bade, pp:bid, bidden	offrir
+bv:bite, pr:bit, pp:bitten	mordre
+bv:bleed, pr:bled, pp:bled	saigner
+bv:blow, pr:blew, pp:blown	souffler, gonfler
+bv:break, pr:broke, pp:broken	casser
+bv:breed, pr:bred, pp:bred	élever (des animaux)
+bv:bring, pr:brought, pp:brought	apporter
+bv:broadcast, pr:broadcast, pp:broadcast	diffuser, émettre
+bv:build, pr:built, pp:built	construire
+bv:burn, pr:burnt, burned, pp:burnt, burned	brûler
+bv:burst, pr:burst, pp:burst	éclater
+bv:buy, pr:bought, pp:bought	acheter
+bv:can, pr:could, pp:could	pouvoir
+bv:cast, pr:cast, pp:cast	jeter, distribuer (rôles)
+bv:catch, pr:caught, pp:caught	attraper
+bv:chide, pr:chid, chode, pp:chid, chidden	gronder
+bv:choose, pr:chose, pp:chosen	choisir
+bv:cling, pr:clung, pp:clung	s'accrocher
+bv:clothe, pr:clad, clothed, pp:clad, clothed	habiller, recouvrir
+bv:come, pr:came, pp:come	venir
+bv:cost, pr:cost, pp:cost	coûter
+bv:creep, pr:crept, pp:crept	ramper
+bv:cut, pr:cut, pp:cut	couper
+bv:deal, pr:dealt, pp:dealt	distribuer
+bv:dig, pr:dug, pp:dug	creuser
+bv:dive, pr:dived, pp:dived, dove	plonger
+bv:do, pr:did, pp:done	faire
+bv:draw, pr:drew, pp:drawn	dessiner, tirer
+bv:dream, pr:dreamt, dreamed, pp:dreamt, dreamed	rêver
+bv:drink, pr:drank, pp:drunk	boire
+bv:drive, pr:drove, pp:driven	conduire
+bv:dwell, pr:dwelt, pp:dwelt, dwelled	habiter
+bv:eat, pr:ate, pp:eaten	manger
+bv:fall, pr:fell, pp:fallen	tomber
+bv:feed, pr:fed, pp:fed	nourrir
+bv:feel, pr:felt, pp:felt	se sentir, ressentir
+bv:fight, pr:fought, pp:fought	se battre
+bv:find, pr:found, pp:found	trouver
+bv:flee, pr:fled, pp:fled	s'enfuir
+bv:fling, pr:flung, pp:flung	lancer
+bv:fly, pr:flew, pp:flown	voler
+bv:forbid, pr:forbade, pp:forbidden	interdire
+bv:forecast, pr:forecast, pp:forecast	prévoir
+bv:foresee, pr:foresaw, pp:foreseen	prévoir, presentir
+bv:forget, pr:forgot, pp:forgotten, forgot	oublier
+bv:forgive, pr:forgave, pp:forgiven	pardonner
+bv:forsake, pr:forsook, pp:forsaken	abandonner
+bv:freeze, pr:froze, pp:frozen	geler
+bv:get, pr:got, pp:gotten, got	obtenir
+bv:give, pr:gave, pp:given	donner
+bv:go, pr:went, pp:gone	aller
+bv:grind, pr:ground, pp:ground	moudre, opprimer
+bv:grow, pr:grew, pp:grown	grandir, pousser
+bv:hang, pr:hung, pp:hung	tenir, pendre
+bv:have, pr:had, pp:had	avoir
+bv:hear, pr:heard, pp:heard	entendre
+bv:hide, pr:hid, pp:hidden	cacher
+bv:hit, pr:hit, pp:hit	taper, appuyer
+bv:hold, pr:held, pp:held	tenir
+bv:hurt, pr:hurt, pp:hurt	blesser
+bv:keep, pr:kept, pp:kept	garder
+bv:kneel, pr:knelt, knelled, pp:knelt, kneeled	s'agenouiller
+bv:know, pr:knew, pp:known	connaître, savoir
+bv:lay, pr:laid, pp:laid	poser
+bv:lead, pr:led, pp:led	mener, guider
+bv:lean, pr:leant, leaned, pp:leant, leaned	s'incliner, se pencher
+bv:leap, pr:leapt, leaped, pp:leapt, leaped	sauter, bondir
+bv:learn, pr:learnt, pp:learnt	apprendre
+bv:leave, pr:left, pp:left	laisser, quitter, partir
+bv:lend, pr:lent, pp:lent	prêter
+bv:let, pr:let, pp:let	permettre, louer
+bv:lie, pr:lay, pp:lain	s'allonger
+bv:light, pr:lit, lighted, pp:lit, lighted	allumer
+bv:lose, pr:lost, pp:lost	perdre
+bv:make, pr:made, pp:made	fabriquer
+bv:mean, pr:meant, pp:meant	signifier
+bv:meet, pr:met, pp:met	rencontrer
+bv:mow, pr:mowed, pp:mowed, mown	tondre
+bv:offset, pr:offset, pp:offset	compenser
+bv:overcome, pr:overcame, pp:overcome	surmonter
+bv:partake, pr:partook, pp:partaken	prendre part à
+bv:pay, pr:paid, pp:paid	payer
+bv:plead, pr:pled, pleaded, pp:pled, pleaded	supplier, plaider
+bv:preset, pr:preset, pp:preset	programmer
+bv:prove, pr:proved, pp:proven, proved	prouver
+bv:put, pr:put, pp:put	mettre
+bv:quit, pr:quit, pp:quit	quitter
+bv:read, pr:read, pp:read	lire
+bv:relay, pr:relaid, pp:relaid	relayer
+bv:rend, pr:rent, pp:rent	déchirer
+bv:rid, pr:rid, pp:rid	débarrasser
+bv:ride, pr:rode, pp:ridden	monter (vélo, cheval)
+bv:ring, pr:rang, pp:rung	sonner, téléphoner
+bv:rise, pr:rose, pp:risen	lever
+bv:run, pr:ran, pp:run	courir
+bv:saw, pr:saw, sawed, pp:sawn, sawed	scier
+bv:say, pr:said, pp:said	dire
+bv:see, pr:saw, pp:seen	voir
+bv:seek, pr:sought, pp:sought	chercher
+bv:sell, pr:sold, pp:sold	vendre
+bv:send, pr:sent, pp:sent	envoyer
+bv:set, pr:set, pp:set	fixer
+bv:shake, pr:shook, pp:shaken	secouer
+bv:shed, pr:shed, pp:shed	répandre, laisser tomber
+bv:shine, pr:shone, pp:shone	briller
+bv:shoe, pr:shod, pp:shod	chausser
+bv:shoot, pr:shot, pp:shot	tirer, fusiller
+bv:show, pr:showed, pp:shown	montrer
+bv:shut, pr:shut, pp:shut	fermer
+bv:sing, pr:sang, pp:sung	chanter
+bv:sink, pr:sank, sunk, pp:sunk, sunken	couler
+bv:sit, pr:sat, pp:sat	s'asseoir
+bv:slay, pr:slew, pp:slain	tuer
+bv:sleep, pr:slept, pp:slept	dormir
+bv:slide, pr:slid, pp:slid	glisser
+bv:slink, pr:slunk, slinked, pp:slunk, slinked	s'en aller furtivement
+bv:slit, pr:slit, pp:slit	fendre
+bv:smell, pr:smelt, pp:smelt	sentir
+bv:sow, pr:sowed, pp:sown, sowed	semer
+bv:speak, pr:spoke, pp:spoken	parler
+bv:speed, pr:sped, pp:sped	aller vite
+bv:spell, pr:spelt, pp:spelt	épeler, orthographier
+bv:spend, pr:spent, pp:spent	dépenser, passer du temps
+bv:spill, pr:spilt, spilled, pp:spilt, spilled	renverser
+bv:spin, pr:spun, pp:spun	tourner, faire tourner
+bv:spit, pr:spat, spit, pp:spat, spit	cracher
+bv:split, pr:split, pp:split	fendre
+bv:spoil, pr:spoilt, pp:spoilt	gâcher, gâter
+bv:spread, pr:spread, pp:spread	répandre
+bv:spring, pr:sprang, pp:sprung	surgir, jaillir, bondir
+bv:stand, pr:stood, pp:stood	être debout
+bv:steal, pr:stole, pp:stolen	voler, dérober
+bv:stick, pr:stuck, pp:stuck	coller
+bv:sting, pr:stung, pp:stung	piquer
+bv:stink, pr:stank, pp:stunk	puer
+bv:strew, pr:strewed, pp:strewn, strewed	éparpiller
+bv:strike, pr:struck, pp:stricken, struck	frapper
+bv:strive, pr:strove, pp:striven	s'efforcer
+bv:swear, pr:swore, pp:sworn	jurer
+bv:sweat, pr:sweat, sweated, pp:sweat, sweated	suer
+bv:sweep, pr:swept, pp:swept	balayer
+bv:swell, pr:swelled, sweated, pp:swollen	gonfler, enfler
+bv:swim, pr:swam, pp:swum	nager
+bv:swing, pr:swung, pp:swung	se balancer
+bv:take, pr:took, pp:taken	prendre
+bv:teach, pr:taught, pp:taught	enseigner
+bv:tear, pr:tore, pp:torn	déchirer
+bv:tell, pr:told, pp:told	dire, raconter
+bv:think, pr:thought, pp:thought	penser
+bv:thrive, pr:throve, thrived, pp:thriven, thrived	prospérer
+bv:throw, pr:threw, pp:thrown	jeter
+bv:thrust, pr:thrust, pp:thrust	enfoncer
+bv:tread, pr:trod, pp:trodden	piétiner quelque chose
+bv:typeset, pr:typeset, pp:typeset	composer
+bv:undergo, pr:underwent, pp:undergone	subir
+bv:understand, pr:understood, pp:understood	comprendre
+bv:wake, pr:woke, pp:woken	réveiller
+bv:wear, pr:wore, pp:worn	porter (avoir sur soi)
+bv:weep, pr:wept, pp:wept	pleurer
+bv:wet, pr:wet, wetted, pp:wet, wetted	mouiller
+bv:win, pr:won, pp:won	gagner
+bv:wind, pr:wound, pp:wound	enrouler, remonter
+bv:withdraw, pr:withdrew, pp:withdrawn	se retirer
+bv:wring, pr:wrung, pp:wrung	tordre
+bv:write, pr:wrote, pp:written	écrire

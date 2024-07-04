@@ -20,9 +20,15 @@
 				option.text = 'Chapitre ' + i;
 				select.appendChild(option);
 			}
-			option.value = 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chapLinkWords.txt';
-			option.text = 'LinkWords';
-			select.appendChild(option);
+			var option1 = document.createElement('option'); // Créez l'option ici
+			option1.value = 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/chapLinkWords.txt';
+			option1.text = 'LinkWords';
+			select.appendChild(option1);
+
+			var option2 = document.createElement('option'); // Créez l'option ici
+			option2.value = 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliers.txt';
+			option2.text = 'Verbes Irreguliers';
+			select.appendChild(option2);
 		</script>
 	</select>
 </body>
