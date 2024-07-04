@@ -12,7 +12,6 @@ let motEtud;
 let chapitre;
 var langue = "";
 let erreurs = "";
-localStorage.setItem("preRemplissage", "");
 // permet de récuperer les éléments de la zone d'entrée
 function getElement(){
     fileInput = document.getElementById('myFile');
@@ -27,6 +26,9 @@ function getElement(){
 async function loadFileFromUrl(url, langue = "Anglais") {
     if (url == 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliers.txt'){
         localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
+    }
+    else {
+        localStorage.setItem("preRemplissage", "");
     }
     try {
       const response = await fetch(url);
