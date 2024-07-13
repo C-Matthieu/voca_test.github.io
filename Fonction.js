@@ -1,5 +1,5 @@
 // création des constantes, variables et listes
-let color = 'grey';
+let color = '#211c1cff';
 document.body.style.background = color;
 document.getElementById('entree').focus();
 let termine = false;
@@ -202,6 +202,9 @@ function passer(){
     afficher();
 }
 
+/**
+ * Toggles the theme between light mode and dark mode.
+ */
 function toggleTheme() {
     var entree = document.getElementById('entree');
     var name = document.getElementById('name'); 
@@ -210,11 +213,12 @@ function toggleTheme() {
     var affichage = document.getElementById('null');
     var entree = document.getElementById('entree');
     if (name.classList.contains('dark-mode')) {
-        document.body.style.background = '#FCF6F6';
-        color = '#FCF6F6';
+        document.body.style.background = '#211c1cff';  // noir
+        color = '#09bc8aff'; // vert
+    
     } else {
-        document.body.style.background = '#393939';
-        color = '#393939';
+        document.body.style.background = '#44a4e3ff';  // bleu
+        color = '#fffc31ff';  // jaune      
     }
     name.classList.toggle('dark-mode')
     entree.classList.toggle('dark-mode')
@@ -222,6 +226,7 @@ function toggleTheme() {
     boutonModeSombre.classList.toggle('dark-mode');
     affichage.classList.toggle('dark-mode');
     entree.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-mode');
 }
 
 function downloadErrors() {

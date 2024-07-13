@@ -1,0 +1,47 @@
+bv:get, pr:got, pp:gotten, got	obtenir
+bv:give, pr:gave, pp:given	donner
+bv:go, pr:went, pp:gone	aller
+bv:grind, pr:ground, pp:ground	moudre, opprimer
+bv:grow, pr:grew, pp:grown	grandir, pousser
+bv:hang, pr:hung, pp:hung	tenir, pendre
+bv:have, pr:had, pp:had	avoir
+bv:hear, pr:heard, pp:heard	entendre
+bv:hide, pr:hid, pp:hidden	cacher
+bv:hit, pr:hit, pp:hit	taper, appuyer
+bv:hold, pr:held, pp:held	tenir
+bv:hurt, pr:hurt, pp:hurt	blesser
+bv:keep, pr:kept, pp:kept	garder
+bv:kneel, pr:knelt, knelled, pp:knelt, kneeled	s'agenouiller
+bv:know, pr:knew, pp:known	connaître, savoir
+bv:lay, pr:laid, pp:laid	poser
+bv:lead, pr:led, pp:led	mener, guider
+bv:lean, pr:leant, leaned, pp:leant, leaned	s'incliner, se pencher
+bv:leap, pr:leapt, leaped, pp:leapt, leaped	sauter, bondir
+bv:learn, pr:learnt, pp:learnt	apprendre
+bv:leave, pr:left, pp:left	laisser, quitter, partir
+bv:lend, pr:lent, pp:lent	prêter
+bv:let, pr:let, pp:let	permettre, louer
+bv:lie, pr:lay, pp:lain	s'allonger
+bv:light, pr:lit, lighted, pp:lit, lighted	allumer
+bv:lose, pr:lost, pp:lost	perdre
+bv:make, pr:made, pp:made	fabriquer
+bv:mean, pr:meant, pp:meant	signifier
+bv:meet, pr:met, pp:met	rencontrer
+bv:mow, pr:mowed, pp:mowed, mown	tondre
+bv:offset, pr:offset, pp:offset	compenser
+bv:overcome, pr:overcame, pp:overcome	surmonter
+bv:partake, pr:partook, pp:partaken	prendre part à
+bv:pay, pr:paid, pp:paid	payer
+bv:plead, pr:pled, pleaded, pp:pled, pleaded	supplier, plaider
+bv:preset, pr:preset, pp:preset	programmer
+bv:prove, pr:proved, pp:proven, proved	prouver
+bv:put, pr:put, pp:put	mettre
+bv:quit, pr:quit, pp:quit	quitter
+bv:read, pr:read, pp:read	lire
+bv:relay, pr:relaid, pp:relaid	relayer
+bv:rend, pr:rent, pp:rent	déchirer
+bv:rid, pr:rid, pp:rid	débarrasser
+bv:ride, pr:rode, pp:ridden	monter (vélo, cheval)
+bv:ring, pr:rang, pp:rung	sonner, téléphoner
+bv:rise, pr:rose, pp:risen	lever
+bv:run, pr:ran, pp:run	courir

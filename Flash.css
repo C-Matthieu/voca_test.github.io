@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--raisin-black: #211c1cff;
+	--celestial-blue: #44a4e3ff;
+	--mint: #09bc8aff;
+	--yellow: #fffc31ff;
+	--ivory: #f6f7ebff;
+}
+
 #retour
 {
 	float: left;
@@ -8,7 +18,6 @@
 {
 	float:center;
 	border-radius: 60px;
-	background-color:darkgrey;
 	font-size: 11pt;
 	margin: 2.5pt;
 }
@@ -23,32 +32,34 @@
 	border-bottom-color: royalblue;
 	border-bottom-width: 1.5pt;
 	font-size: 13pt;
+	background-color: royalblue;
 }
 
 
 #name {
-	background-color: white;
-	color : black;
+	background-color: var(--celestial-blue);
+	color : var(--yellow);
 	border-radius: 60px;
 	min-height: 80vh;
 	text-align: center;
     display: flex; 
     align-items: center;
     justify-content: center; 
-	font-family: Ink Free;
+	font-family: "Montserrat", sans-serif;
+  	font-optical-sizing: auto;
 }
 
 #name.dark-mode {
-	color : black;
-	background-color: darkgrey;
+	color : var(--mint);
+	background-color: var(--raisin-black);
 }
 
 #chrono {
-	color : black;
+	color : var(--yellow);
 }
 
 #chrono.dark-mode {
-	color : white;
+	color : var(--mint);
 }
 
 #bouton-mode-sombre {
