@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-	--raisin-black: #211c1cff;
-	--celestial-blue: #44a4e3ff;
-	--mint: #09bc8aff;
-	--yellow: #fffc31ff;
+	--rich-black: #001514ff;
 	--ivory: #f6f7ebff;
+	--folly: #ff1053ff;
+	--ultra-violet: #6c6ea0ff;
+	--persian-green: #1ea896ff;
 }
 
 #retour
@@ -32,34 +32,34 @@
 	border-bottom-color: royalblue;
 	border-bottom-width: 1.5pt;
 	font-size: 13pt;
-	background-color: royalblue;
 }
 
 
-#name {
-	background-color: var(--celestial-blue);
-	color : var(--yellow);
-	border-radius: 60px;
+#passer {
+	background-color: var(--ivory);
+	color: var(--persian-green);
 	min-height: 80vh;
 	text-align: center;
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
+	display: flex; 
+	align-items: center;
+	justify-content: center; 
 	font-family: "Montserrat", sans-serif;
-  	font-optical-sizing: auto;
+	font-optical-sizing: auto;
+	width: 50%; /* Définir une largeur */
+	margin: auto; /* Centrage horizontal */
 }
 
-#name.dark-mode {
-	color : var(--mint);
-	background-color: var(--raisin-black);
+#passer.dark-mode {
+	color : var(--ultra-violet);
+	background-color: var(--rich-black);
 }
 
 #chrono {
-	color : var(--yellow);
+	color : var(--persian-green);
 }
 
 #chrono.dark-mode {
-	color : var(--mint);
+	color : var(--ultra-violet);
 }
 
 #bouton-mode-sombre {
@@ -80,4 +80,9 @@
 	width: 25px;
 	height: 25px;
 	object-fit: contain;
+}
+
+.boutons {
+    display: flex;
+    justify-content: space-between;
 }

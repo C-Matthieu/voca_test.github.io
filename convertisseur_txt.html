@@ -10,9 +10,8 @@
 </head>
 <body style="text-align: center;">
 <h2>Choisez le fichier qui correspond à la spécification :</h2>
-<h3>- mot dans la langue à apprendre séparé d'un tab puis le mot en français</h3>
+<h3> ! Mot dans la langue à apprendre séparé d'un tab puis le mot en français</h3>
 
-<label id="entree"> <input type="text" type="text" id="langue" spellcheck="false" placeholder="Entrez la langue du fichier"> </label>
 <input type="file" id="myFile" accept=".txt">
 
 <script src="Fonction.js"></script>
@@ -24,4 +23,31 @@
 <div id="retour">
     <button class="choix"> <a href="1ChoixLangue.html">Retour</a> </button>
 </div>
+
+<script>
+    // Demander à l'utilisateur s'il souhaite télécharger le fichier
+    if (confirm('Voulez-vous télécharger le fichier contenant le format attendu')) {
+        // Créer un Blob à partir des erreurs
+        let text = "";
+        for(let i = 1; i <= 100; i++) {
+            text += `mot_anglais${i}	mot_francais${i}\n`;
+        }
+        const blob = new Blob([text], {type: 'text/plain'});
+
+        // Créer une URL pour le Blob
+        const url = URL.createObjectURL(blob);
+
+        // Créer un lien de téléchargement
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Fichier_Erreurs.txt';
+
+        // Ajouter le lien au document et déclencher un clic dessus
+        document.body.appendChild(link);
+        link.click();
+
+        // Supprimer le lien du document
+        document.body.removeChild(link);
+    };
+</script>
 </html>

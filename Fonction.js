@@ -1,5 +1,5 @@
 // création des constantes, variables et listes
-let color = '#211c1cff';
+let color = '#001514ff';
 document.body.style.background = color;
 document.getElementById('entree').focus();
 let termine = false;
@@ -15,10 +15,7 @@ let erreurs = "";
 // permet de récuperer les éléments de la zone d'entrée
 function getElement(){
     fileInput = document.getElementById('myFile');
-    langue = document.getElementById('langue').value;
-    if (langue ==""){
-        langue = "Anglais";
-    }
+    langue = "Anglais";
     processFile(fileInput.files[0], langue);
 }
 
@@ -213,12 +210,12 @@ function toggleTheme() {
     var affichage = document.getElementById('null');
     var entree = document.getElementById('entree');
     if (name.classList.contains('dark-mode')) {
-        document.body.style.background = '#211c1cff';  // noir
-        color = '#09bc8aff'; // vert
+        document.body.style.background = '#001514ff';  // noir
+        color = '#6c6ea0ff'; // violet
     
     } else {
-        document.body.style.background = '#44a4e3ff';  // bleu
-        color = '#fffc31ff';  // jaune      
+        document.body.style.background = '#f6f7ebff';  // blanc
+        color = '#1ea896ff';  // vert
     }
     name.classList.toggle('dark-mode')
     entree.classList.toggle('dark-mode')

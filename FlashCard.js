@@ -1,5 +1,5 @@
 // création des constantes, variables et listes
-let color = '#211c1cff';
+let color = '#001514ff';
 document.body.style.background = color;
 let termine = false;
 var nb_mots;
@@ -130,11 +130,11 @@ function FtoggleTheme() {
     var chrono = document.getElementById('chrono'); 
     var boutonModeSombre  = document.getElementById('bouton-mode-sombre');
     if (name.classList.contains('dark-mode')) {
-        document.body.style.background = '#211c1cff';
-        color = '#09bc8aff';
+        document.body.style.background = '#001514ff';
+        color = '#6c6ea0ff';
     } else {
-        document.body.style.background = '#44a4e3ff';
-        color = '#fffc31ff';
+        document.body.style.background = '#f6f7ebff';
+        color = '#1ea896ff';
     }
     name.classList.toggle('dark-mode')
     chrono.classList.toggle('dark-mode')

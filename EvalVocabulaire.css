@@ -1,35 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-	--raisin-black: #211c1cff;
-	--celestial-blue: #44a4e3ff;
-	--mint: #09bc8aff;
-	--yellow: #fffc31ff;
+	--rich-black: #001514ff;
 	--ivory: #f6f7ebff;
+	--folly: #ff1053ff;
+	--ultra-violet: #6c6ea0ff;
+	--persian-green: #1ea896ff;
 }
-
-* 
-{
+*{
 	font-family: "Montserrat", sans-serif;
   	font-optical-sizing: auto;
-	background-color: var(--raisin-black);
+}
+body 
+{
+	background-color: var(--rich-black);
 }
 
 
 h1{
-	color: var(--yellow);
+	color: var(--persian-green);
 }
 
 h2{
-	color: var(--mint);
+	color: var(--ultra-violet);
 }
 
+h3{
+	color: var(--folly);
+}
 a{
 	background-color: var(--ivory);
-	color: var(--mint);
+	color: var(--ultra-violet);
 }
 a, a:visited {
-	color: var(--mint);
+	color: var(--ultra-violet);
 }
 
 #texte-acceuil {
@@ -39,7 +43,7 @@ a, a:visited {
     align-items: center;
     justify-content: center; 
 	font-size: 30px;
-	color: var(--yellow);
+	color: var(--persian-green);
 }
 
 #page-principale {
@@ -54,7 +58,7 @@ a, a:visited {
 	margin: 2.5pt;
 	border-radius: 60px;
 	background-color: var(--ivory);
-	font-style: var(--mint);
+	font-style: var(--ultra-violet);
 }
 
 #retour
@@ -112,7 +116,8 @@ select{
 	font-size: 12pt;
 	margin: 2.5pt;
 	border-radius: 60px;
-	color: var(--mint);
+	color: var(--ultra-violet);
+	background-color: var(--rich-black);
 }
 
 
@@ -125,7 +130,7 @@ select{
 
 #entree {
 	background-color: var(--ivory);
-	color : var(--raisin-black);
+	color : var(--rich-black);
 	font-size:14pt;
 	border-radius: 40px;
 }
@@ -142,18 +147,18 @@ select{
 }
 
 #chrono, #null, #name {
-	color : var(--mint);
-	background-color: var(--raisin-black);
+	color : var(--ultra-violet);
+	background-color: var(--rich-black);
 }
 
 #chrono.dark-mode, #null.dark-mode, #name.dark-mode {
-	color : var(--yellow);
-	background-color: var(--celestial-blue);	
+	color : var(--persian-green);
+	background-color: var(--ivory);	
 }
 
 #entree.dark-mode {
 	background-color: var(--ivory);
-	color : var(--celestial-blue);
+	color : var(--ivory);
 	font-size:14pt;
 	border-radius: 40px;
 }
@@ -168,9 +173,7 @@ select{
 	object-fit: contain;
 }
 
-.dark-mode *
+body.dark-mode
 {
-	font-family: "Montserrat", sans-serif;
-  	font-optical-sizing: auto;
-	background-color: var(--celestial-blue);
+	background-color: var(--ivory);
 }

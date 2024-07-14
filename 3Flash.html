@@ -13,13 +13,19 @@
 	</div>
 	<button id="bouton-mode-sombre" class="bouton-par-defaut" onclick="FtoggleTheme()">
 	  </button>
-	  <h1 id="name"> <span id="mot"></span> </h1>
-	<button id="passer" class="bouton" type="submit" onclick="Fretourner()"> Tourner </button>
-    <button id="valider" class="bouton" type="submit" onclick="Fsuivant()"> Suivant </button>
+	<button id="passer" class="bouton" type="submit" onclick="Fretourner()"> <h1 id="name"> <span id="mot"></span> </h1> </button>
+	<div class="boutons">
+	<div id="retour">
+		<button class="bouton" onclick="Fretour()">Retour</button>
+	</div>
+	<button id="valider" class="bouton" type="submit" onclick="Fsuivant()"> Suivant </button>
+	</div>
 	<script type="text/javascript" src="FlashCard.js"></script>
+	<script>
+        window.onload = function() {
+            alert("Pour retourner la flashcard, cliquez sur la carte.");
+        };
+    </script>
 </body>
-<div id="retour">
-	<button class="bouton" onclick="Fretour()">Retour</button>
-</div>
 </html>	
 
