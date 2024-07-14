@@ -54,12 +54,20 @@
 	background-color: var(--rich-black);
 }
 
-#chrono {
+#chrono, #mot {
 	color : var(--persian-green);
 }
 
-#chrono.dark-mode {
+#chrono.dark-mode, #mot.dark-mode {
 	color : var(--ultra-violet);
+}
+
+#passer{
+	background-color: #002927;
+}
+
+#passer.dark-mode{
+	background-color: var(--ivory);
 }
 
 #bouton-mode-sombre {

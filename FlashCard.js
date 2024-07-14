@@ -129,17 +129,20 @@ function FtoggleTheme() {
     var name = document.getElementById('name'); 
     var chrono = document.getElementById('chrono'); 
     var boutonModeSombre  = document.getElementById('bouton-mode-sombre');
+    var mot = document.getElementById('mot');
+    var passer = document.getElementById('passer');
     if (name.classList.contains('dark-mode')) {
         document.body.style.background = '#001514ff';
-        color = '#6c6ea0ff';
+        color = '#001514ff';
     } else {
         document.body.style.background = '#f6f7ebff';
-        color = '#1ea896ff';
+        color = '#f6f7ebff';
     }
     name.classList.toggle('dark-mode')
     chrono.classList.toggle('dark-mode')
     boutonModeSombre.classList.toggle('dark-mode');
-    affichage.classList.toggle('dark-mode');
+    mot.classList.toggle('dark-mode');
+    passer.classList.toggle('dark-mode');
 }
 
 const worker = new Worker('worker.js');

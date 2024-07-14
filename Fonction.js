@@ -104,7 +104,7 @@ function getValue()
     if (termine == false){
         let reponse = document.getElementById("entree").value;
         document.getElementById('entree').value = localStorage.getItem("preRemplissage");
-        if (reponse.length == 0){
+        if (reponse.length == 0 || reponse == "bv: , pr: , pp: "){
             document.getElementById("faux").innerHTML = "";
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
@@ -215,11 +215,11 @@ function toggleTheme() {
     var entree = document.getElementById('entree');
     if (name.classList.contains('dark-mode')) {
         document.body.style.background = '#001514ff';  // noir
-        color = '#6c6ea0ff'; // violet
+        color = '#001514ff'; // violet
     
     } else {
         document.body.style.background = '#f6f7ebff';  // blanc
-        color = '#1ea896ff';  // vert
+        color = '#f6f7ebff';  // vert
     }
     name.classList.toggle('dark-mode')
     entree.classList.toggle('dark-mode')

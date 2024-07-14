@@ -148,12 +148,10 @@ select{
 
 #chrono, #null, #name {
 	color : var(--ultra-violet);
-	background-color: var(--rich-black);
 }
 
 #chrono.dark-mode, #null.dark-mode, #name.dark-mode {
 	color : var(--persian-green);
-	background-color: var(--ivory);	
 }
 
 #entree.dark-mode {
