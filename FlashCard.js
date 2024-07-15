@@ -57,6 +57,9 @@ document.addEventListener('keydown', function(event) {
     if (event.code == "Enter" && termine == false) {
         Fsuivant();
   }
+    if (event.code == "ArrowRight" || event.code == "ArrowLeft") {
+        Fretourner();
+    }
 });
 
 // permet de prendre un élement aléatoirement dans la liste
