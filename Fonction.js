@@ -144,7 +144,7 @@ function getValue()
             }
         }
     else if (termine == true){
-        document.location.href = `3LeTest.html${a}`
+        document.location.href = `3LeTest.html`;
     }
     }
 
