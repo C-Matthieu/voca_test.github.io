@@ -21,10 +21,10 @@ function getElement(){
 
 // permet de récuperer les fichiers txt du répository GitHub
 async function loadFileFromUrl(url, langue = "Anglais") {
-    if (url == 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliers.txt'
-    || url == 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliersA-F.txt'
-    || url == 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliersG-R.txt'
-    || url == 'https://raw.githubusercontent.com/C-Matthieu/voca_test.github.io/main/listes/anglais/verbesIrreguliersS-Z.txt'
+    if (url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliers.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersA-F.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersG-R.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersS-Z.txt'
     ){
         localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
     }
