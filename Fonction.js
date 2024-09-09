@@ -80,9 +80,9 @@ if (preRemplissage == ""){
     document.getElementById('entree').value = localStorage.getItem("preRemplissage");
 }
 else{
-    document.getElementById('entree').value = "bv:";
-    document.getElementById('entree1').value = "pr:";
-    document.getElementById('entree2').value = "pp:";
+    document.getElementById('entree').placeholder = "bv:";
+    document.getElementById('entree1').placeholder = "pr:";
+    document.getElementById('entree2').placeholder = "pp:";
 }
 
 if (localStorage.getItem("preRemplissage") !=""){
@@ -123,11 +123,14 @@ function getValue()
     if (termine == false){ 
         let reponse;
         if (localStorage.getItem("preRemplissage") !=""){
-            reponse = document.getElementById("entree").value+ "," + document.getElementById("entree1").value+ "," + document.getElementById("entree2").value;
+            let e0 = "bv: " + document.getElementById("entree").value; 
+            let e1 = "pr: " + document.getElementById("entree1").value;
+            let e2 = "pp: " + document.getElementById("entree2").value;
+            reponse = e0+ "," + e1 + "," + e2;
             console.log(reponse);
-            document.getElementById('entree').value = "bv:";
-            document.getElementById('entree1').value = "pr:";
-            document.getElementById('entree2').value = "pp:";
+            document.getElementById('entree').value = "";
+            document.getElementById('entree1').value = "";
+            document.getElementById('entree2').value = "";
         }
         else{
             reponse = document.getElementById("entree").value;
