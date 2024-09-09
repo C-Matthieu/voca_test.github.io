@@ -23,6 +23,11 @@
 			defaultOption.disabled = true;
 			select.appendChild(defaultOption);
 
+			var optionProfAnglais = document.createElement('option'); // Créez l'option ici
+			optionProfAnglais.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrrugliersProfAnglais.txt';
+			optionProfAnglais.text = 'Verbes Irrugliers Prof Anglais';
+			select.appendChild(optionProfAnglais);
+
 			var option1 = document.createElement('option'); // Créez l'option ici
 			option1.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliers.txt';
 			option1.text = 'Verbes Irreguliers';

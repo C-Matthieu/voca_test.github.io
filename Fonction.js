@@ -74,7 +74,25 @@ langue = localStorage.getItem("langue").toLowerCase();
 motVocab = String(liste[aleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
 document.getElementById('langueEtud').innerHTML = langue;
-document.getElementById('entree').value = localStorage.getItem("preRemplissage");
+let preRemplissage = localStorage.getItem("preRemplissage");
+if (preRemplissage == ""){
+    document.getElementById('entree').value = localStorage.getItem("preRemplissage");
+}
+else{
+    document.getElementById('entree').value = "bv:";
+    document.getElementById('entree1').value = "pr:";
+    document.getElementById('entree2').value = "pp:";
+}
+
+if (localStorage.getItem("preRemplissage") !=""){
+    let entree1 = document.getElementById('entree1');
+    let entree2 = document.getElementById('entree2');
+    console.log(entree1);
+    entree1.style.display = "block";
+    entree2.style.display = "block";
+    entree1.style="center";
+    entree2.style="center";
+}
 
 
 // permet de valider avec la touche entrer
@@ -101,9 +119,18 @@ function aleatoire() {
 // permet de recuperer la valeur et d'agir en conséquence
 function getValue()
 {
-    if (termine == false){
-        let reponse = document.getElementById("entree").value;
-        document.getElementById('entree').value = localStorage.getItem("preRemplissage");
+    if (termine == false){ 
+        let reponse;
+        if (localStorage.getItem("preRemplissage") !=""){
+            reponse = document.getElementById("entree")+ document.getElementById("entree1")+ document.getElementById("entree2");
+            document.getElementById('entree').value = "bv:";
+            document.getElementById('entree1').value = "pr:";
+            document.getElementById('entree2').value = "pp:";
+        }
+        else{
+            reponse = document.getElementById("entree").value;
+            document.getElementById('entree').value = localStorage.getItem("preRemplissage");
+        }
         if (reponse.length == 0 || reponse == "bv: , pr: , pp: "){
             document.getElementById("faux").innerHTML = "";
             document.getElementById("juste").innerHTML = "";

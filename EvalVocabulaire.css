@@ -128,7 +128,7 @@ select{
 	font-size: 25pt;
 }
 
-#entree {
+.entree {
 	background-color: var(--ivory);
 	color : var(--rich-black);
 	font-size:14pt;
@@ -154,7 +154,7 @@ select{
 	color : var(--persian-green);
 }
 
-#entree.dark-mode {
+.entree.dark-mode {
 	background-color: var(--ivory);
 	color : var(--ivory);
 	font-size:14pt;
