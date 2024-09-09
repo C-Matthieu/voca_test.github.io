@@ -25,6 +25,7 @@ async function loadFileFromUrl(url, langue = "Anglais") {
     || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersA-F.txt'
     || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersG-R.txt'
     || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersS-Z.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrrugliersProfAnglais.txt'
     ){
         localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
     }
@@ -122,7 +123,8 @@ function getValue()
     if (termine == false){ 
         let reponse;
         if (localStorage.getItem("preRemplissage") !=""){
-            reponse = document.getElementById("entree")+ document.getElementById("entree1")+ document.getElementById("entree2");
+            reponse = document.getElementById("entree").value+ "," + document.getElementById("entree1").value+ "," + document.getElementById("entree2").value;
+            console.log(reponse);
             document.getElementById('entree').value = "bv:";
             document.getElementById('entree1').value = "pr:";
             document.getElementById('entree2').value = "pp:";
