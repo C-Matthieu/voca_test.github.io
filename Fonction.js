@@ -16,17 +16,18 @@ let erreurs = "";
 function getElement(){
     fileInput = document.getElementById('myFile');
     langue = "Anglais";
-    processFile(fileInput.files[0], langue);
+    processFile(fileInput.files[0], langue, "");
 }
 
 // permet de récuperer les fichiers txt du répository GitHub
 async function loadFileFromUrl(url, langue = "Anglais") {
-    if (url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliers.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersA-F.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersG-R.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersS-Z.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrrugliersProfAnglais.txt'
+    if (url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliers.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersA-F.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersG-R.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersS-Z.txt'
+    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrrugliersProfAnglais.txt'
     ){
+        console.log("préremplissage");
         localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
     }
     else {
@@ -48,7 +49,10 @@ async function loadFileFromUrl(url, langue = "Anglais") {
   }
   
 // permet de convertir un fichier en liste
-function processFile(e, langue = "Anglais") {
+function processFile(e, langue = "Anglais", pre="bv: , pr: , pp: ") {
+    if (pre == ""){
+        localStorage.setItem("preRemplissage", "");
+    }
     localStorage.setItem("langue", langue);
     const file = e;
     if (true) {
