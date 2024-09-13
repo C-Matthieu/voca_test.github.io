@@ -11,65 +11,183 @@
 <body  style="text-align: center;">
 	<script src="FlashCard.js"></script>
 	<h2> Mode Flashcard</h2>
-	<select id="chapitres" class="chapitres" onchange="FloadFileFromUrl(this.value)">
-		<script>
-			var select = document.getElementById('chapitres');
 
-			// Option par défaut
+	<!-- Choix entre les quatre options -->
+	<select id="menu" class="menuDef" onchange="afficherSelect(this.value)">
+		<option value="" selected disabled>Sélectionnez une option...</option>
+		<option value="vocabulaire">Vocabulaire Thématique</option>
+		<option value="bigPicture">The big Picture</option>
+		<option value="etapes">60 Etapes</option>
+		<option value="autres">Autres</option>
+	</select>
+
+	<!-- Conteneurs pour les selects -->
+	<div id="vocabulaire-container"></div>
+	<div id="bigPicture-container"></div>
+	<div id="etapes-container"></div>
+	<div id="autres-container"></div>
+
+	<script>
+		// Créer et ajouter les selects dynamiquement
+		document.addEventListener('DOMContentLoaded', function() {
+			// Vocabulaire Thématique
+			var vocabulaireSelect = document.createElement('select');
+			vocabulaireSelect.id = 'vocabulaire';
+			vocabulaireSelect.className = 'vocabulaire';
+			vocabulaireSelect.style.display = 'none';
+			vocabulaireSelect.onchange = function() { FloadFileFromUrl(this.value); };
+
 			var defaultOption = document.createElement('option');
+			defaultOption.value = '';
 			defaultOption.text = 'Sélectionnez un chapitre...';
+			defaultOption.disabled = true;
+			defaultOption.selected = true;
+			vocabulaireSelect.appendChild(defaultOption);
+
+			for (var i = 1; i <= 116; i++) {
+				var option = document.createElement('option');
+				option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/VocabThematique/chap' + i + '.txt';
+				option.text = 'Chapitre ' + i;
+				vocabulaireSelect.appendChild(option);
+			}
+		
+
+			document.getElementById('vocabulaire-container').appendChild(vocabulaireSelect);
+
+			// The big Picture
+			var bigPictureSelect = document.createElement('select');
+			bigPictureSelect.id = 'bigPicture';
+			bigPictureSelect.className = 'bigPicture';
+			bigPictureSelect.style.display = 'none';
+			bigPictureSelect.onchange = function() { FloadFileFromUrl(this.value); };
+
+			var defaultOption = document.createElement('option');
+			defaultOption.value = '';
+			defaultOption.text = 'Sélectionnez un chapitre...';
+			defaultOption.disabled = true;
+			defaultOption.selected = true;
+			bigPictureSelect.appendChild(defaultOption);
+
+			var option1 = document.createElement('option');
+			option1.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/TheBigPicture/space.txt';
+			option1.text = 'Space';
+			bigPictureSelect.appendChild(option1);
+
+			document.getElementById('bigPicture-container').appendChild(bigPictureSelect);
+
+			// 60 Etapes
+			var etapesSelect = document.createElement('select');
+			etapesSelect.id = 'etapes';
+			etapesSelect.className = 'etapes';
+			etapesSelect.style.display = 'none';
+			etapesSelect.onchange = function() { FloadFileFromUrl(this.value); };
+
+			var defaultOption = document.createElement('option');
+			defaultOption.text = 'Sélectionnez une etapes...';
 			defaultOption.value = '';
 			defaultOption.selected = true;
 			defaultOption.disabled = true;
-			select.appendChild(defaultOption);
+			etapesSelect.appendChild(defaultOption);
+			
+			var option = document.createElement('option');
+			option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Etapes/1617.txt';
+			option.text = 'Pages 16-17';
+			etapesSelect.appendChild(option);
+
+			var option = document.createElement('option');
+			option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Etapes/2829.txt';
+			option.text = 'Pages 28-29';
+			etapesSelect.appendChild(option);
+
+			for (var i = 1; i <= 60; i++) {
+				var option = document.createElement('option');
+				option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Etapes/etape' + i + '.txt';
+				option.text = 'Chapitre ' + i;
+				etapesSelect.appendChild(option);
+			}
+
+			document.getElementById('etapes-container').appendChild(etapesSelect);
+
+			// Autres
+			var autresSelect = document.createElement('select');
+			autresSelect.id = 'autres';
+			autresSelect.className = 'autres';
+			autresSelect.style.display = 'none';
+			autresSelect.onchange = function() { FloadFileFromUrl(this.value); };
+
+			var defaultOption = document.createElement('option');
+			defaultOption.text = 'Sélectionnez une etapes...';
+			defaultOption.value = '';
+			defaultOption.selected = true;
+			defaultOption.disabled = true;
+			autresSelect.appendChild(defaultOption);
 
 			var optionProfAnglais = document.createElement('option'); // Créez l'option ici
-			optionProfAnglais.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrrugliersProfAnglais.txt';
+			optionProfAnglais.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrrugliersProfAnglais.txt';
 			optionProfAnglais.text = 'Verbes Irrugliers Prof Anglais';
-			select.appendChild(optionProfAnglais);
+			autresSelect.appendChild(optionProfAnglais);
 
 			var option1 = document.createElement('option'); // Créez l'option ici
-			option1.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliers.txt';
+			option1.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliers.txt';
 			option1.text = 'Verbes Irreguliers';
-			select.appendChild(option1);
+			autresSelect.appendChild(option1);
 
 			var option2 = document.createElement('option'); // Créez l'option ici
-			option2.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersA-F.txt';
+			option2.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersA-F.txt';
 			option2.text = 'Verbes Irreguliers de A à F';
-			select.appendChild(option2);
+			autresSelect.appendChild(option2);
 
 			var option3 = document.createElement('option'); // Créez l'option ici
-			option3.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersG-R.txt';
+			option3.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersG-R.txt';
 			option3.text = 'Verbes Irreguliers de G à R';
-			select.appendChild(option3);
+			autresSelect.appendChild(option3);
 
 			var option4 = document.createElement('option'); // Créez l'option ici
-			option4.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/verbesIrreguliersS-Z.txt';
+			option4.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersS-Z.txt';
 			option4.text = 'Verbes Irreguliers de S à Z';
-			select.appendChild(option4);
+			autresSelect.appendChild(option4);
 
 			var option5 = document.createElement('option'); // Créez l'option ici
-			option5.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/presse.txt';
+			option5.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/presse.txt';
 			option5.text = 'Vocabulaire Presse';
-			select.appendChild(option5);
+			autresSelect.appendChild(option5);
 
-			for (var i = 1; i <= 116; i++) {
-			var option = document.createElement('option');
-			option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/chap' + i + '.txt';
-			option.text = 'Chapitre ' + i;
-			select.appendChild(option);
-			}
 			var option6 = document.createElement('option'); // Créez l'option ici
-			option6.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/chapLinkWords.txt';
+			option6.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/chapLinkWords.txt';
 			option6.text = 'LinkWords';
-			select.appendChild(option6);
-		</script>
-	</select>
+			autresSelect.appendChild(option6);
+
+			document.getElementById('autres-container').appendChild(autresSelect);
+		});
+
+		function afficherSelect(value) {
+			// Masquer tous les selects
+			document.getElementById('vocabulaire').style.display = 'none';
+			document.getElementById('bigPicture').style.display = 'none';
+			document.getElementById('etapes').style.display = 'none';
+			document.getElementById('autres').style.display = 'none';
+
+			// Afficher le select approprié
+			if (value === 'vocabulaire') {
+				document.getElementById('vocabulaire').style.display = 'block';
+				document.getElementById('vocabulaire').style = 'center';
+			} else if (value === 'bigPicture') {
+				document.getElementById('bigPicture').style.display = 'block';
+				document.getElementById('bigPicture').style = 'center';
+			} else if (value === 'etapes') {
+				document.getElementById('etapes').style.display = 'block';
+				document.getElementById('etapes').style = 'center';
+			} else if (value === 'autres') {
+				document.getElementById('autres').style.display = 'block';
+				document.getElementById('autres').style = 'center';
+			}
+		}
+	</script>
 
 </body>
 <br>
 <div id="retour">
-	<button class="choix" > <a href="index.html">Retour</a></button>
+	<button class="choix"> <a href="index.html">Accueil</a> </button>
 </div>
 </html>
 
