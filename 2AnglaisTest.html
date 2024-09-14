@@ -28,9 +28,9 @@
     <div id="autres-container"></div>
 
     <script>
-        // Créer et ajouter les selects dynamiquement
-        document.addEventListener('DOMContentLoaded', function() {
-            // Vocabulaire Thématique
+		// Créer et ajouter les selects dynamiquement
+		document.addEventListener('DOMContentLoaded', function() {
+			// Vocabulaire Thématique
             var vocabulaireSelect = document.createElement('select');
             vocabulaireSelect.id = 'vocabulaire';
             vocabulaireSelect.className = 'vocabulaire';
@@ -44,12 +44,24 @@
             defaultOption.selected = true;
             vocabulaireSelect.appendChild(defaultOption);
 
-			for (var i = 1; i <= 116; i++) {
-				var option = document.createElement('option');
-				option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/VocabThematique/chap' + i + '.txt';
-				option.text = 'Chapitre ' + i;
-				vocabulaireSelect.appendChild(option);
-			}
+            fetch('https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/anglais/VocabThematique')
+	        .then(response => response.json())
+            .then(data => {
+            data.forEach(file => {
+            if (file.name.endsWith('.txt')) { // Si tes fichiers sont en .txt
+                var option = document.createElement('option');
+                option.value = file.download_url;
+                name = file.name;
+                name = name.replace('.txt', '');
+                name = name.replace('_',' ');
+                name = name.replace('Chapitre00','Chapitre ');
+                name = name.replace('Chapitre0','Chapitre ');
+                option.textContent = name;
+                vocabulaireSelect.appendChild(option);
+            }
+            });
+        })
+            .catch(error => console.error('Erreur lors du chargement des fichiers:', error));
 		
 
             document.getElementById('vocabulaire-container').appendChild(vocabulaireSelect);
@@ -68,10 +80,22 @@
             defaultOption.selected = true;
             bigPictureSelect.appendChild(defaultOption);
 
-			var option1 = document.createElement('option');
-			option1.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/TheBigPicture/space.txt';
-			option1.text = 'Space';
-			bigPictureSelect.appendChild(option1);
+            fetch('https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/anglais/TheBigPicture')
+	        .then(response => response.json())
+            .then(data => {
+            data.forEach(file => {
+            if (file.name.endsWith('.txt')) { // Si tes fichiers sont en .txt
+                var option = document.createElement('option');
+                option.value = file.download_url;
+                name = file.name;
+                name = name.replace('.txt', '');
+                name = name.replace('_',' ');
+                option.textContent = name;
+                bigPictureSelect.appendChild(option);
+            }
+            });
+        })
+            .catch(error => console.error('Erreur lors du chargement des fichiers:', error));
 
             document.getElementById('bigPicture-container').appendChild(bigPictureSelect);
 
@@ -89,22 +113,23 @@
 			defaultOption.disabled = true;
 			etapesSelect.appendChild(defaultOption);
 			
-			var option = document.createElement('option');
-			option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Etapes/1617.txt';
-			option.text = 'Pages 16-17';
-			etapesSelect.appendChild(option);
-
-			var option = document.createElement('option');
-			option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Etapes/2829.txt';
-			option.text = 'Pages 28-29';
-			etapesSelect.appendChild(option);
-
-			for (var i = 1; i <= 60; i++) {
-				var option = document.createElement('option');
-				option.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Etapes/etape' + i + '.txt';
-				option.text = 'Chapitre ' + i;
-				etapesSelect.appendChild(option);
-			}
+            fetch('https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/anglais/Etapes')
+	        .then(response => response.json())
+            .then(data => {
+            data.forEach(file => {
+            if (file.name.endsWith('.txt')) { // Si tes fichiers sont en .txt
+                var option = document.createElement('option');
+                option.value = file.download_url;
+                name = file.name;
+                name = name.replace('.txt', '');
+                name = name.replace('_',' ');
+                name = name.replace('Etape0','Etape ');
+                option.textContent = name;
+                etapesSelect.appendChild(option);
+            }
+            });
+        })
+            .catch(error => console.error('Erreur lors du chargement des fichiers:', error));
 
             document.getElementById('etapes-container').appendChild(etapesSelect);
 
@@ -122,68 +147,50 @@
 			defaultOption.disabled = true;
 			autresSelect.appendChild(defaultOption);
 
-			var optionProfAnglais = document.createElement('option'); // Créez l'option ici
-			optionProfAnglais.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrrugliersProfAnglais.txt';
-			optionProfAnglais.text = 'Verbes Irrugliers Prof Anglais';
-			autresSelect.appendChild(optionProfAnglais);
-
-			var option1 = document.createElement('option'); // Créez l'option ici
-			option1.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliers.txt';
-			option1.text = 'Verbes Irreguliers';
-			autresSelect.appendChild(option1);
-
-			var option2 = document.createElement('option'); // Créez l'option ici
-			option2.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersA-F.txt';
-			option2.text = 'Verbes Irreguliers de A à F';
-			autresSelect.appendChild(option2);
-
-			var option3 = document.createElement('option'); // Créez l'option ici
-			option3.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersG-R.txt';
-			option3.text = 'Verbes Irreguliers de G à R';
-			autresSelect.appendChild(option3);
-
-			var option4 = document.createElement('option'); // Créez l'option ici
-			option4.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersS-Z.txt';
-			option4.text = 'Verbes Irreguliers de S à Z';
-			autresSelect.appendChild(option4);
-
-			var option5 = document.createElement('option'); // Créez l'option ici
-			option5.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/presse.txt';
-			option5.text = 'Vocabulaire Presse';
-			autresSelect.appendChild(option5);
-
-			var option6 = document.createElement('option'); // Créez l'option ici
-			option6.value = 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/chapLinkWords.txt';
-			option6.text = 'LinkWords';
-			autresSelect.appendChild(option6);
+            fetch('https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/anglais/Autres')
+	        .then(response => response.json())
+            .then(data => {
+            data.forEach(file => {
+            if (file.name.endsWith('.txt')) { // Si tes fichiers sont en .txt
+                var option = document.createElement('option');
+                option.value = file.download_url;
+                name = file.name;
+                name = name.replace('.txt', '');
+                name = name.replace('_',' ');
+                option.textContent = name;
+                autresSelect.appendChild(option);
+            }
+            });
+        })
+            .catch(error => console.error('Erreur lors du chargement des fichiers:', error));
 
             document.getElementById('autres-container').appendChild(autresSelect);
         });
 
-        function afficherSelect(value) {
-            // Masquer tous les selects
-            document.getElementById('vocabulaire').style.display = 'none';
-            document.getElementById('bigPicture').style.display = 'none';
-            document.getElementById('etapes').style.display = 'none';
-            document.getElementById('autres').style.display = 'none';
 
-            // Afficher le select approprié
-            if (value === 'vocabulaire') {
-                document.getElementById('vocabulaire').style.display = 'block';
-                document.getElementById('vocabulaire').style = 'center';
-            } else if (value === 'bigPicture') {
-                document.getElementById('bigPicture').style.display = 'block';
+		function afficherSelect(value) {
+			// Masquer tous les selects
+			document.getElementById('vocabulaire').style.display = 'none';
+			document.getElementById('bigPicture').style.display = 'none';
+			document.getElementById('etapes').style.display = 'none';
+			document.getElementById('autres').style.display = 'none';
+
+			// Afficher le select approprié
+			if (value === 'vocabulaire') {
+				document.getElementById('vocabulaire').style.display = 'block';
+				document.getElementById('vocabulaire').style = 'center';
+			} else if (value === 'bigPicture') {
+				document.getElementById('bigPicture').style.display = 'block';
 				document.getElementById('bigPicture').style = 'center';
-            } else if (value === 'etapes') {
-                document.getElementById('etapes').style.display = 'block';
+			} else if (value === 'etapes') {
+				document.getElementById('etapes').style.display = 'block';
 				document.getElementById('etapes').style = 'center';
-            } else if (value === 'autres') {
-                document.getElementById('autres').style.display = 'block';
+			} else if (value === 'autres') {
+				document.getElementById('autres').style.display = 'block';
 				document.getElementById('autres').style = 'center';
-            }
-        }
-    </script>
-
+			}
+		}
+	</script>
 </body>
 <br>
 <div id="retour">
