@@ -34,8 +34,18 @@
 	font-size: 13pt;
 }
 
+#compteur{
+	color : var(--persian-green);
+	font-family: "Montserrat", sans-serif;
+	font-size: 10pt;
+}
+
+#compteur.dark-mode{
+	color: var(--ultra-violet);
+}
 
 #passer {
+	position: relative;
 	background-color: var(--ivory);
 	color: var(--persian-green);
 	min-height: 80vh;
@@ -45,8 +55,11 @@
 	justify-content: center; 
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
-	width: 50%; /* Définir une largeur */
-	margin: auto; /* Centrage horizontal */
+	min-width: 40%;
+	padding: 20px;
+	margin: auto;
+	white-space: normal;
+	text-overflow: ellipsis;
 }
 
 #passer.dark-mode {

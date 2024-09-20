@@ -50,6 +50,7 @@ liste = eval(liste);
 nb_mots = liste.length;
 motVocab = String(liste[Faleatoire()][1]);
 document.getElementById('mot').innerHTML = motVocab;
+document.getElementById('compteur').innerHTML = `Mots restants : ${liste.length}`;
 
 
 // permet de valider avec la touche entrer
@@ -82,6 +83,7 @@ function Faleatoire() {
 function Fafficher()
 {
     Faleatoire()
+    document.getElementById('compteur').innerHTML = `Mots restants : ${liste.length}`;
     motVocab = String(liste[motEtud][1]);
     affiché = 1;
     document.getElementById('mot').innerHTML = motVocab;
