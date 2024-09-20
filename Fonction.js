@@ -126,6 +126,7 @@ function getValue()
 {
     if (termine == false){ 
         let reponse;
+        let correction;
         if (localStorage.getItem("preRemplissage") !=""){
             let e0 = "bv: " + document.getElementById("entree").value; 
             let e1 = "pr: " + document.getElementById("entree1").value;
@@ -140,12 +141,19 @@ function getValue()
             reponse = document.getElementById("entree").value;
             document.getElementById('entree').value = localStorage.getItem("preRemplissage");
         }
-        if (reponse.length == 0 || reponse == "bv: , pr: , pp: "){
+        reponse = reponse.toUpperCase().replace(/\s+/g, '');
+        correction = liste[motEtud][0].toUpperCase().replace(/\s+/g, '');
+    
+        reponse = reponse.split("/");
+        correction = correction.split("/");
+        reponse.sort();
+        correction.sort();
+        if ((reponse.length == 1 && reponse[0]=='') || reponse == "bv: , pr: , pp: "){
             document.getElementById("faux").innerHTML = "";
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
             }
-        else if (reponse.toUpperCase().replace(/\s+/g, '') == liste[motEtud][0].toUpperCase().replace(/\s+/g, '')){
+        else if (reponse.every(value => correction.includes(value))){
             document.body.style.background = '#1DC16A';
             document.getElementById("faux").innerHTML = "";
             document.getElementById("null").innerHTML = "";

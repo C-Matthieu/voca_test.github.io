@@ -53,7 +53,7 @@
                 option.value = file.download_url;
                 name = file.name;
                 name = name.replace('.txt', '');
-                name = name.replace('_',' ');
+                name = name.replace(/_/g,' ');
                 name = name.replace('Chapitre00','Chapitre ');
                 name = name.replace('Chapitre0','Chapitre ');
                 option.textContent = name;
@@ -89,7 +89,7 @@
                 option.value = file.download_url;
                 name = file.name;
                 name = name.replace('.txt', '');
-                name = name.replace('_',' ');
+                name = name.replace(/_/g,' ');
                 option.textContent = name;
                 bigPictureSelect.appendChild(option);
             }
@@ -122,7 +122,7 @@
                 option.value = file.download_url;
                 name = file.name;
                 name = name.replace('.txt', '');
-                name = name.replace('_',' ');
+                name = name.replace(/_/g,' ');
                 name = name.replace('Etape0','Etape ');
                 option.textContent = name;
                 etapesSelect.appendChild(option);
@@ -156,7 +156,7 @@
                 option.value = file.download_url;
                 name = file.name;
                 name = name.replace('.txt', '');
-                name = name.replace('_',' ');
+                name = name.replace(/_/g,' ');
                 option.textContent = name;
                 autresSelect.appendChild(option);
             }
