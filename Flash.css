@@ -55,7 +55,8 @@
 	justify-content: center; 
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
-	min-width: 40%;
+	min-width: 50%;
+	width: auto;
 	padding: 20px;
 	margin: auto;
 	white-space: normal;
