@@ -1,2 +1,2 @@
 # voca_test.github.io
-Permet de tester sa connaissance des différentes listes de mots présentent dans le site.
+You can revise the vocabulary lists on the site (dedicated to French preparatory courses), or import your own to revise as you wish.
