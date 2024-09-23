@@ -180,7 +180,7 @@ function getValue()
             document.body.style.background = '#DC143C';
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "";
-            document.getElementById("faux").innerHTML = `Dommage vous n'avez pas trouvé la bonne reponse, qui était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
+            document.getElementById("faux").innerHTML = `Dommage, vous n'avez pas trouvé la bonne réponse, qui était <u>${liste[motEtud][0]}</u>. Il vous reste plus que ${liste.length} mots à apprendre.`;
             if (!erreurs.includes(liste[motEtud][0])){
                 erreurs += `${liste[motEtud][0]}	${liste[motEtud][1]}\n`;}
             fautes += 1;
@@ -241,7 +241,7 @@ function passer(){
     passes += 1;
     document.getElementById("juste").innerHTML = "";
     document.getElementById("null").innerHTML = "";
-    document.getElementById("faux").innerHTML = `La reponse était ${liste[motEtud][0]}, il vous reste plus que ${liste.length} mots à apprendre`;
+    document.getElementById("faux").innerHTML = `La reponse était <u>${liste[motEtud][0]}</u>, il vous reste plus que ${liste.length} mots à apprendre`;
     if (!erreurs.includes(liste[motEtud][0])){
         erreurs += `${liste[motEtud][0]}	${liste[motEtud][1]}\n`;}
     afficher();
