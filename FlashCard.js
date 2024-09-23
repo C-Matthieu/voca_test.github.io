@@ -6,7 +6,7 @@ var nb_mots;
 let liste;
 let motVocab;
 let motEtud;
-let affiché = 1;
+let affiche = 1;
 
 // permet de récuperer les fichiers txt du répository GitHub
 async function FloadFileFromUrl(url) {
@@ -56,6 +56,7 @@ document.getElementById('compteur').innerHTML = `Mots restants : ${liste.length}
 // permet de valider avec la touche entrer
 document.addEventListener('keydown', function(event) {
     if (event.code == "Enter" && termine == false) {
+        event.preventDefault();
         Fsuivant();
   }
     if (event.code == "ArrowRight" || event.code == "ArrowLeft") {
@@ -83,21 +84,23 @@ function Faleatoire() {
 function Fafficher()
 {
     Faleatoire()
+    console.log("affiche")
     document.getElementById('compteur').innerHTML = `Mots restants : ${liste.length}`;
     motVocab = String(liste[motEtud][1]);
-    affiché = 1;
+    affiche = 1;
     document.getElementById('mot').innerHTML = motVocab;
     document.body.style.background = color;
 }
 
 function Fretourner(){
-    if (affiché == 1){
+    console.log("retourne")
+    if (affiche == 1){
         motVocab = String(liste[motEtud][0]);
-        affiché = 0;
+        affiche = 0;
     }
     else{
         motVocab = String(liste[motEtud][1]);
-        affiché = 1;
+        affiche = 1;
     }
     document.getElementById('mot').innerHTML = motVocab;
     document.body.style.background = color;
@@ -110,6 +113,7 @@ function Fsuivant(){
             document.getElementById('mot').innerHTML = "Fin";
             termine = true;
             document.getElementById('valider').innerHTML = "Recommencer";
+            document.getElementById('compteur').innerHTML = `Mot restant : 0`;
         }
         else {
         Fafficher();
@@ -122,6 +126,8 @@ function Fsuivant(){
         motVocab = String(liste[Faleatoire()][1]);
         document.getElementById('mot').innerHTML = motVocab;
         document.getElementById('valider').innerHTML = "Suivant";
+        termine = false;
+        document.getElementById('compteur').innerHTML = `Mots restants : ${liste.length}`;
     }
 }
 
