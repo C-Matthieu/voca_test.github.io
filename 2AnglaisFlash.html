@@ -206,14 +206,19 @@
 
 
 		function afficherSelect(value) {
-			// Masquer tous les selects
+            // Masquer tous les selects
+            document.getElementById('prochainement').style.display = 'none';
 			document.getElementById('vocabulaire').style.display = 'none';
 			document.getElementById('bigPicture').style.display = 'none';
 			document.getElementById('etapes').style.display = 'none';
 			document.getElementById('autres').style.display = 'none';
 
 			// Afficher le select approprié
-			if (value === 'vocabulaire') {
+            if (value === 'prochainement') {
+                document.getElementById('prochainement').style.display = 'block';
+                document.getElementById('prochainement').style = 'center';
+            }
+			else if (value === 'vocabulaire') {
 				document.getElementById('vocabulaire').style.display = 'block';
 				document.getElementById('vocabulaire').style = 'center';
 			} else if (value === 'bigPicture') {
