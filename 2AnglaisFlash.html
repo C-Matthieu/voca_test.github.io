@@ -15,6 +15,7 @@
 	<!-- Choix entre les quatre options -->
 	<select id="menu" class="menuDef" onchange="afficherSelect(this.value)">
 		<option value="" selected disabled>Sélectionnez une option...</option>
+        <option value="prochainement">Prochainement</option>
 		<option value="vocabulaire">Vocabulaire Thématique</option>
 		<option value="bigPicture">The big Picture</option>
 		<option value="etapes">60 Etapes</option>
@@ -22,6 +23,7 @@
 	</select>
 
 	<!-- Conteneurs pour les selects -->
+    <div id="prochainement-container"></div>
 	<div id="vocabulaire-container"></div>
 	<div id="bigPicture-container"></div>
 	<div id="etapes-container"></div>
@@ -30,6 +32,41 @@
 	<script>
 		// Créer et ajouter les selects dynamiquement
 		document.addEventListener('DOMContentLoaded', function() {
+            // Prochainement
+            var prochainementSelect = document.createElement('select');
+            prochainementSelect.id = 'prochainement';
+            prochainementSelect.className = 'prochainement';
+            prochainementSelect.style.display = 'none';
+            prochainementSelect.onchange = function() { FloadFileFromUrl(this.value); };
+
+            var defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.text = 'Sélectionnez un chapitre...';
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            prochainementSelect.appendChild(defaultOption);
+
+            fetch('https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/anglais/Prochainement')
+            .then(response => response.json())
+            .then(data => {
+            data.forEach(file => {
+                if (file.name.endsWith('.txt')) { // Si tes fichiers sont en .txt
+                var option = document.createElement('option');
+                option.value = file.download_url;
+                name = file.name;
+                name = name.replace('.txt', '');
+                name = name.replace(/_/g,' ');
+                option.textContent = name;
+                prochainementSelect.appendChild(option);
+            }
+            });
+        })
+            .catch(error => console.error('Erreur lors du chargement des fichiers:', error));
+		
+
+            document.getElementById('prochainement-container').appendChild(prochainementSelect);
+
+
 			// Vocabulaire Thématique
             var vocabulaireSelect = document.createElement('select');
             vocabulaireSelect.id = 'vocabulaire';
