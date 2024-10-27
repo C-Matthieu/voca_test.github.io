@@ -37,7 +37,7 @@
             prochainementSelect.id = 'prochainement';
             prochainementSelect.className = 'prochainement';
             prochainementSelect.style.display = 'none';
-            prochainementSelect.onchange = function() { FloadFileFromUrl(this.value); };
+            prochainementSelect.onchange = function() { loadFileFromUrl(this.value); };
 
             var defaultOption = document.createElement('option');
             defaultOption.value = '';
