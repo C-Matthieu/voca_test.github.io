@@ -102,7 +102,7 @@ if (localStorage.getItem("preRemplissage") !=""){
 
 // permet de valider avec la touche entrer
 document.addEventListener('keydown', function(event) {
-    if (event.code == "Enter" && termine == false) {
+    if (event.key == "Enter" && termine == false) {
         getValue();
   }
 });
