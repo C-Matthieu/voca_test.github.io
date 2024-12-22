@@ -9,6 +9,99 @@
 	<link rel="stylesheet" href="EvalVocabulaire.css">
 </head>
 <body style="text-align: center;">
+	<script src="Fonction.js"></script>
+    <h2> Mode Evaluation </h2>
+    <select id="menu" class="menuDef" onchange="afficherSelect(this.value)">
+        <option value="" selected disabled>Sélectionnez une option...</option>
+    </select>
+    
+    <!-- Conteneur principal pour les div dynamiques -->
+    <div id="content-container"></div>
+
+	<script>
+        let eltMenu = [];
+        const menu = document.getElementById('menu');
+        const contentContainer = document.getElementById('content-container');
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/espagnol')
+            .then(response => response.json())
+            .then(data=> {
+                data.forEach(elt => {
+                    let value = elt.name;
+                    let name = elt.name.replace(/_/g, ' ');
+                    let url = 'https://api.github.com/repos/C-Matthieu/MCVocabTestLists/contents/espagnol/' + value; 
+
+                    eltMenu.push({value, name, url});
+                });
+            eltMenu.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category.value;
+                option.textContent = category.name;
+                menu.appendChild(option); // Ajoute l'option au menu principal
+                let container = document.getElementById(category.value + '-container');
+                if (!container) { // Crée un conteneur s'il n'existe pas
+                    container = document.createElement('div');
+                    container.id = category.value + '-container';
+                    contentContainer.appendChild(container);
+                }
+            });
+            eltMenu.forEach(({ value, name, url }) => {
+                // Créer le select pour chaque catégorie
+                const eltSelect = document.createElement('select');
+                eltSelect.id = value;
+                eltSelect.className = value;
+                eltSelect.style.display = 'none';
+                eltSelect.onchange = function () { loadFileFromUrl(this.value); };
+
+                // Ajouter une option par défaut
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.textContent = 'Sélectionnez un chapitre...';
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                eltSelect.appendChild(defaultOption);
+
+                // Charger les fichiers et ajouter les options
+                fetch(url)
+                    .then(resp => resp.json())
+                    .then(datas => {
+                        datas.forEach(file => {
+                            if (file.name.endsWith('.txt')) {
+                                const option = document.createElement('option');
+                                option.value = file.download_url;
+                                option.textContent = file.name.replace('.txt', '').replace(/_/g, ' ');
+                                eltSelect.appendChild(option);
+                            }
+                        });
+                    })
+                    .catch(error => console.error('Erreur lors du chargement des fichiers:', error));
+
+                // Ajouter le select au conteneur
+                const container = document.getElementById(value + '-container') || contentContainer;
+                container.appendChild(eltSelect);
+            });
+        });const option = document.createElement('option');
+        option.value = "Convertisseur_txt";
+        option.textContent = "Convertisseur_txt";
+        menu.appendChild(option); // Ajoute l'option au menu principal   
+        
+    });
+
+        function afficherSelect(value) {
+            // Masquer tous les selects
+            for (let i =0; i<eltMenu.length; i++) {
+                document.getElementById(eltMenu[i]["value"]).style.display = 'none';
+            }
+            if (value == "Convertisseur_txt") {
+                window.location.href = "convertisseur_txt_test.html";
+            }
+            else {
+            document.getElementById(value).style.display = 'block';
+            document.getElementById(value).style = 'center';
+            }
+        }
+
+	</script>
 </body>
 <br>
 <div id="retour">

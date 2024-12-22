@@ -8,6 +8,11 @@ let motVocab;
 let motEtud;
 let affiche = 1;
 
+function FgetElement(){
+    fileInput = document.getElementById('myFile');
+    langue = "Anglais";
+    FprocessFile(fileInput.files[0]);
+}
 // permet de récuperer les fichiers txt du répository GitHub
 async function FloadFileFromUrl(url) {
     try {
