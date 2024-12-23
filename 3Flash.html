@@ -13,6 +13,27 @@
 	</div>
 	<button id="bouton-mode-sombre" class="bouton-par-defaut" onclick="FtoggleTheme()">
 	  </button>
+	<div id="rules-button">
+		<button onclick="openRulesModal()">?</button>
+	</div>
+	
+	<!-- Fenêtre modale pour expliquer les règles-->
+	<div id="rules-modal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeRulesModal()">&times;</span>
+			<h2>Site operation</h2>
+			<p>
+				Flashcards are used to learn vocabulary.
+				To turn the flashcard over, click on the card or on the left or right arrows.
+				Use the “Suivant” button or the enter key on your keyboard to move on to the next card.
+				<br>
+				<br>
+				Les flashcards sont des cartes qui permettent d'apprendre du vocabulaire.
+				Pour retourner la flashcard, cliquez sur la carte ou sur les flèche de gauche ou droite.
+				Le bouton "Suivant" ou la touche entrer du clavier permettent de passer à la carte suivante.
+			</p>
+		</div>
+	</div>
 	<button id="passer" class="bouton" type="submit" onclick="Fretourner()">
 	<h1 id="name" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
 		<span id="mot"></span>
@@ -28,11 +49,6 @@
 		<button id="valider" class="bouton" type="submit" onclick="Fsuivant()"> Suivant </button>
 	</div>
 	<script type="text/javascript" src="FlashCard.js"></script>
-	<script>
-        window.onload = function() {
-            alert("Pour retourner la flashcard, cliquez sur la carte ou sur les flèche de gauche ou droite.");
-        };
-    </script>
 </body>
 </html>	
 

@@ -161,6 +161,16 @@ function FtoggleTheme() {
     passer.classList.toggle('dark-mode');
 }
 
+// Fonction pour ouvrir et fermer la modal des règles
+function openRulesModal() {
+    document.getElementById('rules-modal').style.display = 'flex';
+}
+
+function closeRulesModal() {
+    document.getElementById('rules-modal').style.display = 'none';
+}
+
+
 const worker = new Worker('worker.js');
 worker.onmessage = function(event) {
     document.getElementById("chronometre").innerHTML = event.data;

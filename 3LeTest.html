@@ -13,6 +13,35 @@
 	</div>
 	<button id="bouton-mode-sombre" class="bouton-par-defaut" onclick="toggleTheme()">
 	  </button>
+	  <div id="rules-button">
+		<button onclick="openRulesModal()">?</button>
+	</div>
+	
+	<!-- Fenêtre modale pour expliquer les règles-->
+	<div id="rules-modal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeRulesModal()">&times;</span>
+			<h2>Site Operation</h2>
+			<p>
+				The word to be translated is underlined.
+				Write the translation in the text box provided.
+				For Spanish, you can use the buttons with accents for special characters.
+				The “Passer” button allows you to move on to the next question without answering; the answer will be given.
+				The “Retour” button takes you back to the home page.
+				The “Envoyer” button or the Enter key on the keyboard submit the answer.
+				At the end of the series of questions, you'll have the option of starting the whole list again, or downloading the file containing all the errors and words you've passed.
+				<br>
+				<br>
+				Le mot à traduire sera écrit en haut en souligné.
+				Vous devez écrire la traduction dans le zone de texte prévue à cet effet.
+				Pour l'espagnol, vous pouvez utiliser les boutons avec des accents pour les caractères spéciaux.
+				Le bouton "Passer" permet de passer à la question suivante sans répondre, la réponse sera donnée.
+				Le bouton "Retour" permet de revenir à l'acceuil du site.
+				Le bouton "Envoyer" ou la touche entrer du clavier permettent de valider la réponse.
+				A la fin de la série de questions, vous aurez la possibilité de recommencer la liste complète ou de télécharger le fichier contenant toutes les erreurs et mots que vous avez passses.
+			</p>
+		</div>
+	</div>
 	<br>
 	<h1 id="name"  style="text-align: center;"> Comment dit-on : <strong><u><span id="mot"> </span></u></strong> en <span id="langueEtud"></span> </h1>
 	<button type="button" class="accent" onclick="á()">á</button>
