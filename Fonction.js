@@ -21,11 +21,11 @@ function getElement(){
 
 // permet de récuperer les fichiers txt du répository GitHub
 async function loadFileFromUrl(url, langue = "Anglais") {
-    if (url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliers.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersA-F.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersG-R.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrreguliersS-Z.txt'
-    || url == 'https://raw.githubusercontent.com/C-matthieu/MCVocabTestLists/main/anglais/Autres/verbesIrrugliersProfAnglais.txt'
+    if (url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers.txt'
+    || url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers_A-F.txt'
+    || url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers_G-R.txt'
+    || url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers_ProfAnglais.txt'
+    || url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers_S-Z.txt'
     ){
         console.log("préremplissage");
         localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
