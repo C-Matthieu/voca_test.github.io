@@ -7,7 +7,8 @@ let liste;
 let motVocab;
 let motEtud;
 let affiche = 1;
-
+let erreurs = "";
+localStorage.setItem("Erreurs", erreurs);
 function FgetElement(){
     fileInput = document.getElementById('myFile');
     langue = "Anglais";
@@ -119,6 +120,10 @@ function Fsuivant(){
             termine = true;
             document.getElementById('valider').innerHTML = "Recommencer";
             document.getElementById('compteur').innerHTML = `Mot restant : 0`;
+            downloadErrors();
+            Frecommencer();
+            erreurs = "";
+
         }
         else {
         Fafficher();
@@ -159,6 +164,57 @@ function FtoggleTheme() {
     boutonModeSombre.classList.toggle('dark-mode');
     mot.classList.toggle('dark-mode');
     passer.classList.toggle('dark-mode');
+}
+
+function Fenregistrer() {
+    erreurs += `${liste[motEtud][0]}	${liste[motEtud][1]}\n`;
+    localStorage.setItem("Erreurs", erreurs);
+    Fsuivant();
+}
+    
+
+function downloadErrors() {
+    // Récupérer les erreurs du localStorage
+    let errors = localStorage.getItem('Erreurs');
+    if(errors){
+        errors = errors.slice(0, -1);
+    }
+    // Demander à l'utilisateur s'il souhaite télécharger le fichier
+    if (confirm('Voulez-vous télécharger le fichier contenant vos erreurs et les mots passés (au format comprehensible par le site pour vous entrainer sur cette liste)?')) {
+        // Créer un Blob à partir des erreurs
+        const blob = new Blob([errors], {type: 'text/plain'});
+
+        // Créer une URL pour le Blob
+        const url = URL.createObjectURL(blob);
+
+        // Créer un lien de téléchargement
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Fichier_Erreurs.txt';
+
+        // Ajouter le lien au document et déclencher un clic dessus
+        document.body.appendChild(link);
+        link.click();
+
+        // Supprimer le lien du document
+        document.body.removeChild(link);
+    }
+}
+
+function Frecommencer() {
+    if (confirm("Voulez-vous recommencer seulement avec vos erreurs ?")) {
+        let errors = localStorage.getItem('Erreurs');
+        let erreurs = [];
+
+        // Transformer les erreurs en liste de paires
+        if (errors) {
+            const lines = errors.split('\n');
+            erreurs = lines.map(line => line.split('\t')).filter(pair => pair.length === 2);
+        }
+        localStorage.setItem("Erreurs", "");
+        localStorage.setItem("liste", JSON.stringify(erreurs));
+        Fsuivant();
+    }
 }
 
 // Fonction pour ouvrir et fermer la modal des règles
