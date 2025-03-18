@@ -27,8 +27,10 @@ async function loadFileFromUrl(url, langue = "Anglais") {
     || url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers_ProfAnglais.txt'
     || url == 'https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/anglais/Autres/Verbes_Irreguliers_S-Z.txt'
     ){
-        console.log("préremplissage");
         localStorage.setItem("preRemplissage", "bv: , pr: , pp: ");
+    }
+    else if(url.includes('https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/espagnol/Conjugaison')){
+        localStorage.setItem("preRemplissage", "Yo: , Tú: , Él/Ella: , Nosotros: , Vosotros: , Ellos/Ellas: ");
     }
     else {
         localStorage.setItem("preRemplissage", "");
@@ -83,20 +85,45 @@ let preRemplissage = localStorage.getItem("preRemplissage");
 if (preRemplissage == ""){
     document.getElementById('entree').value = localStorage.getItem("preRemplissage");
 }
-else{
+else if (preRemplissage == "bv: , pr: , pp: "){
     document.getElementById('entree').placeholder = "bv:";
     document.getElementById('entree1').placeholder = "pr:";
     document.getElementById('entree2').placeholder = "pp:";
 }
+else{
+    document.getElementById('entree').placeholder = "Yo: ";
+    document.getElementById('entree1').placeholder = "Tú: ";
+    document.getElementById('entree2').placeholder = "Él/Ella: ";
+    document.getElementById('entree3').placeholder = "Nosotros: ";
+    document.getElementById('entree4').placeholder = "Vosotros: ";
+    document.getElementById('entree5').placeholder = "Ellos/Ellas: ";
+}
 
-if (localStorage.getItem("preRemplissage") !=""){
-    let entree1 = document.getElementById('entree1');
-    let entree2 = document.getElementById('entree2');
-    console.log(entree1);
+// Gère l'affichage des éléments en fonction du préremplissage
+let entree1 = document.getElementById('entree1');
+let entree2 = document.getElementById('entree2');
+let entree3 = document.getElementById('entree3');
+let entree4 = document.getElementById('entree4');
+let entree5 = document.getElementById('entree5');
+if (localStorage.getItem("preRemplissage") == ""){
+}
+else if (localStorage.getItem("preRemplissage") == "bv: , pr: , pp: "){
     entree1.style.display = "block";
     entree2.style.display = "block";
     entree1.style="center";
     entree2.style="center";
+}
+else{
+    entree1.style.display = "block";
+    entree2.style.display = "block";
+    entree3.style.display = "block";
+    entree4.style.display = "block";
+    entree5.style.display = "block";
+    entree1.style="center";
+    entree2.style="center";
+    entree3.style="center";
+    entree4.style="center";
+    entree5.style="center";
 }
 
 
@@ -127,7 +154,11 @@ function getValue()
     if (termine == false){ 
         let reponse;
         let correction;
-        if (localStorage.getItem("preRemplissage") !=""){
+        if (localStorage.getItem("preRemplissage") == ""){
+            reponse = document.getElementById("entree").value;
+            document.getElementById('entree').value = localStorage.getItem("preRemplissage");
+        }
+        else if (localStorage.getItem("preRemplissage") == "bv: , pr: , pp: "){
             let e0 = "bv: " + document.getElementById("entree").value; 
             let e1 = "pr: " + document.getElementById("entree1").value;
             let e2 = "pp: " + document.getElementById("entree2").value;
@@ -138,17 +169,27 @@ function getValue()
             document.getElementById('entree2').value = "";
         }
         else{
-            reponse = document.getElementById("entree").value;
-            document.getElementById('entree').value = localStorage.getItem("preRemplissage");
+            let e0 = "Yo: " + document.getElementById("entree").value;
+            let e1 = "Tú: " + document.getElementById("entree1").value;
+            let e2 = "Él/Ella: " + document.getElementById("entree2").value;
+            let e3 = "Nosotros: " + document.getElementById("entree3").value;
+            let e4 = "Vosotros: " + document.getElementById("entree4").value;
+            let e5 = "Ellos/Ellas: " + document.getElementById("entree5").value;
+            reponse = e0 + "," + e1 + "," + e2 + "," + e3 + "," + e4 + "," + e5;
+            document.getElementById('entree').value = "";
+            document.getElementById('entree1').value = "";
+            document.getElementById('entree2').value = "";
+            document.getElementById('entree3').value = "";
+            document.getElementById('entree4').value = "";
+            document.getElementById('entree5').value = "";            
         }
         reponse = reponse.toUpperCase().replace(/\s+/g, '');
         correction = liste[motEtud][0].toUpperCase().replace(/\s+/g, '');
-    
         reponse = reponse.split("/");
         correction = correction.split("/");
         reponse.sort();
         correction.sort();
-        if ((reponse.length == 1 && reponse[0]=='') || reponse == "bv: , pr: , pp: "){
+        if ((reponse.length == 1 && reponse[0]=='') || reponse == "bv: , pr: , pp: " || reponse == "Yo: , Tú: , Él/Ella: , Nosotros: , Vosotros: , Ellos/Ellas: "){
             document.getElementById("faux").innerHTML = "";
             document.getElementById("juste").innerHTML = "";
             document.getElementById("null").innerHTML = "Veuillez entrez une valeur s'il vous plaît";
@@ -203,35 +244,86 @@ function afficher()
 }
 
 // gère les accents
-function á(){
-    let reponse = document.getElementById("entree").value;
-    document.getElementById('entree').value = reponse + "á";
-    document.getElementById('entree').focus();
+//function á(){
+//    let reponse = document.getElementById("entree").value;
+//    document.getElementById('entree').value = reponse + "á";
+//    document.getElementById('entree').focus();
+//}
+//
+//function ú(){
+//    let reponse = document.getElementById("entree").value;
+//    document.getElementById('entree').value = reponse + "ú";
+//    document.getElementById('entree').focus();
+//}
+//        
+//function í(){
+//    let reponse = document.getElementById("entree").value;
+//    document.getElementById('entree').value = reponse + "í";
+//    document.getElementById('entree').focus();
+//}
+//
+//function ñ(){
+//    let reponse = document.getElementById("entree").value;
+//    document.getElementById('entree').value = reponse + "ñ";
+//    document.getElementById('entree').focus();
+//}
+//
+//function ó(){
+//    let reponse = document.getElementById("entree").value;
+//    document.getElementById('entree').value = reponse + "ó";
+//    document.getElementById('entree').focus();
+//}
+
+let dernierElementActif = null;
+
+// Fonction pour capturer l'élément actif
+document.addEventListener('click', function() {
+    dernierElementActif = document.activeElement;
+});
+
+// Fonction générique pour ajouter un caractère accentué à l'entrée active
+function ajouterAccent(caractere) {
+    if (dernierElementActif && (dernierElementActif.tagName === 'INPUT' || dernierElementActif.tagName === 'TEXTAREA')) {
+        let positionCurseur = dernierElementActif.selectionStart;
+        let valeurActuelle = dernierElementActif.value;
+        let nouvelleValeur = valeurActuelle.substring(0, positionCurseur) + caractere + valeurActuelle.substring(positionCurseur);
+        dernierElementActif.value = nouvelleValeur;
+        dernierElementActif.focus();
+        dernierElementActif.setSelectionRange(positionCurseur + 1, positionCurseur + 1);
+    } else {
+        console.log("Aucun champ de texte n'est actif.");
+    }
 }
 
-function ú(){
-    let reponse = document.getElementById("entree").value;
-    document.getElementById('entree').value = reponse + "ú";
-    document.getElementById('entree').focus();
-}
-        
-function í(){
-    let reponse = document.getElementById("entree").value;
-    document.getElementById('entree').value = reponse + "í";
-    document.getElementById('entree').focus();
+// Utilisation des fonctions pour chaque accent
+function á() {
+    ajouterAccent('á');
 }
 
-function ñ(){
-    let reponse = document.getElementById("entree").value;
-    document.getElementById('entree').value = reponse + "ñ";
-    document.getElementById('entree').focus();
+function ú() {
+    ajouterAccent('ú');
 }
 
-function ó(){
-    let reponse = document.getElementById("entree").value;
-    document.getElementById('entree').value = reponse + "ó";
-    document.getElementById('entree').focus();
+function í() {
+    ajouterAccent('í');
 }
+
+function ñ() {
+    ajouterAccent('ñ');
+}
+
+function ó() {
+    ajouterAccent('ó');
+}
+
+// Ajoutez un gestionnaire d'événements pour chaque bouton
+document.querySelectorAll('.accent').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Empêche le focus de changer
+        const caractere = button.textContent;
+        ajouterAccent(caractere);
+    }, { once: true }); // Assure que l'événement est attaché une seule fois
+});
 
 function retour(){
         document.location.href = `Evaluation.html`;
