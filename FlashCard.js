@@ -8,6 +8,7 @@ let motVocab;
 let motEtud;
 let affiche = 1;
 let erreurs = "";
+let temps_conjugaison = "";
 localStorage.setItem("Erreurs", erreurs);
 function FgetElement(){
     fileInput = document.getElementById('myFile');
@@ -16,6 +17,14 @@ function FgetElement(){
 }
 // permet de récuperer les fichiers txt du répository GitHub
 async function FloadFileFromUrl(url) {
+    if(url.includes('https://raw.githubusercontent.com/C-Matthieu/MCVocabTestLists/main/espagnol/Conjugaison')){
+        temps_conjugaison = url.split('/').pop().split('.')[0];
+        localStorage.setItem("temps_conjugaison", temps_conjugaison);
+    }
+    else{
+        temps_conjugaison = "";
+        localStorage.setItem("temps_conjugaison", temps_conjugaison);
+    }
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -220,11 +229,82 @@ function Frecommencer() {
 // Fonction pour ouvrir et fermer la modal des règles
 function openRulesModal() {
     document.getElementById('rules-modal').style.display = 'flex';
+    openTab(event, 'Rules'); // Ouvrir l'onglet Règles par défaut
 }
 
 function closeRulesModal() {
     document.getElementById('rules-modal').style.display = 'none';
 }
+
+// Fonction pour obtenir l'explication de la conjugaison
+function getConjugationExplanation() {
+    // Récupérer le temps de conjugaison depuis localStorage
+    var selectedTime = localStorage.getItem("temps_conjugaison").replace(/_/g, ' ');
+
+    // Définir les explications et constructions pour chaque temps
+    var explanations = {
+        "Present": {
+            "explication": "Le présent est utilisé pour parler d'actions ou d'états actuels ou habituels.",
+            "construction": "Yo: habl<strong>o</strong><br>Tú: habl<strong>as</strong><br>Él/Ella: habl<strong>a</strong><br>Nosotros: habl<strong>amos</strong><br>Vosotros: habl<strong>áis</strong><br>Ellos/Ellas: habl<strong>an</strong>"
+        },
+        "Conditionnel present": {
+            "explication": "Le conditionnel présent est utilisé pour exprimer des actions ou des états hypothétiques ou souhaités.",
+            "construction": "Yo: hablar<strong>ía</strong><br>Tú: hablar<strong>ías</strong><br>Él/Ella: hablar<strong>ía</strong><br>Nosotros: hablar<strong>íamos</strong><br>Vosotros: hablar<strong>íais</strong><br>Ellos/Ellas: hablar<strong>ían</strong>"
+        },
+        "Futur": {
+            "explication": "Le futur est utilisé pour parler d'actions qui se produiront dans le futur.",
+            "construction": "Yo: hablar<strong>é</strong><br>Tú: hablar<strong>ás</strong><br>Él/Ella: hablar<strong>á</strong><br>Nosotros: hablar<strong>emos</strong><br>Vosotros: hablar<strong>éis</strong><br>Ellos/Ellas: hablar<strong>án</strong>"
+        },
+        "Imparfait": {
+            "explication": "L'imparfait est utilisé pour parler d'actions ou d'états dans le passé qui étaient en cours ou répétés.",
+            "construction": "Yo: habl<strong>aba</strong><br>Tú: habl<strong>abas</strong><br>Él/Ella: habl<strong>aba</strong><br>Nosotros: habl<strong>ábamos</strong><br>Vosotros: habl<strong>abais</strong><br>Ellos/Ellas: habl<strong>aban</strong>"
+        },
+        "Prétérit": {
+            "explication": "Le prétérit est utilisé pour parler d'actions complétées dans le passé.",
+            "construction": "Yo: habl<strong>é</strong><br>Tú: habl<strong>aste</strong><br>Él/Ella: habl<strong>ó</strong><br>Nosotros: habl<strong>amos</strong><br>Vosotros: habl<strong>asteis</strong><br>Ellos/Ellas: habl<strong>aron</strong>"
+        },
+        "Subjonctif passe": {
+            "explication": "Le subjonctif passé est utilisé pour exprimer des actions passées hypothétiques ou souhaitées.",
+            "construction": "Yo: hubiera habl<strong>ado</strong><br>Tú: hubieras habl<strong>ado</strong><br>Él/Ella: hubiera habl<strong>ado</strong><br>Nosotros: hubiéramos habl<strong>ado</strong><br>Vosotros: hubierais habl<strong>ado</strong><br>Ellos/Ellas: hubieran habl<strong>ado</strong>"
+        },
+      "Subjonctif present": {    
+        "explication": "Le subjonctif présent est utilisé pour exprimer des actions ou des états hypothétiques ou souhaités.",
+        "construction": "Yo: habl<strong>e</strong><br>Tú: habl<strong>es</strong><br>Él/Ella: habl<strong>e</strong><br>Nosotros: habl<strong>emos</strong><br>Vosotros: habl<strong>éis</strong><br>Ellos/Ellas: habl<strong>en</strong>"
+}
+
+    };
+
+    // Retourner l'explication et la construction pour le temps sélectionné
+    if (explanations[selectedTime]) {
+        return `<h3>${selectedTime}</h3>
+                <p>${explanations[selectedTime].explication}</p>
+                <p><strong>Construction:</strong><br><br>${explanations[selectedTime].construction}</p>`;
+    } else {
+        return "Explication de la conjugaison non disponible pour ce temps.";
+    }
+}
+
+// Exemple d'utilisation dans le modal
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+    // Si l'onglet Conjugaison est ouvert, mettre à jour le contenu
+    if (tabName == 'Conjugation') {
+        var explanation = getConjugationExplanation();
+        document.getElementById("conjugationText").innerHTML = explanation;
+    }
+}
+
 
 
 const worker = new Worker('worker.js');

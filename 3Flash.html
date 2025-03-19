@@ -16,24 +16,36 @@
 	<div id="rules-button">
 		<button onclick="openRulesModal()">?</button>
 	</div>
-	
-	<!-- Fenêtre modale pour expliquer les règles-->
-	<div id="rules-modal" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closeRulesModal()">&times;</span>
-			<h2>Site operation</h2>
-			<p>
-				Flashcards are used to learn vocabulary.
-				To turn the flashcard over, click on the card or on the left or right arrows.
-				Use the “Suivant” button or the enter key on your keyboard to move on to the next card.
-				<br>
-				<br>
-				Les flashcards sont des cartes qui permettent d'apprendre du vocabulaire.
-				Pour retourner la flashcard, cliquez sur la carte ou sur les flèche de gauche ou droite.
-				Le bouton "Suivant" ou la touche entrer du clavier permettent de passer à la carte suivante.
-			</p>
-		</div>
-	</div>
+	<!-- Fenêtre modale pour expliquer les règles et la conjugaison -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRulesModal()">&times;</span>
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Rules')">Règles</button>
+                <button class="tablinks" onclick="openTab(event, 'Conjugation')">Conjugaison</button>
+            </div>
+
+            <div id="Rules" class="tabcontent">
+                <h2>Site operation</h2>
+                <p>
+                    Flashcards are used to learn vocabulary.
+                    To turn the flashcard over, click on the card or on the left or right arrows.
+                    Use the “Suivant” button or the enter key on your keyboard to move on to the next card.
+                    <br><br>
+                    Les flashcards sont des cartes qui permettent d'apprendre du vocabulaire.
+                    Pour retourner la flashcard, cliquez sur la carte ou sur les flèches de gauche ou droite.
+                    Le bouton "Suivant" ou la touche entrer du clavier permettent de passer à la carte suivante.
+                </p>
+            </div>
+
+            <div id="Conjugation" class="tabcontent">
+                <h2>Explication de la Conjugaison</h2>
+                <p id="conjugationText">
+                    <!-- Le contenu de la conjugaison sera inséré ici -->
+                </p>
+            </div>
+        </div>
+    </div>
 	<button id="passer" class="bouton" type="submit" onclick="Fretourner()">
 	<h1 id="name" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
 		<span id="mot"></span>
