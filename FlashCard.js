@@ -267,11 +267,10 @@ function getConjugationExplanation() {
             "explication": "Le subjonctif passé est utilisé pour exprimer des actions passées hypothétiques ou souhaitées.",
             "construction": "Yo: hubiera habl<strong>ado</strong><br>Tú: hubieras habl<strong>ado</strong><br>Él/Ella: hubiera habl<strong>ado</strong><br>Nosotros: hubiéramos habl<strong>ado</strong><br>Vosotros: hubierais habl<strong>ado</strong><br>Ellos/Ellas: hubieran habl<strong>ado</strong>"
         },
-      "Subjonctif present": {    
-        "explication": "Le subjonctif présent est utilisé pour exprimer des actions ou des états hypothétiques ou souhaités.",
-        "construction": "Yo: habl<strong>e</strong><br>Tú: habl<strong>es</strong><br>Él/Ella: habl<strong>e</strong><br>Nosotros: habl<strong>emos</strong><br>Vosotros: habl<strong>éis</strong><br>Ellos/Ellas: habl<strong>en</strong>"
-}
-
+        "Subjonctif present": {    
+            "explication": "Le subjonctif présent est utilisé pour exprimer des actions ou des états hypothétiques ou souhaités.",
+            "construction": "Yo: habl<strong>e</strong><br>Tú: habl<strong>es</strong><br>Él/Ella: habl<strong>e</strong><br>Nosotros: habl<strong>emos</strong><br>Vosotros: habl<strong>éis</strong><br>Ellos/Ellas: habl<strong>en</strong>"
+        },
     };
 
     // Retourner l'explication et la construction pour le temps sélectionné
@@ -279,7 +278,8 @@ function getConjugationExplanation() {
         return `<h3>${selectedTime}</h3>
                 <p>${explanations[selectedTime].explication}</p>
                 <p><strong>Construction:</strong><br><br>${explanations[selectedTime].construction}</p>`;
-    } else {
+    }
+    else {
         return "Explication de la conjugaison non disponible pour ce temps.";
     }
 }
@@ -288,6 +288,15 @@ function getConjugationExplanation() {
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
+    let bool = localStorage.getItem("temps_conjugaison") != "";
+
+    // Désactiver le bouton Conjugaison si bool est faux
+    var conjugationTab = document.querySelector('.tablinks[onclick="openTab(event, \'Conjugation\')"]');
+    if (conjugationTab) {
+        conjugationTab.disabled = !bool;
+    }
+
+
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
@@ -298,14 +307,11 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 
-    // Si l'onglet Conjugaison est ouvert, mettre à jour le contenu
     if (tabName == 'Conjugation') {
         var explanation = getConjugationExplanation();
         document.getElementById("conjugationText").innerHTML = explanation;
     }
 }
-
-
 
 const worker = new Worker('worker.js');
 worker.onmessage = function(event) {
